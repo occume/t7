@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/5363/WorkOrder1.0/src/com/hy/wo/util/hibernate
+END
+StatesType.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/hyProject/!svn/ver/647/WorkOrder1.0/src/com/hy/wo/util/hibernate/StatesType.java
+END
+EnumType.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hyProject/!svn/ver/5363/WorkOrder1.0/src/com/hy/wo/util/hibernate/EnumType.java
+END
+EvaluationsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/hyProject/!svn/ver/647/WorkOrder1.0/src/com/hy/wo/util/hibernate/EvaluationsType.java
+END

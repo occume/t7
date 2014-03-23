@@ -1,0 +1,22 @@
+ #follow{
+	position: absolute;
+	width:200px;
+	border:1px solid #ddd;
+	display: none;
+	background: #ffffff;
+}
+#follow ul{
+	margin:0;
+	padding: 5px 0 0 0;
+}
+#follow ul li{
+	list-style: none;
+	cursor: pointer;
+}
+.noban{
+	margin-bottom:0;
+	
+}
+.currentLi{
+	background: #ddd;
+}

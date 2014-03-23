@@ -1,0 +1,993 @@
+package com.hy.wo.action;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+import net.sf.json.JSONObject;
+import org.apache.log4j.Logger;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+import rtx.SendNotify;
+
+import com.hy.wo.dto.userWOListDTO;
+import com.hy.wo.dto.userwolist_ajaxDTO;
+import com.hy.wo.exception.WoCenterException;
+import com.hy.wo.po.Goods;
+import com.hy.wo.po.Staff;
+import com.hy.wo.po.WorkOrder;
+import com.hy.wo.servlet.DWRHelper;
+import com.hy.wo.util.CheckParamManager;
+import com.hy.wo.util.Constants;
+import com.hy.wo.util.DepictXmlManager;
+import com.hy.wo.util.MyUtil;
+import com.hy.wo.util.Pages;
+import com.hy.wo.util.Constants.ActionResultList;
+import com.hy.wo.util.Constants.PAGE;
+import com.hy.wo.util.Constants.ParamName;
+import com.hy.wo.util.Constants.PromptMessage;
+import com.hy.wo.util.Constants.SessionKey;
+import com.hy.wo.util.Constants.StateList;
+import com.hy.wo.util.Constants.States;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ModelDriven;
+import com.you9.base.util.StringUtil;
+/**
+ * 工单处理Action
+ * @author dong_jin
+ *
+ */
+@Controller @Scope("prototype")
+public class WorkOrderAction extends BaseAction implements ModelDriven<WorkOrder>{
+	private static final long serialVersionUID = 1386306049977526298L;
+	private static final Logger LOGGER = Logger.getLogger(WorkOrderAction.class);
+	private  String state=StateList.SUCCESS;
+	private  String stateDesc=PromptMessage.SUCCESS;
+	
+	/**
+	 * 客服创建工单
+	 * @return
+	 */
+	public String workOrder(){
+		Staff staff=(Staff) session.getAttribute(SessionKey.STAFF);
+		if(staff==null){
+			addActionMessage(PromptMessage.PLEASE_LOGIN);
+			return ACC_LOGON;
+		}
+		if(upload!=null)
+			woService.uploadFileHandle(wo, upload, uploadFileName, rp+"/WorkOrder",staff.getAccName());
+		if(needhf!=null&&needhf.length>0){
+			wo.setIshf(true);
+		}
+		long id = woService.createWorkOrder(wo,staff,immediate,toGroupId,toStaffId);
+		//DWRHelper.showScriptSession(session.getServletContext(), makeMap1(staff));
+		
+		//////////////////////////////////////
+		//    		 RTX 提醒    start          //
+		//////////////////////////////////////
+		if(toGroupId != 0){
+			String receivers = woPfService.getRTXStaff( toGroupId, staff );
+			try{
+				SendNotify.notify( receivers  , String.valueOf(id) );
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		//////////////////////////////////////
+		//           RTX 提醒    end            //
+		//////////////////////////////////////
+		return ActionResultList.SUCCESS_CREATE;
+	}
+	/**
+	 * 读取玩家的联系信息
+	 * @return
+	 */
+	public String ContactInfoOfUser(){
+		response.setContentType( Constants.DEFAULT_CONTENT_TYPE );
+	    response.setCharacterEncoding( Constants.DEFAULT_CHARSET );
+	    
+	    JSONObject jobj=woService.readContactInfoOfUser(currentUser);
+	  
+		PrintWriter out=null; 
+		try{
+			out = response.getWriter();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}  
+		out.print(jobj.toString());
+		out.flush();
+		out.close();
+		return null;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public String updateWorkOrder(){
+		LOGGER.debug("修改工单信息：@"+new Date());
+		response.setContentType( Constants.DEFAULT_CONTENT_TYPE );
+	    response.setCharacterEncoding( Constants.DEFAULT_CHARSET );
+	    
+		PrintWriter out=null;
+		try {
+			out = response.getWriter();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		if(woService.updateWorkORder(wo, woId))
+			out.print("修改成功！");
+		else
+			out.print("修改工单出错，请重试~");
+	    out.flush();
+	    out.close();
+		return null;
+	}
+	/**
+	 * 编辑工单回复内容
+	 */
+	public void editPtReply(){
+		LOGGER.debug("编辑工单回复信息：@"+new Date());
+		String message="编辑成功@_@";
+		Staff staff=(Staff) session.getAttribute("staff");
+		if(staff==null){
+			addActionMessage(PromptMessage.PLEASE_LOGIN);
+			return ;
+		}
+			try {
+				woService.editPtReply(staff, wo.getId(), wo.getReply(), wo.getComment());
+			} catch (WoCenterException e1) {
+				message=e1.getStateDesc();
+			}
+			
+			response.setContentType( Constants.DEFAULT_CONTENT_TYPE );
+		    response.setCharacterEncoding( Constants.DEFAULT_CHARSET );
+	    
+		PrintWriter out=null;
+		try {
+			out = response.getWriter();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		out.print(message);
+	    out.flush();
+	    out.close();
+	}
+	/**
+	 * 删除工单回复内容
+	 */
+	public void deletePtReply(){
+		LOGGER.debug("删除工单回复信息：@"+new Date());
+		String message="OK,删除成功@_@";
+		Staff staff=(Staff) session.getAttribute("staff");
+		if(staff==null){
+			addActionMessage("请登录~");
+			return ;
+		}
+			try {
+				woService.deletePtReply(staff, wo.getId(),  wo.getComment());
+			} catch (WoCenterException e1) {
+				message=e1.getStateDesc();
+			}
+			response.setContentType( Constants.DEFAULT_CONTENT_TYPE );
+		    response.setCharacterEncoding( Constants.DEFAULT_CHARSET );
+	    
+		PrintWriter out=null;
+		try {
+			out = response.getWriter();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		out.print(message);
+	    out.flush();
+	    out.close();
+	}
+	/**
+	 * 处理角色恢复问题的方法
+	 * @return
+	 * @throws IOException 
+	 */
+	public void recovery(){
+		LOGGER.debug("********角色恢复请求******");
+		try{
+			CheckParamManager.checkRecoveryParam(wo,request);//验证参数
+			woService.recoveryHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 处理游戏运行问题
+	 * @return
+	 */
+	public void gameRun(){
+		LOGGER.debug("********游戏运行请求******");
+		try{
+			CheckParamManager.checkGameRunParam(wo,request);//验证参数
+			woService.gameRunHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 处理角色异常问题
+	 * @return
+	 */
+	public void abnormal(){
+		LOGGER.debug("********角色异常请求******");
+		
+		try{
+			CheckParamManager.checkRoleOfAbnormalParam(wo,request);//验证参数
+			woService.abnormalHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	
+	
+	
+	/**
+	 * 处理物品丢失问题
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public void goodsLost(){
+		LOGGER.debug("********物品丢失请求******");	
+		try{
+			CheckParamManager.checkLoseItemsParam(wo,request);//验证参数	
+			LOGGER.debug("*参数验证完毕*");
+			ActionContext context=ActionContext.getContext();			
+			Map map=context.getParameters();
+			Set<Goods> goodsSet=wo.getAdditional().getGoodsSet();
+			if(map!=null&&map.size()>0){
+				for(Entry en :(Set<Entry>)map.entrySet()){
+					if(en.getKey().toString().contains("goodses")){
+						String[] gArr=(String[]) en.getValue();
+						if(!StringUtil.isBlankOrNull(gArr[0])||!StringUtil.isBlankOrNull(gArr[1])){
+							Goods goods=new Goods();
+							goods.setAdditional(wo.getAdditional());
+							goods.setName(gArr[0]);
+							goods.setAttr(gArr[1]);
+							goods.setCount(Integer.valueOf(gArr[2]));
+							goodsSet.add(goods);
+						}
+					}
+				}
+			}
+			woService.goodsLostHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 处理服务器故障问题
+	 * @return
+	 */
+	public void serverDefault(){
+		LOGGER.debug("********服务器故障请求******");
+		try{
+			CheckParamManager.checkServerFailureParam(wo,request);
+			woService.serverDefaultHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 *  处理游戏bug问题
+	 * @return
+	 */
+	public void gameBug(){
+		
+		try{
+			CheckParamManager.checkGameBugParam(wo,request);//验证参数
+			woService.gameBugHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 游戏内bug提交
+	 * @return
+	 */
+	public String ggameBug(){
+		LOGGER.debug("********游戏内bug请求******");
+		
+		try{
+			CheckParamManager.checkInnerGameBugParam(wo,request);//验证参数
+			String username = callerService.getUserName(String.valueOf(wo.getUserInfo().getServer().getId()), 
+					wo.getUserInfo().getUsername());
+			wo.getUserInfo().setUsername(username);
+			woService.innerGameBugHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(IllegalArgumentException e){
+			state = Constants.StateList.PARAM_ERR;
+			stateDesc = StringUtil.isBlankOrNull(e.getMessage())?MyUtil.getStateDesc(state):e.getMessage();
+			return "g_success";
+		} catch (WoCenterException e) {
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}
+		
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		LOGGER.debug("********游戏内bug请求 保存完毕******");
+		return null;
+	}
+	/**
+	 * 处理违规举报问题
+	 * @return
+	 */
+	public void illegalReport(){
+		LOGGER.debug("********违规举报请求******");
+		try{
+			CheckParamManager.checkPlugAbuseParam(wo,request);//验证参数
+			woService.illegalReportHandle(wo,uploadFileName);
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	
+	/**
+	 * 充值问题处理
+	 * @return
+	 */
+	public void rechargeProblem(){
+		LOGGER.debug("********充值问题请求******");
+		try{
+			CheckParamManager.checkRechargeParam(wo,request);//验证参数
+			woService.rechargeHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 处理其他问题
+	 * @return
+	 */
+	public void others(){
+		LOGGER.debug("********其他问题请求******");
+		try{
+			CheckParamManager.checkOthersParam(wo,request);//验证参数
+			woService.othersHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 意见建议处理
+	 * @return
+	 */
+	public void suggestion(){
+	//	LOGGER.debug("********意见建议请求******");
+		try{
+			CheckParamManager.checkSuggestionParam(wo,request);//验证参数
+			woService.suggestionHandle(wo);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * vip投诉
+	 * @return
+	 */
+	public void vipComp(){
+		LOGGER.debug("********vip投诉******");
+		try{
+			CheckParamManager.checkSuggestionParam(wo,request);//验证参数
+			woService.vipCompHandle(wo);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	
+	/**
+	 * 咨询问题
+	 * @return
+	 * @throws WoCenterException 
+	 */
+	public void advisory(){
+		LOGGER.debug("********咨询问题请求******");
+		try{
+			CheckParamManager.checkAdvisoryParam(wo,request);//验证参数
+			woService.advisoryHandle(wo);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * 处理账号解封问题
+	 * @return
+	 */
+	public void accountlock(){
+		LOGGER.debug("********账号解封请求******");
+		try{
+			CheckParamManager.checkAccountLockParam(wo,request);//验证参数
+			woService.accountnamelockHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	/**
+	 * vip祝福申请
+	 * @return
+	 */
+	public void vipBless(){
+		LOGGER.debug("********vip祝福申请******");
+		try{
+			wo.getUserInfo().setAccountname(username);
+			wo.getUserInfo().setMemo(msg);
+			wo.getUserInfo().setMail(from);
+			wo.getUserInfo().setRealname(to);
+			wo.getUserInfo().setHappendate(tm);
+			wo.getUserInfo().setTel(type);
+			CheckParamManager.checkAccountLockParam(wo,request);//验证参数
+			woService.vipBlessHandle(wo,uploadFileName);
+			DWRHelper.showScriptSession(session.getServletContext(), makeMap());
+		}catch(WoCenterException e){
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}finally{
+			DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+		}
+	}
+	
+	/**
+	 * GET获取问题详细信息
+	 * @return
+	 */
+	public void workOrderDetail(){
+		try {
+			CheckParamManager.baseValidate(request);
+			wo = woService.getWorkOrderDetail(woId);
+		} catch (WoCenterException e) {
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}
+		if(wo==null){
+			return;
+		}
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+DepictXmlManager.makeWorkOrderXML(wo), response);
+		
+	}
+	/**
+	 * 处理问题补充
+	 * @return
+	 */
+	public void issueAdditional(){
+		LOGGER.debug("****************cs center  补充问题*********************");
+		wo=woService.getWorkOrderDetail(woId);
+		Staff staff=new Staff();
+		staff.setNickName(wo.getUserInfo().getAccountname());
+		if(MyUtil.checkAddMemoStates(wo.getStates(), wo.getIssueAddSet().size())){//是否可以补充问题
+			if(uploadFileName!=null&&uploadFileName.length>0)
+					woService.uploadFileHandle(wo, uploadFileName);
+			woService.saveIssueAdditional(woId, addMemo,staff,true,null);
+		}else{//无权限补充问题
+			state=StateList.Illegal_OPERATION_ERROR;
+			stateDesc=PromptMessage.Illegal_OPERATION_ERROR;
+		}
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+	}
+	/**
+	 * 处理玩家评价
+	 * @return
+	 */
+	public void evaluation(){
+		LOGGER.debug("****************cs center  评价*********************");
+		try {
+			woService.saveEvaluation(wo, woId);
+			//LOGGER.debug("wo.getComment="+wo.getComment());
+			LOGGER.debug("getEvaluation="+wo.getEvaluation());
+		} catch (WoCenterException e) {
+			e.printStackTrace();
+		}
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc), response);
+	}
+	/**
+	 * 玩家问题列表
+	 * @return
+	 */
+	public void userwolist(){
+		LOGGER.debug("******* 1.0 userwolist******");
+		
+		String toUri=request.getRequestURI();
+		String ctag=request.getParameter( PAGE.CURRENT_TAG );
+		session.setAttribute(ParamName.SOURCE_URL, toUri);
+		if(!MyUtil.isBlankOrNull(ctag)){
+			session.setAttribute( PAGE.C_TAG, ctag);
+		}
+		String userName=request.getParameter(ParamName.USERNAME);
+		userWOListDTO userDTO= new userWOListDTO();
+		try{
+				CheckParamManager.baseValidate(request);
+				Pages<WorkOrder> alldata = woService.getAllWorkOrderOfUserByStatus(1, len,userName, States.DEALED);
+				Pages<WorkOrder> dealingdata = woService.getAllWorkOrderOfUserByStatus(1, len, userName, States.DEALING);
+				Pages<WorkOrder> responseddata = woService.getAllWorkOrderOfUserByStatus(1, len, userName, States.RESPONSED);
+				Pages<WorkOrder> undealdata = woService.getAllWorkOrderOfUserByStatus(1, len, userName, States.UNDEAL);
+				Pages<WorkOrder> lackinfodata = woService.getAllWorkOrderOfUserByStatus(1, len, userName, States.LACKINFO);
+				//填充到DTO数据模型中
+				
+				userDTO.setDealCount(alldata.getTotalCount());
+				userDTO.setDealList(alldata);
+				
+				userDTO.setDelingCount(dealingdata.getTotalCount());
+				userDTO.setDelingList(dealingdata);
+				
+				userDTO.setReplyCount(responseddata.getTotalCount());
+				userDTO.setReplyList(responseddata);
+				
+				userDTO.setUndealCount(undealdata.getTotalCount());
+				userDTO.setUndealList(undealdata);
+//				for(WorkOrder wo:undealdata.getResultList()){
+//					System.out.println(wo.getId());
+//				}
+				userDTO.setLackinfoCount(lackinfodata.getTotalCount());
+				userDTO.setLackinfoList(lackinfodata);
+		}catch(WoCenterException e){
+				state=e.getState();
+				stateDesc=e.getStateDesc();
+		}catch(Exception e){
+				state=StateList.UNKNOWN_ERROR;
+				state=PromptMessage.SYSTEM_BUSY;
+		}
+		
+		//更新总记录数
+		userDTO.setTotalCount(userDTO.getDelingCount()+userDTO.getLackinfoCount()+userDTO.getReplyCount()+userDTO.getUndealCount());
+
+		//setUserwolist(userDTO);
+		//System.out.println(userDTO.getTotalCount());
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+DepictXmlManager.makeListInfoXML(userDTO), response);
+	}
+	
+	
+	public void userwolist_ajax()
+	{
+		LOGGER.debug("*******userwolistajax******");
+		String userName=request.getParameter(ParamName.USERNAME);
+		//LOGGER.debug("********user:"+user.getUsername()+"******");
+		LOGGER.debug("********currentPage:"+currentPage+"******");
+		
+		states = request.getParameter( ParamName.STATES );
+		LOGGER.debug("********states:"+states+"******");
+		String S ="";
+		if (states.equalsIgnoreCase("undeal"))
+		{
+			S = States.UNDEAL;
+		}else if (states.equalsIgnoreCase("reply"))
+		{
+			S = States.RESPONSED;
+		}else if (states.equalsIgnoreCase("deling"))
+		{
+			S = States.DEALING;
+		}else if (states.equalsIgnoreCase("deal"))
+		{
+			S = States.DEALED;
+		}else if (states.equalsIgnoreCase("lackinfo"))
+		{
+			S = States.LACKINFO;
+		}else {
+			S = States.UNDEAL;
+		}
+//		LOGGER.debug("********states:"+S+"******");
+		pages=woService.getAllWorkOrderOfUserByStatus(currentPage, 15, userName, S);
+		//System.out.println("*******pages******"+pages.getResultList().size());
+		userwolist_ajaxDTO wa= new userwolist_ajaxDTO();
+		wa.setWorkorderlist(pages);
+		//System.out.println("*******setpages******");
+		wa.setStates(S);
+		setUserwolist_ajax(wa);
+		LOGGER.debug("*******userwolistajax_over******");
+		//System.out.println("*******userwolistajax_over******");
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+DepictXmlManager.makePagesXML(pages, states, 0), response);
+		
+	}
+	
+	/**
+	 * 获取用户提交问题当前处理情况
+	 */
+	public void getDealInfo(){
+		String accName=request.getParameter(ParamName.USERNAME);
+		String content="";
+		try{
+				CheckParamManager.baseValidate(request);
+				content=woService.makeDealInfo(accName);
+		}catch(WoCenterException e){
+				//state=e.getState();
+				//stateDesc=e.getStateDesc();
+		}catch(Exception e){
+			//	state=StateList.DATABASE_ERR;
+				//stateDesc=PromptMessage.DATABASE_ERROR;
+		}
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+content, response);
+	}
+	/**
+	 * 获取Map
+	 */
+	public void ServerMap(){
+		LOGGER.debug("Get ServerMap 1.0");
+		String content="";
+		try{
+				CheckParamManager.baseValidate(request);
+				content=woService.makeServerMap();
+		}catch(WoCenterException e){
+				//state=e.getState();
+				//stateDesc=e.getStateDesc();
+		}catch(Exception e){
+			//	state=StateList.DATABASE_ERR;
+				//stateDesc=PromptMessage.DATABASE_ERROR;
+		}
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+content, response);
+	}
+	/**
+	 * 获取充值类型Map
+	 */
+	public void rechargeTypeMap(){
+		LOGGER.debug("Get rechargeTypeMap work.2211");
+		String content="";
+		try{
+				CheckParamManager.baseValidate(request);
+				content=woService.makerechargeTypeMap();
+		}catch(WoCenterException e){
+				//state=e.getState();
+				//stateDesc=e.getStateDesc();
+		}catch(Exception e){
+			//	state=StateList.DATABASE_ERR;
+				//stateDesc=PromptMessage.DATABASE_ERROR;
+		}
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+content, response);
+	}
+	/**
+	 * 物品名称自动完成
+	 * @return
+	 */
+	public void getGoodsItems(){
+		LOGGER.debug("获取物品名称1.0");
+		LOGGER.debug("关键字："+keyWord);
+		
+		String items="";
+		try {
+			CheckParamManager.baseValidate(request);
+			items=woService.initGoodsItems(keyWord);
+		} catch (WoCenterException e) {
+			state=e.getState();
+			stateDesc=e.getStateDesc();
+		}
+		LOGGER.debug("state="+state);
+		DepictXmlManager.outputStr(DepictXmlManager.organizeBasicXML(state, stateDesc)+items, response);
+	}
+	/**
+	 * 玩家提交工单WorkOrderView Map
+	 * @return
+	 */
+	private Map<String,String> makeMap(){
+		LOGGER.debug("Get cs ip as==="+request.getParameter("ip"));
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("id", wo.getUserInfo().getAccountname());
+		map.put("type", wo.getUserInfo().getLvlOne().getName());
+		map.put("memo", wo.getUserInfo().getMemo());
+		map.put("gap", Constants.sdf.format(new Date()));
+		map.put("ip", request.getParameter("ip"));
+		return map;
+	}
+	/**
+	 * 客服提交工单WorkOrderView Map
+	 * @return
+	 */
+	private Map<String,String> makeMap1(Staff staff){
+		//LOGGER.debug("Get cs ip as==="+request.getParameter("ip"));
+		Map<String,String> map=new HashMap<String, String>();
+		map.put("id", staff.getNickName());
+		map.put("type", wo.getUserInfo().getLvlOne()==null?"其它":wo.getUserInfo().getLvlOne().getName());
+		map.put("memo", wo.getUserInfo().getMemo());
+		map.put("gap", Constants.sdf.format(new Date()));
+		map.put("ip", request.getRemoteAddr());
+		map.put("CT", "1");
+		return map;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void viewList(){
+		
+		response.setContentType( Constants.DEFAULT_CONTENT_TYPE );
+	    response.setCharacterEncoding( Constants.DEFAULT_CHARSET );
+		List<Map<String,String>> viewList=(List) session.getServletContext().getAttribute("viewList");
+		if(viewList!=null&&viewList.size()>0){														
+				JSONObject jobj=new JSONObject();
+				jobj.element("wo", viewList);
+				PrintWriter out=null;
+				try
+				{
+					out = response.getWriter();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}  
+				out.print(jobj.toString());
+				out.flush();
+				out.close();
+		}
+	}
+
+	
+	WorkOrder wo=new WorkOrder(request,"");
+	Pages<WorkOrder> pages=new Pages<WorkOrder>();
+	private String addMemo;//问题补充内容
+	private long woId;//工单详情ID
+	private int currentPage=1;//当前页
+	private int len=15;//每页显示条数
+	private String currentUser;//当前玩家
+	private int immediate;
+	private int currentTag;
+	private Date hiddenDate;
+	private String keyWord;
+	private Integer toGroupId;//派转组
+	private Long toStaffId;//派转员工
+	private String[] needhf;
+	private InputStream inputStream;
+	
+	/**** vip 祝福****/
+	private String username;
+	private String type;
+	private String from;
+	private String to;
+	private Date tm;
+	private String msg;
+	/**** vip 祝福****/
+	
+	public InputStream getResult(){
+		return inputStream;
+	}
+	
+	public String[] getNeedhf() {
+		return needhf;
+	}
+	public void setNeedhf(String[] needhf) {
+		this.needhf = needhf;
+	}
+	public String getKeyWord() {
+		return keyWord;
+	}
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
+	}
+	public Date getHiddenDate() {
+		return hiddenDate;
+	}
+	public void setHiddenDate(Date hiddenDate) {
+		this.hiddenDate = hiddenDate;
+	}
+	public int getCurrentTag() {
+		return currentTag;
+	}
+	public void setCurrentTag(int currentTag) {
+		this.currentTag = currentTag;
+	}
+	public Integer getToGroupId() {
+		return toGroupId;
+	}
+	public void setToGroupId(Integer toGroupId) {
+		this.toGroupId = toGroupId;
+	}
+	public Long getToStaffId() {
+		return toStaffId;
+	}
+	public void setToStaffId(Long toStaffId) {
+		this.toStaffId = toStaffId;
+	}
+	public InputStream getInputStream() {
+		return inputStream;
+	}
+	public void setInputStream(InputStream inputStream) {
+		this.inputStream = inputStream;
+	}
+	public String getAddMemo() {
+		return addMemo;
+	}
+	public void setAddMemo(String addMemo) {
+		this.addMemo = addMemo;
+	}
+	public String getCurrentUser() {
+		return currentUser;
+	}
+	public void setCurrentUser(String currentUser) {
+		this.currentUser = currentUser;
+	}
+	private File[] upload;//上传的文件数组
+	private String[] uploadContentType;
+	private String[] uploadFileName;
+	
+	
+	
+	private userWOListDTO userwolist;
+	
+	public userWOListDTO getUserwolist() {
+		return userwolist;
+	}
+	public void setUserwolist(userWOListDTO userwolist) {
+		this.userwolist = userwolist;
+	}
+	
+	
+	private userwolist_ajaxDTO userwolist_ajax;
+	
+	
+	public userwolist_ajaxDTO getUserwolist_ajax() {
+		return userwolist_ajax;
+	}
+	public void setUserwolist_ajax(userwolist_ajaxDTO userwolistAjax) {
+		userwolist_ajax = userwolistAjax;
+	}
+
+	private String states;
+	
+	
+	public String getStates() {
+		return states;
+	}
+	public void setStates(String states) {
+		this.states = states;
+	}
+	/*****************setters and getters*******************/
+	public WorkOrder getModel() {
+		return wo;
+	}
+	
+
+	public long getWoId() {
+		return woId;
+	}
+	public void setWoId(long woId) {
+		this.woId = woId;
+	}
+	public int getCurrentPage() {
+		return currentPage;
+	}
+	public void setCurrentPage(int currentPage) {
+		this.currentPage = currentPage;
+	}
+	public int getLen() {
+		return len;
+	}
+	public void setLen(int len) {
+		this.len = len;
+	}
+	public Pages<WorkOrder> getPages() {
+		return pages;
+	}
+	public void setPages(Pages<WorkOrder> pages) {
+		this.pages = pages;
+	}
+	public File[] getUpload() {
+		return upload;
+	}
+	public void setUpload(File[] upload) {
+		this.upload = upload;
+	}
+	public String[] getUploadContentType() {
+		return uploadContentType;
+	}
+	public void setUploadContentType(String[] uploadContentType) {
+		this.uploadContentType = uploadContentType;
+	}
+	public String[] getUploadFileName() {
+		return uploadFileName;
+	}
+	public void setUploadFileName(String[] uploadFileName) {
+		this.uploadFileName = uploadFileName;
+	}
+	public WorkOrder getWo() {
+		return wo;
+	}
+	public void setWo(WorkOrder wo) {
+		this.wo = wo;
+	}
+	public int getImmediate() {
+		return immediate;
+	}
+	public void setImmediate(int immediate) {
+		this.immediate = immediate;
+	}
+	
+	
+	private String js;
+	public String getJs() {
+		return js;
+	}
+	public void setJs(String js) {
+		this.js = js;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getFrom() {
+		return from;
+	}
+	public void setFrom(String from) {
+		this.from = from;
+	}
+	public String getTo() {
+		return to;
+	}
+	public void setTo(String to) {
+		this.to = to;
+	}
+	public Date getTm() {
+		return tm;
+	}
+	public void setTm(Date tm) {
+		this.tm = tm;
+	}
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	
+	
+	
+}

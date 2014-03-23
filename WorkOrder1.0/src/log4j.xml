@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- 系统日志，按周生成 -->
+    <appender name="logFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${resin.home}/log/wokeOrder.log" />
+        <param name="Append" value="false" />
+        <param name="DatePattern" value="'.'yyyy-MM-ww" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%-5p]%d{yy-MM-dd HH:mm:ss,SSS}[%l]: %m%n" />
+        </layout>
+    </appender> 
+    <appender name="extLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${resin.home}/log/ext-wokeOrder.log" />
+        <param name="Append" value="true" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%m%n" />
+        </layout>
+    </appender>
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[WorkOrder1.0][%-5p]%d{yy-MM-dd HH:mm:ss,SSS}[%l]: %m%n" />
+        </layout>
+    </appender>
+	<logger name="org.apache" additivity="false">
+        <level value="warn" />
+         <appender-ref ref="extLogFile" />
+    </logger>
+    <logger name="com.hy" additivity="false">
+        <level value="debug" />
+         <appender-ref ref="console" />
+    </logger>
+    <root>
+        <level value="warn" />
+        <appender-ref ref="extLogFile" />
+    </root>
+
+</log4j:configuration>

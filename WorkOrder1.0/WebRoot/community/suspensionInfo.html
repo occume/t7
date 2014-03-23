@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+    	.tip_div {	
+			font-size:12px;
+			z-index: 9999;
+			position: relative;
+			top: 0px;
+			border: 0px;
+			background-color:#F1F1F1;
+			padding: 0px 0px;
+			text-align:left;
+		}
+    </style>
+  </head>
+  
+  <body>
+    <!--注册详细内容开始-->
+                	<script language="javascript">
+                		function textshow() {                			
+							var a=textshow.arguments;							
+							var t=a[0].offsetTop;
+							var l=a[0].offsetLeft;
+							while(a[0]=a[0].offsetParent){
+								l+=a[0].offsetLeft;
+								t+=a[0].offsetTop;
+							}
+							l=l+a[1]; 
+							var o = document.getElementById("div_notice");
+							o.style.position="absolute";
+							o.style.top=t+"px";
+							o.style.left=l+"px";
+							document.getElementById("div_noticeword").innerHTML=a[2];
+							o.style.display="";
+						}
+                		function texthide(){
+							document.getElementById("div_notice").style.display="none";
+						}
+                	</script>
+                	<div id='div_notice'
+						style="border-right: 0px; border-top: 0px; display: none; z-index: 1000; vertical-align: top; border-left: 0px; width: 240px; border-bottom: 0px; text-align: left; border-color:f3f3f3;">
+						<table cellspacing=0 cellpadding=1 width="100%" border=0>
+							<tr>
+								<td valign=top width=15>
+									<img height="7" src="../images/arrow2.gif" width=4 vspace=3>
+								</td>
+								<td id='div_noticeword'
+									style="border-right: #cccccc 1px solid; padding-right: 5px; border-top: #cccccc 1px solid; padding-left: 5px; background: #f7f7f7; padding-bottom: 5px; border-left: #cccccc 1px solid; padding-top: 5px; border-bottom: #cccccc 1px solid; text-align: left;font-size=12px"></td>
+							</tr>
+						</table>
+					</div>		
+  </body>
+</html>

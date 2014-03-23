@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/hyProject/!svn/ver/6310/WorkOrder1.0/src/com/hy/wo/dao
+END
+DBManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/5131/WorkOrder1.0/src/com/hy/wo/dao/DBManager.java
+END
+DBManager1.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/5147/WorkOrder1.0/src/com/hy/wo/dao/DBManager1.java
+END
+AsistDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/5592/WorkOrder1.0/src/com/hy/wo/dao/AsistDao.java
+END
+GameServersDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/6310/WorkOrder1.0/src/com/hy/wo/dao/GameServersDao.java
+END
+BaseDaoSupport.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/6310/WorkOrder1.0/src/com/hy/wo/dao/BaseDaoSupport.java
+END
+BaseDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/6036/WorkOrder1.0/src/com/hy/wo/dao/BaseDao.java
+END

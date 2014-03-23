@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  	<link rel="stylesheet" href="../css/common.css"></link>
+  	<link rel="stylesheet" href="../css/selfSeviceCommon.css"></link>
+	<script type="text/javascript" src="../js/jquery.js"></script> 
+  </head>
+  
+  <body>
+    <div id="headDiv">
+		<div>
+			<a href="../selfServiceMain.jsp">在线自助服务专区</a>
+			<span>客服电话：客服邮箱：客服传真：</span>
+		</div>
+    	<div>
+			<span><input type="button" value="帐号问题区" class="btn" onclick="javascript:self.location.href='selfServiceMain.jsp'" ></span>
+			<span><input type="button" value="游戏问题区" class="btn" onclick="javascript:self.location.href='selfServiceMain.jsp'" ></span>
+			<span><input type="button" value="意见建议区" class="btn" onclick="javascript:self.location.href='selfServiceMain.jsp'" ></span>
+			<span><input type="button" value="咨询区" class="btn" onclick="javascript:self.location.href='selfServiceMain.jsp'" ></span>
+		</div>
+    	<div>
+			您的满意，是我们工作最大动力
+		</div>
+    </div>
+  </body>
+</html>

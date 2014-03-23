@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	本文档定义了客服系统的相关接口(请求/响应)等。
+	本文档内容今后可能会有调整。
+
+	*****************************请仔细阅读********************************
+
+	
+	state/stateDesc 状态码对照表
+	00:操作成功
+	01:数据库访问异常
+	04:系统忙（未知错误）
+	26:非法操作
+-->
+	
+<!--
+问题提交
+ 	可能返回state 00,01,04,26
+	提交的数据形如：
+	http://work.2211.com/wo/get_workOrderDetail?woId=xx&clientId=WO_CS&s=xx
+以下未说可以为空的参数均不可以为空
+输入：
+     clientId:WO_CS                     	 客户端id(由本系统分配)
+	 woId:xxx									 	工单号
+     s: xxx												md5(clientId+paramKey）
+     paramKey由本系统分配
+输出：
+-->
+<hy>
+    <id></id>										<!--客户端id-->
+    <state></state>							<!-- 状态码 -->
+    <stateDesc></stateDesc>		<!-- 状态码描述   -->    
+   	<workOrder>
+    		<id></id>												<!--工单号-->    
+    		<createTime></createTime>			<!--创建时间-->    
+    		<memo></memo>							<!--问题内容-->
+    		<lvlOne></lvlOne>							<!--问题类型-->
+    		<states></states>								<!--当前处理状态-->
+    		<accName></accName>					<!--玩家账号-->
+    		<userName></userName>				<!--角色名称-->
+    		<read></read>									<!--是否已读-->
+    			<addSet>											<!--问题补充列表-->
+    					<issueAdd>								
+    					<addDate></addDate>			<!--补充时间-->
+    					<content></content>				<!--补充内容-->
+    					</issueAdd>
+    			</addSet>
+    			<replySet>										<!--客服回复列表-->
+    					<oper>
+    					<worker></worker>				<!--回复人-->
+    					<content></content>			<!--回复内容-->
+    					<operTime></operTime>	<!--回复时间-->
+    					</oper>
+    			</replySet>
+    			<evaluation></evaluation>		<!--玩家评价-->
+    			<comment></comment>			<!--玩家评价内容-->
+    		</workOrder>
+</hy>

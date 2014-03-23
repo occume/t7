@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 	
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>	
+	<!-- 更换Struts2的对象工厂，可选 -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<package name="workorder-default" abstract="true" extends="struts-default" >
+		
+		
+		<default-action-ref name="default"></default-action-ref>
+		
+		<global-results>
+			<result name="input">/ctService/error/defaultError.jsp</result>
+			<result name="detail">/selfService/workOrderDetail.jsp</result>
+			<!-- 游戏问题Result  S -->
+			<result name="roleRecovery">/selfService/roleRecovery.jsp</result>
+			<result name="gameRunning">/selfService/gameRunning.jsp</result>
+			<result name="roleOfAbnormal">/selfService/roleOfAbnormal.jsp</result>
+			<result name="loseItems">/selfService/loseItems.jsp</result>
+			<result name="serverFailure">/selfService/serverFailure.jsp</result>
+			<result name="gameBug">/selfService/gameBug.jsp</result>
+			<result name="plugAbuse">/selfService/plugAbuse.jsp</result>
+			<result name="others">/selfService/others.jsp</result>
+			<result name="suggestion">/selfService/suggestion.jsp</result>
+			<result name="advisory">/selfService/advisory.jsp</result>
+			<result name="recharge">/selfService/rechargeProblem.jsp</result>
+			<result name="accountlock">/selfService/accountlock.jsp</result><!-- 账号解封 -->
+			<!-- 游戏问题Result  E -->
+			<!-- 创建工单Result  E -->
+			<result name="createWO">/ctService/createWorkOrder.jsp</result>
+			<result name="accLogon">/ctService/htLogon.jsp</result>
+			<result name="JsResult">/selfService/JsResult.jsp</result>
+			<!-- Error -->
+			<result name="error">/selfService/globeError.jsp</result>
+			<result name="default_error" >/ctService/error/defaultError.jsp</result>
+			<result name="defaultError" >/ctService/error/defaultError.jsp</result>
+			
+		</global-results>	
+		<!-- 全局异常 -->	
+		
+		<global-exception-mappings>
+			<exception-mapping result="default_error" exception=""></exception-mapping>
+		</global-exception-mappings>
+		
+		<action name="defalut">
+			<exception-mapping result="default_error" exception=""></exception-mapping>
+		</action>
+		
+		
+	</package>
+	<package name="wo.index" extends="workorder-default" namespace="/index">
+		<action name="grab_*" class="indexAction" method="{1}">
+			
+		</action>
+		<action name="index_*" class="indexAction" method="{1}">
+			<result name="abnormal">/selfService/roleRecovery.jsp</result>
+		</action>
+		<!-- 文件下载的action-->
+		<action name="download" class="com.hy.wo.action.DownloadFileAction">
+			<param name="inputPath">/upload/ctExtraInfo</param>
+			<param name="fileName">fax.doc</param>
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream;charset=UTF-8</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--玩家登录的action-->
+		<action name="login_*" class="loginAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<exception-mapping result="default_login" exception=""></exception-mapping>
+			<result name="selfMain" type="redirect">/selfServiceMain.jsp</result>
+			<result name="error">/selfService/login.jsp</result>	
+			<result name="0" type="redirect">/selfService/userWOList.jsp</result><!-- 我咨询的问题 -->	 
+			<result name="1" type="redirect">/selfService/roleRecovery.jsp</result>
+			<result name="2" type="redirect">/selfService/roleRecovery.jsp</result>
+			<result name="3" type="redirect">/selfService/roleRecovery.jsp</result>
+			<result name="4" type="redirect">/selfService/serverFailure.jsp</result>
+			<result name="5" type="redirect">/selfService/loseItems.jsp</result>
+			<result name="6" type="redirect">/selfService/roleRecovery.jsp</result>
+			<result name="7" type="redirect">/selfService/roleOfAbnormal.jsp</result>
+			<result name="8" type="redirect">/selfService/gameRunning.jsp</result>
+			<result name="9" type="redirect">/selfService/gameBug.jsp</result>
+			<result name="10" type="redirect">/selfService/rechargeProblem.jsp</result>
+			<result name="11" type="redirect">/selfService/plugAbuse.jsp</result>
+			<result name="12" type="redirect">/selfService/others.jsp</result>
+			<result name="13" type="redirect">/selfService/suggestion.jsp</result>
+			<result name="14" type="redirect">/selfService/advisory.jsp</result>
+			<result name="isLogin" type="redirect">${urlRef}</result>
+			<result name="default_login" >/selfService/login.jsp</result>
+		</action>
+		<!--生成验证码的action-->
+		<action name="verificationCode" class="verificationCodeAction" method="makeCheckCode">
+			<result name="success">/selfService/checkcode.jsp</result>
+		</action>
+		<!--缓存操作的action-->
+		<action name="cache_*" class="cacheOperationAction" method="{1}">
+			<result name="putBatchDataToCacheSuccess">/ctService/batchDataOperation.jsp</result>
+			<result name="putBatchTypeSuccess">/ctService/htLogon.jsp</result>
+			<result name="returnPlatform">/ctService/workOrderPlatform.jsp</result><!-- 跳转至查询平台页面  -->
+			<result name="toCacheDataPlatform">/ctService/batchDataOperation.jsp</result>
+			<result name="exception">/ctService/workOrderPlatform.jsp</result><!-- 异常跳转页 -->
+		</action>
+	</package>
+	<include file="workorder.xml"></include>
+	<package name="test" extends="workorder-default" namespace="/test">
+		<action name="test_*" class="testAction" method="{1}">
+			
+		</action>
+	</package>
+</struts>
+

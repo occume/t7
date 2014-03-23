@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"  
+       xmlns:tx="http://www.springframework.org/schema/tx"  
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<!-- 开启自动扫描 -->
+	
+		<context:component-scan base-package="com.hy.wo" />
+		<!--
+	<aop:aspectj-autoproxy />
+	<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" />
+	
+	
+	<bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean" /> 
+	  -->
+	<!-- 在Spring中配置JNDI数据源 -->
+	<bean id="dataSource1" class="org.springframework.jndi.JndiObjectFactoryBean">
+		 <property name="jndiName">
+		  	<value>java:comp/env/jdbc/MySqlWorkOrder</value>
+		 </property>
+	</bean>
+	
+	<!-- 配置sessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+      	<property name="dataSource" ref="dataSource1"/>
+      	<property name="hibernateProperties">
+      		<value>
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.hbm2ddl.auto=update
+				<!-- hibernate.show_sql=true
+				hibernate.format_sql=false -->
+			</value>
+      	</property>
+      	<property name="mappingResources">
+      		<list>
+      			<value>com/hy/wo/po/WorkOrder.hbm.xml</value>
+      			<value>com/hy/wo/po/WorkOrderUserInfo.hbm.xml</value>
+      			<value>com/hy/wo/po/Staff.hbm.xml</value>
+      			<value>com/hy/wo/po/Faq.hbm.xml</value>
+      			<value>com/hy/wo/po/Caller.hbm.xml</value>
+      		</list>
+      	</property>	
+    </bean>
+    <!--声明事务 -->
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<!--使用基于注解方式配置事务  -->
+	<tx:annotation-driven transaction-manager="txManager"/>
+	
+	
+	<!-- MySql dataSource
+	<bean id="MysqlDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	 	<property name="jndiName">
+	 		<value>java:comp/env/jdbc/woTest</value>
+	 	</property>
+	</bean>
+	
+	<bean id="mysqlSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+      	<property name="dataSource" ref="MysqlDataSource"/>
+      	<property name="hibernateProperties">
+      		<value>
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.hbm2ddl.auto=update
+				hibernate.show_sql=true
+				hibernate.format_sql=false 
+			</value>
+      	</property>
+      	<property name="mappingResources">
+      		<list>
+      			<value>com/hy/wo/aop/Cat.hbm.xml</value>
+      		</list>
+      	</property>	
+    </bean>
+     -->
+</beans>

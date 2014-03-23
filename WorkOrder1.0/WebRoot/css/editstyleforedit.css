@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrappercheck .editboxleft{float:left;position: relative;width:950px;margin:0px 0 0 35px;}
+.wrappercheck .edit{width:100%;margin:10px 0 10px 0px;}
+.wrappercheck .edit .edit1{float:left;width:60px;height:23px;line-height:23px;text-align:right;}
+.wrappercheck .edit .edit2{float:left;width:230px;height:23px;line-height:23px;margin-left:5px;}
+.wrappercheck .edit .edit3{float:left;width:60px;height:23px;line-height:23px;text-align:right;margin-left:30px;}
+.wrappercheck .edit .edit4{float:left;width:230px;height:23px;line-height:23px;margin-left:5px;}
+.wrappercheck .edit .edit5{float:left;width:60px;height:23px;line-height:23px;text-align:right;margin-left:30px;}
+.wrappercheck .edit .edit6{float:left;width:230px;height:23px;line-height:23px;margin-left:5px;}
+.wrappercheck .edit .edit7{float:left;width:60px;height:23px;line-height:23px;text-align:right;margin-left:30px;}
+.wrappercheck .edit .edit8{float:left;width:230px;height:23px;line-height:23px;margin-left:5px;}
+.wrappercheck .edit span{color:#f00;margin-left:5px;}
+
+.wrappercheck .edit .editpic1{float:left;width:360px;height:auto;margin:0 0 10px 5px;}
+.wrappercheck .edit .editpic2{float:right;width:60px;height:auto;margin:0 0 10px 5px;}
+.wrappercheck .edit .editpic3{float:right;width:300px;height:auto;margin:0 30px 10px 5px;}
+.wrappercheck .edit .pic{width:300px;height:180px; border:2px solid #fff;}
+.wrappercheck .edit .textarea{float:left;width:880px;height:auto;margin-left:5px;}
+
+.wrappercheck .editboxright{float:left;position: relative;width:360px;margin-top:67px;margin-top:58px\9;height:auto;}
+.history{width:360px;margin:auto;border:1px solid #4bb5ff;background:#DFF4FF;}
+.hiscont{width:340px;height:auto;line-height:25px;margin:2px auto;border-bottom:1px dashed #4bb5ff;}
+.hiscont .histop{width:340px;height:2px;margin:auto;border-top:2px solid #4bb5ff;}
+.hiscont .histitle1{float:left;width:80px;text-align:center;height:25px;line-height:25px;font-weight:bold;}
+.hiscont .histitle2{float:left;width:80px;text-align:center;margin-left:5px;height:25px;line-height:25px;font-weight:bold;}
+.hiscont .histitle3{float:left;width:80px;text-align:center;margin-left:5px;height:25px;line-height:25px;font-weight:bold;}
+.hiscont .histitle4{float:left;width:80px;text-align:center;margin-left:5px;height:25px;line-height:25px;font-weight:bold;}
+
+.hiscont .hiscont1{float:left;width:80px;text-align:center;height:auto;line-height:25px;word-break:break-all;overflow:hidden;}
+.hiscont .hiscont2{float:left;width:80px;text-align:center;margin-left:5px;height:auto;line-height:25px;}
+.hiscont .hiscont3{float:left;width:80px;text-align:center;margin-left:5px;height:auto;line-height:25px;}
+.hiscont .hiscont4{float:left;width:80px;text-align:left;margin-left:5px;height:auto;line-height:25px;}
+
+.fqacont{width:340px;height:auto;line-height:25px;margin:2px auto;border-bottom:1px dashed #4bb5ff;}
+.fqacont .fqatop{width:340px;height:2px;margin:auto;border-top:2px solid #4bb5ff;}
+.fqacont .fqatitle1{float:left;width:80px;text-align:center;height:25px;line-height:25px;font-weight:bold;}
+.fqacont .fqatitle2{float:left;width:165px;text-align:center;margin-left:5px;height:25px;line-height:25px;font-weight:bold;}
+.fqacont .fqatitle3{float:left;width:80px;text-align:center;margin-left:5px;height:25px;line-height:25px;font-weight:bold;}
+
+.fqacont .fqacont1{float:left;width:80px;text-align:center;height:auto;line-height:25px;word-break:break-all;overflow:hidden;}
+.fqacont .fqacont2{float:left;width:165px;text-align:left;margin-left:5px;height:auto;line-height:25px;}
+.fqacont .fqacont3{float:left;width:80px;text-align:center;margin-left:5px;height:auto;line-height:25px;}
+
+
+
+
+
+
+
+
+
+
+.edittools{ position:relative;width:1200px;margin:auto;height:70px;}
+.edittools .tools1_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px; color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools1_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools2_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools2_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools3_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools3_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools4_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools4_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools5_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools5_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools6_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools6_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools7_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools7_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools8_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools8_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools9_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools9_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+
+
+.edittools .tools1no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px; color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools1no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools2no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools2no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools3no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools3no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools4no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools4no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools5no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools5no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools6no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools6no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools7no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools7no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools8no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools8no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.edittools .tools9no_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -234px;margin-left:15px;color:#fff;font-weight:bold;cursor:hand;border:none;}
+.edittools .tools9no_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -304px;margin-left:15px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+
+
+
+
+
+
+
+
+
+.newtools{ position:relative;width:270px;margin:auto;height:70px;}
+.newtools .tools1_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px; color:#fff;font-weight:bold;cursor:hand;border:none;}
+.newtools .tools1_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;}
+.newtools .tools2_mouseout {float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -94px; color:#fff;font-weight:bold;cursor:hand;border:none;margin-left:30px;}
+.newtools .tools2_mouseover{float:left;display:inline-block;width:120px;height:70px;padding-bottom:10px;background:url(../htimages/toolsbutton.png) no-repeat 0 -164px;COLOR:#fff;font-weight:bold;CURSOR:hand;border:none;margin-left:30px;}
+
+.wrappercheck .newbox{position: relative;width:1300px;margin:auto;}
+
+
+.indexbox{ position:relative;height:500px;width:900px;margin:auto;}
+
+.indexleftbox{float:left;width:418px;height:350px;background:url(../htimages/indexbg.png) no-repeat 0 0;margin-top:50px;}
+.indexrightbox{float:right;width:418px;height:350px;background:url(../htimages/indexbg.png) no-repeat 0 -350px;margin-top:50px;}
+.indexbutton1 a{width:280px;height:60px;margin:90px 0 0 69px;background:url(../htimages/indexbutton.png) no-repeat 0 0;display:inline-block;}
+.indexbutton1 a:hover{background:url(../htimages/indexbutton.png) no-repeat -280px 0;}
+.indexbutton5 a{width:280px;height:60px;margin:30px 0 0 69px;background:url(../htimages/indexbutton.png) no-repeat 0 -240px;display:inline-block;}
+.indexbutton5 a:hover{background:url(../htimages/indexbutton.png) no-repeat -280px -240px;}
+
+.indexbutton2 a{width:280px;height:60px;margin:75px 0 0 69px;background:url(../htimages/indexbutton.png) no-repeat 0 -60px;display:inline-block;}
+.indexbutton2 a:hover{background:url(../htimages/indexbutton.png) no-repeat -280px -60px;}
+.indexbutton3 a{width:280px;height:60px;margin:10px 0 0 69px;background:url(../htimages/indexbutton.png) no-repeat 0 -120px;display:inline-block;}
+.indexbutton3 a:hover{background:url(../htimages/indexbutton.png) no-repeat -280px -120px;}
+.indexbutton4 a{width:280px;height:60px;margin:10px 0 0 69px;background:url(../htimages/indexbutton.png) no-repeat 0 -180px;display:inline-block;}
+.indexbutton4 a:hover{background:url(../htimages/indexbutton.png) no-repeat -280px -180px;}
+
+
+

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/hyProject/!svn/ver/5795/WorkOrder1.0/docs
+END
+获取玩家所有提问处理情况.xml
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/hyProject/!svn/ver/4848/WorkOrder1.0/docs/%E8%8E%B7%E5%8F%96%E7%8E%A9%E5%AE%B6%E6%89%80%E6%9C%89%E6%8F%90%E9%97%AE%E5%A4%84%E7%90%86%E6%83%85%E5%86%B5.xml
+END
+工单系统数据库信息.txt
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/hyProject/!svn/ver/638/WorkOrder1.0/docs/%E5%B7%A5%E5%8D%95%E7%B3%BB%E7%BB%9F%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF.txt
+END
+获取玩家提问列表.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/hyProject/!svn/ver/4848/WorkOrder1.0/docs/%E8%8E%B7%E5%8F%96%E7%8E%A9%E5%AE%B6%E6%8F%90%E9%97%AE%E5%88%97%E8%A1%A8.xml
+END
+获取玩家提问分页列表.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/hyProject/!svn/ver/4848/WorkOrder1.0/docs/%E8%8E%B7%E5%8F%96%E7%8E%A9%E5%AE%B6%E6%8F%90%E9%97%AE%E5%88%86%E9%A1%B5%E5%88%97%E8%A1%A8.xml
+END
+CallCenter登录接口文档.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/hyProject/!svn/ver/4824/WorkOrder1.0/docs/CallCenter%E7%99%BB%E5%BD%95%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.xml
+END
+Passport获取玩家所有提问处理情况.xml
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/hyProject/!svn/ver/5795/WorkOrder1.0/docs/Passport%E8%8E%B7%E5%8F%96%E7%8E%A9%E5%AE%B6%E6%89%80%E6%9C%89%E6%8F%90%E9%97%AE%E5%A4%84%E7%90%86%E6%83%85%E5%86%B5.xml
+END
+玩家问题提交.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/hyProject/!svn/ver/4848/WorkOrder1.0/docs/%E7%8E%A9%E5%AE%B6%E9%97%AE%E9%A2%98%E6%8F%90%E4%BA%A4.xml
+END
+获取玩家问题详细内容.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/hyProject/!svn/ver/4848/WorkOrder1.0/docs/%E8%8E%B7%E5%8F%96%E7%8E%A9%E5%AE%B6%E9%97%AE%E9%A2%98%E8%AF%A6%E7%BB%86%E5%86%85%E5%AE%B9.xml
+END

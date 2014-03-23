@@ -1,0 +1,287 @@
+
+
+.popoutContent {
+
+	BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #ffffff; BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; PADDING-TOP: 0px
+
+}
+
+.bgcorner1 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .50
+
+}
+
+.bgcorner2 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5
+
+}
+
+.bgcorner3 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5
+
+}
+
+.bgcorner4 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5
+
+}
+
+.pobg1 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5;
+
+}
+
+.pobg2 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5
+
+}
+
+.pobg3 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5
+
+}
+
+.pobg4 {
+
+	Z-INDEX: 1005; FILTER: Alpha(opacity=50); LINE-HEIGHT: 0; OVERFLOW: hidden; opacity: .5
+
+}
+
+.bgcorner1 {
+
+	WIDTH: 5px; BACKGROUND: #bbbbbb; HEIGHT: 5px
+
+}
+
+.bgcorner2 {
+
+	WIDTH: 5px; BACKGROUND: #bbbbbb; HEIGHT: 5px
+
+}
+
+.bgcorner3 {
+
+	WIDTH: 5px; BACKGROUND: #bbbbbb; HEIGHT: 5px
+
+}
+
+.bgcorner4 {
+
+	WIDTH: 5px; BACKGROUND: #bbbbbb; HEIGHT: 5px
+
+}
+
+.pobg1 {
+
+	BACKGROUND: #bbbbbb
+
+}
+
+.pobg2 {
+
+	BACKGROUND: #bbbbbb
+
+}
+
+.pobg3 {
+
+	BACKGROUND: #bbbbbb
+
+}
+
+.pobg4 {
+
+	BACKGROUND: #bbbbbb
+
+}
+
+.pobg1 {
+
+	HEIGHT: 5px
+
+}
+
+.pobg2 {
+
+	WIDTH: 5px
+
+}
+
+.pobg3 {
+
+	HEIGHT: 5px
+
+}
+
+.pobg4 {
+
+	WIDTH: 5px
+
+}
+
+.popTop {
+
+	BORDER-BOTTOM: #d9e5f2 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #eaf2fa; HEIGHT: 21px; COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: 700; PADDING-TOP: 5px; _height: 16px
+
+}
+
+.popTop SELECT {
+
+	FONT-SIZE: 12px
+
+}
+
+.popTop INPUT {
+
+	FONT-SIZE: 12px
+
+}
+
+.popBottom {
+
+	TEXT-ALIGN: center; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #f7f7f7; OVERFLOW: hidden; BORDER-TOP: #e4e4e4 1px solid; PADDING-TOP: 5px
+
+}
+
+.popCont {
+
+	TEXT-ALIGN: center; LINE-HEIGHT: 2; MARGIN: 40px 0px 60px; COLOR: #333
+
+}
+
+.popoutContent TABLE {
+
+	WIDTH: 100%
+
+}
+
+.popTop .adel {
+
+	MARGIN-TOP: 4px
+
+}
+
+.popTop UL {
+
+	MARGIN-BOTTOM: -4px; _position: relative
+
+}
+
+.popTop LI {
+
+	FLOAT: left
+
+}
+
+.popTop LI A {
+
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FLOAT: left; HEIGHT: 24px; COLOR: #1b72af; FONT-SIZE: 12px; PADDING-TOP: 0px
+
+}
+
+.popTop LI A:hover {
+
+	TEXT-DECORATION: none
+
+}
+
+.popTop .current A {
+
+	BORDER-BOTTOM: #d9e5f2 0px solid; BORDER-LEFT: #d9e5f2 1px solid; BACKGROUND: #ffffff; COLOR: #333; BORDER-TOP: #d9e5f2 1px solid; BORDER-RIGHT: #d9e5f2 1px solid
+
+}
+
+.popoutContent TD {
+
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+
+}
+
+.popoutContent .tr3 TD {
+
+	BORDER-BOTTOM: #ccc 1px dotted; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px; PADDING-RIGHT: 5px; PADDING-TOP: 5px; _border-bottom: 1px dotted #f4f4f4
+
+}
+
+.popoutContent .z .tr3:hover TD {
+
+	BACKGROUND: #f5faff
+
+}
+
+.popoutContent .tr3 TD TD {
+
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+
+}
+
+.menu-post {
+
+	BORDER-BOTTOM: #a6cbe7 1px solid; BORDER-LEFT: #a6cbe7 1px solid; BORDER-TOP: #a6cbe7 1px solid; BORDER-RIGHT: #a6cbe7 1px solid
+
+}
+
+.menu-post .menu-b {
+
+	BORDER-BOTTOM: #d5e6ed 3px solid; BORDER-LEFT: #d5e6ed 3px solid; BACKGROUND: #ffffff; BORDER-TOP: #d5e6ed 3px solid; BORDER-RIGHT: #d5e6ed 3px solid
+
+}
+
+#TB_overlay {
+
+	Z-INDEX: 100; POSITION: absolute; MIN-HEIGHT: 100%; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px; background:black;
+	filter:Alpha(Opacity=30);
+	opacity:0.3;
+	display:none;
+}
+#FB_dialog{Z-INDEX: 102; POSITION: absolute;}
+* HTML #TB_overlay {
+
+	POSITION: absolute
+
+}
+
+#TB_HideSelect {
+
+	Z-INDEX: 99; BORDER-BOTTOM: medium none; POSITION: absolute; FILTER: alpha(opacity=30); BORDER-LEFT: medium none; BACKGROUND-COLOR: #fff; WIDTH: 100%; HEIGHT: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none; TOP: 0px; LEFT: 0px; opacity: 0.3; -moz-opacity: 0.3
+
+}
+
+#FB_dialog_iframe {
+
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; HEIGHT: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+
+}
+
+#FB_dialog_loading {
+
+	PADDING-BOTTOM: 6px; LINE-HEIGHT: 35px; PADDING-LEFT: 6px; WIDTH: 350px; PADDING-RIGHT: 6px; DISPLAY: block; HEIGHT: 35px; FONT-SIZE: 14px; FONT-WEIGHT: 700; PADDING-TOP: 6px
+
+}
+
+.popoutContent .popErrorContent {
+
+	MIN-WIDTH: 300px; PADDING-BOTTOM: 20px; MIN-HEIGHT: 30px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; FONT-SIZE: 14px; PADDING-TOP: 20px
+
+}
+
+.adel {
+
+	BACKGROUND-IMAGE: url(../images/del.png); MARGIN-TOP: 4px; WIDTH: 12px; DISPLAY: block; BACKGROUND-POSITION: 0px -15px; FLOAT: right; HEIGHT: 13px; OVERFLOW: hidden; CURSOR: pointer
+
+}
+
+.popBottom .linkImg03 {
+
+	MARGIN: auto
+
+}
+
+.errorMsgPanel{ width:300px; color:red;}

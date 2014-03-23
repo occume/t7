@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/hyProject/!svn/ver/6785/WorkOrder1.0/src/com/hy/wo/util
+END
+DynamicDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/hyProject/!svn/ver/5006/WorkOrder1.0/src/com/hy/wo/util/DynamicDataSource.java
+END
+Pages.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/1398/WorkOrder1.0/src/com/hy/wo/util/Pages.java
+END
+AreaJson.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/5932/WorkOrder1.0/src/com/hy/wo/util/AreaJson.java
+END
+InnerGameLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/hyProject/!svn/ver/3732/WorkOrder1.0/src/com/hy/wo/util/InnerGameLimit.java
+END
+DateTypeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/hyProject/!svn/ver/4720/WorkOrder1.0/src/com/hy/wo/util/DateTypeConverter.java
+END
+WorkOrderNearNow.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/hyProject/!svn/ver/1849/WorkOrder1.0/src/com/hy/wo/util/WorkOrderNearNow.java
+END
+StatesConversion.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/656/WorkOrder1.0/src/com/hy/wo/util/StatesConversion.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/6993/WorkOrder1.0/src/com/hy/wo/util/Constants.java
+END
+EvaluationConversion.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/hyProject/!svn/ver/5364/WorkOrder1.0/src/com/hy/wo/util/EvaluationConversion.java
+END
+GenericsUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hyProject/!svn/ver/648/WorkOrder1.0/src/com/hy/wo/util/GenericsUtils.java
+END
+OperInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/1085/WorkOrder1.0/src/com/hy/wo/util/OperInfo.java
+END
+UserContextHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/hyProject/!svn/ver/838/WorkOrder1.0/src/com/hy/wo/util/UserContextHolder.java
+END
+CheckParamManagerNotStatic.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hyProject/!svn/ver/5006/WorkOrder1.0/src/com/hy/wo/util/CheckParamManagerNotStatic.java
+END
+MyUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/6053/WorkOrder1.0/src/com/hy/wo/util/MyUtil.java
+END
+DateConversion.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/hyProject/!svn/ver/5304/WorkOrder1.0/src/com/hy/wo/util/DateConversion.java
+END
+DepictXmlManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/hyProject/!svn/ver/6053/WorkOrder1.0/src/com/hy/wo/util/DepictXmlManager.java
+END
+FtpClientUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/2187/WorkOrder1.0/src/com/hy/wo/util/FtpClientUtil.java
+END
+OperGenre.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/1246/WorkOrder1.0/src/com/hy/wo/util/OperGenre.java
+END
+CountResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/4719/WorkOrder1.0/src/com/hy/wo/util/CountResult.java
+END
+DataSourceMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/5006/WorkOrder1.0/src/com/hy/wo/util/DataSourceMap.java
+END
+CheckParamManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/hyProject/!svn/ver/6977/WorkOrder1.0/src/com/hy/wo/util/CheckParamManager.java
+END
+CheckCodeUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/716/WorkOrder1.0/src/com/hy/wo/util/CheckCodeUtils.java
+END

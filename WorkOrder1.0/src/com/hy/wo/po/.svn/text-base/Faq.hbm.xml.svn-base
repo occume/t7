@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hy.wo.po">
+<!-- FAQ信息ORM -->
+	<class name="Faq">
+		<id name="id" length="10">
+			<generator class="identity"></generator>
+		</id>
+		
+		<property name="status" length="10"/>
+		<property name="version" length="16"/>
+		<property name="src" length="10"/>
+		<property name="title" length="16"/>
+		<property name="sortType" length="30"/>
+		<property name="type" length="30"/>
+		<property name="descrip" length="500"/>
+		<property name="gameName" length="20"/>
+		<property name="createTime"  length="16"/>
+		<property name="lastEditTime"  length="16"/>
+		<property name="toUser" length="6"></property>
+		<property name="visible" length="6"></property>
+		<property name="isdelete" length="6"></property>
+		
+		<set name="reps" inverse="true" lazy="false" cascade="all" fetch="join">
+			<key column="pid"></key>
+			<one-to-many class="FaqRep"/>
+		</set>
+		
+	</class>
+	<!-- Faq回复 -->
+	<class name="FaqRep" table="faqRep">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<many-to-one name="parent" column="pid"></many-to-one>
+		<property name="guy" length="10"/>
+		<property name="desc" column="descrip" length="300"/>
+		<property name="cdate" length="20"/>
+		
+	</class>	
+	<!-- 游戏内物品 -->
+	<class name="GameGoods" table="item_data">
+		<id name="id" column="item_tid">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="40"/>
+		<property name="code" length="40"/>
+		<property name="category" length="40"/>
+		<property name="rarity" length="40"/>
+		
+	</class>	
+</hibernate-mapping>

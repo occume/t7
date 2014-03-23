@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	本文档定义了客服系统的相关接口(请求/响应)等。
+	本文档内容今后可能会有调整。
+
+	*****************************请仔细阅读********************************
+
+	
+	state/stateDesc 状态码对照表
+	00:操作成功
+	01:数据库访问异常
+	04:系统忙（未知错误）
+	26:非法操作
+-->
+	
+<!--
+问题提交
+ 	可能返回state 00,01,04,26
+	提交的数据形如：
+	http://work.2211.com/selfService/userwolist_ajax?&clientId=WO_CS&s=xx
+以下未说可以为空的参数均不可以为空
+输入：
+     clientId:WO_CS                       	客户端id(由本系统分配)
+	 accountname:xxx						用户名
+	 currentPage:xxx							当前页
+	 pageSize:xxx								每页长度
+	 states:xxx										问题处理状态
+     s:xxx 												md5(clientId+paramKey)
+     paramKey由本系统分配
+输出：
+-->
+<hy>
+    <id></id>									<!--客户端id-->
+    <state></state>						<!-- 状态码 -->
+    <stateDesc></stateDesc>	<!-- 状态码描述   -->    
+   <undeal>
+    	<count></count>				<!-- 该状态问题数量 -->    
+    	<pages>											<!-- 分页信息  -->    
+    	<currentPage></currentPage>	<!-- 当前页  -->    
+    	<totalPage></totalPage>			<!-- 总页数  -->    
+    	<lastPage></lastPage>					<!-- 最后页  -->    
+    	<pageSize></pageSize>				<!-- 每页数量  -->    
+    	<totalCount></totalCount>
+    		<workOrder>
+    		<id></id>										<!-- 工单号  --> 
+    		<createTime></createTime><!-- 创建时间  --> 
+    		<memo></memo>					<!-- 问题内容  --> 
+    		<lvlOne></lvlOne>					<!-- 问题类型  --> 
+    		</workOrder>
+    	</pages>
+    </undeal>
+</hy>
+

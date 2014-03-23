@@ -1,0 +1,103 @@
+package com.hy.wo.util.hibernate;
+
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+
+import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
+import org.hibernate.usertype.UserType;
+
+import com.hy.wo.util.MyUtil;
+
+
+public class EnumType<T extends Enum<T>> implements UserType {
+	// 生成的数据库数据类型
+	private static final Logger LOG = Logger.getLogger(EnumType.class);//定义日志
+	private static final int[] SQL_TYPES = {Types.VARCHAR};
+	// Class
+	private Class<T> clazz = null;
+	// 构造方法
+	public EnumType(Class<T> c) {
+		this.clazz = c;
+	}
+	
+	public Object assemble(Serializable arg0, Object arg1) throws HibernateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public Object deepCopy(Object arg0) throws HibernateException {
+		return arg0;
+	}
+	
+	public Serializable disassemble(Object arg0) throws HibernateException {
+		return (Serializable) arg0;
+	}
+	
+	public boolean equals(Object arg0, Object arg1) throws HibernateException {
+		if (arg0 == arg1)
+			return true;
+		if (null == arg0 || null == arg1)
+			return true;
+		return arg0.equals(arg1);
+	}
+	
+	public int hashCode(Object arg0) throws HibernateException {
+		return arg0.hashCode();
+	}
+	
+	public boolean isMutable() {
+		return false;
+	}
+	
+	public Object nullSafeGet(ResultSet rs, String[] names, Object owner)
+			throws HibernateException, SQLException {
+		try {
+			if (!rs.wasNull()) {
+				// 获取字段值
+				String name = rs.getString(names[0]);
+				//System.out.println(name);
+				// 将字段值转换成为枚举
+				return Enum.valueOf(clazz, name);
+			}else{
+				if(names.length>0){
+					String name=rs.getString(names[0]);
+					return Enum.valueOf(clazz, name);
+				}
+				//LOG.debug(rs.getString(names[0]));
+			}
+			
+		} catch (Exception e) {
+			//e.printStackTrace();
+		}
+		return null;
+	}
+	@SuppressWarnings("unchecked")
+	
+	public void nullSafeSet(PreparedStatement arg0, Object arg1, int arg2)
+			throws HibernateException, SQLException {
+		if (null == arg1) {
+			arg0.setNull(arg2, Types.VARCHAR);
+		} else {
+			// 将枚举转换成为字符串
+			arg0.setString(arg2, ((Enum) arg1).name());
+		}
+	}
+	
+	public Object replace(Object arg0, Object arg1, Object arg2)
+			throws HibernateException {
+		return arg0;
+	}
+	
+	public Class<T> returnedClass() {
+		return clazz;
+	}
+	
+	public int[] sqlTypes() {
+		return SQL_TYPES;
+	}
+	
+}

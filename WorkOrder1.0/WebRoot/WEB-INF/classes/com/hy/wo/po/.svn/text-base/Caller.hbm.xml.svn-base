@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hy.wo.po">
+<!-- Caller -->
+	<class name="Caller">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="caller" length="12"/>
+		<property name="accName" length="30"/>
+		<property name="userName" length="30"/>
+		<property name="userType" length="20"/>
+		<property name="createTime"  length="16"/>
+	</class>
+	
+	<class name="CallBack" table="Call_Back">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="title" length="200"/>
+		<property name="content" type="text"/>
+		<property name="attime"/>
+		<property name="operator"  length="50"/>
+		
+		<set name="callBacks" inverse="true"  cascade="all">
+	        <key column="tid"/>
+	        <one-to-many class="SubCallBack"/>
+   		 </set>
+    
+	</class>
+	
+	<class name="SubCallBack" table="Call_Back_list">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		
+		<many-to-one name="callBack" 
+        column="tid" 
+        not-null="true"/>
+        
+		<property name="account" length="16"/>
+		<property name="caller" column="phone" length="16"/>
+		<property name="username" length="16"/>
+		<property name="state"/>
+		<property name="content" type="text"/>
+		<property name="operator"  length="16"/>
+		<property name="callbacktime"/>
+		
+	</class>
+	
+</hibernate-mapping>

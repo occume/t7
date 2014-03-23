@@ -1,0 +1,342 @@
+package com.hy.wo.po;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import com.hy.wo.util.Constants;
+import com.hy.wo.util.MyUtil;
+import com.hy.wo.util.Constants.ParamName;
+import com.hy.wo.util.constants.Evaluations;
+
+/**
+ * 工单类
+ * @author dong_jin
+ *
+ */
+public class WorkOrder implements Serializable{
+
+	private static final long serialVersionUID = 3104387256140141536L;
+	private long id;
+	private Date createTime;//生成时间
+	private Date prefinishTime;//预计结案时间
+	private String states;//处理状态
+	private boolean getState = false;//拉单状态
+	private String urgency;//紧急程度
+	private String source;//工单来源
+	private String suggestion;//处理建议
+	private Staff worker;//String worker;处理人 @2011.08.19 修改
+	private Group group;//所属小组
+	private Group tobeGroup;//被派单小组
+	private Assign assign;//派单状态
+	private Staff getWorker;//String getWorker;//拉单人@2011.08.19 修改
+	private String ip;
+	//private Department department;//处理部门
+	private String createWorker;//String createWorker;//创建人@2011.08.19 修改
+	private String reply;//回复内容
+	private Evaluations evaluation;//服务质量评价
+	private String comment;//服务评语
+	private Date getTime;//拉单时间
+	private Date finishTime;//结案时间
+	private int innerMark;
+	
+	private boolean isreaded=false;
+	private boolean isdelete=false;
+	private boolean ishf=false;//是否需要回访
+	private boolean isdhgd=false;
+	private String callid;
+	
+	private WorkOrderUserInfo userInfo = new WorkOrderUserInfo();//玩家信息
+	private WorkOrderDevice device;//硬件信息
+	private WorkOrderRecharge recharge;//充值信息
+	private WorkOrderAdditional additional;//工单额外信息
+	private Set<IssueAdditional> issueAddSet=new HashSet<IssueAdditional>();//补充问题
+	private Set<WorkOrderOper> opers=new HashSet<WorkOrderOper>();
+	
+	public WorkOrder(){}
+	
+	public WorkOrder(HttpServletRequest r){
+		WorkOrderUserInfo uf=new WorkOrderUserInfo();
+		uf.setRealname(r.getParameter("realname"));
+		uf.setAccountname(r.getParameter(ParamName.USERNAME));
+		uf.setMemo(r.getParameter("memo"));
+		uf.setQq(r.getParameter("qq"));
+		uf.setTel(r.getParameter("tel"));
+		ClassCategory vocation=new ClassCategory();
+		String voca=r.getParameter("vocation");
+			if(voca.equals("飞云")){
+				vocation.setId(1);
+			}else if(voca.equals("疾风")){
+				vocation.setId(2);
+			}else if(voca.equals("浪客")){
+				vocation.setId(3);
+			}else{
+				vocation.setId(0);
+			}
+		uf.setClassCategory(vocation);
+		
+		Games game = new Games();
+		uf.setGame(game);
+		
+		uf.setUsername(r.getParameter(ParamName._USERNAME));
+		if(!MyUtil.isBlankOrNull(r.getParameter("serverId"))){
+			Servers server=new Servers();
+			server.setId(Integer.valueOf(r.getParameter("serverId")));
+			uf.setServer(server);
+		}
+		if(!MyUtil.isBlankOrNull(r.getParameter("i1Id"))){
+			Issue issue1=new Issue();
+			issue1.setId(Integer.valueOf(r.getParameter("i1Id")));
+			uf.setLvlOne(issue1);
+			
+				Issue issue2=new Issue();
+				String l2=r.getParameter("i2Id");
+				if(!MyUtil.isBlankOrNull(l2))
+					issue2.setId(Integer.valueOf(l2));
+				else
+					issue2.setId(0);
+				uf.setLvlTwo(issue2);
+			
+		}
+		this.suggestion=r.getParameter("suggestion");
+		this.callid=r.getParameter("callid");
+		this.userInfo=uf;
+	}
+	
+	public WorkOrder(HttpServletRequest request, String session) {
+		String vipGrade = request.getParameter("userInfo.vipGrade");
+		//System.out.println("work.2211.com :" + vipGrade);
+		if(!MyUtil.isBlankOrNull(vipGrade)){
+			//userInfo = new WorkOrderUserInfo();
+			//userInfo.setVipGrade(vipGrade);
+			
+			//System.out.println("enter workOrder constructor");
+			//this.g
+			this.getState = true;
+			this.states = Constants.States.DEALING;
+		}
+	}
+
+	public void addOper(WorkOrderOper oper){
+		opers.add(oper);
+		oper.setWorkOrder(this);
+	}
+	public boolean isIsreaded() {
+		return isreaded;
+	}
+	public void setIsreaded(boolean isreaded) {
+		this.isreaded = isreaded;
+	}
+
+	public boolean isIshf() {
+		return ishf;
+	}
+
+	public boolean isIsdhgd() {
+		return isdhgd;
+	}
+
+	public String getCallid() {
+		return callid;
+	}
+
+	public void setCallid(String callid) {
+		this.callid = callid;
+	}
+
+	public void setIsdhgd(boolean isdhgd) {
+		this.isdhgd = isdhgd;
+	}
+
+	public int getInnerMark() {
+		return innerMark;
+	}
+
+	public void setInnerMark(int innerMark) {
+		this.innerMark = innerMark;
+	}
+
+	public void setIshf(boolean ishf) {
+		this.ishf = ishf;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+	public void removeOper(WorkOrderOper oper){
+		opers.remove(oper);
+	}
+	public Set<WorkOrderOper> getOpers() {
+		return opers;
+	}
+	public void setOpers(Set<WorkOrderOper> opers) {
+		this.opers = opers;
+	}
+	
+	public Group getGroup() {
+		return group;
+	}
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+	
+	public Assign getAssign() {
+		return assign;
+	}
+	public void setAssign(Assign assign) {
+		this.assign = assign;
+	}
+	public boolean isIsdelete() {
+		return isdelete;
+	}
+	public void setIsdelete(boolean isdelete) {
+		this.isdelete = isdelete;
+	}
+	public Staff getWorker() {
+		return worker;
+	}
+	public void setWorker(Staff worker) {
+		this.worker = worker;
+	}
+	public Staff getGetWorker() {
+		return getWorker;
+	}
+	public void setGetWorker(Staff getWorker) {
+		this.getWorker = getWorker;
+	}
+	
+	public Group getTobeGroup() {
+		return tobeGroup;
+	}
+	public void setTobeGroup(Group tobeGroup) {
+		this.tobeGroup = tobeGroup;
+	}
+	
+	public String getCreateWorker() {
+		return createWorker;
+	}
+	public void setCreateWorker(String createWorker) {
+		this.createWorker = createWorker;
+	}
+	public Set<IssueAdditional> getIssueAddSet() {
+		return issueAddSet;
+	}
+	public void setIssueAddSet(Set<IssueAdditional> issueAddSet) {
+		this.issueAddSet = issueAddSet;
+	}
+	public WorkOrderRecharge getRecharge() {
+		return recharge;
+	}
+	public void setRecharge(WorkOrderRecharge recharge) {
+		this.recharge = recharge;
+	}
+	public WorkOrderAdditional getAdditional() {
+		return additional;
+	}
+	public void setAdditional(WorkOrderAdditional additional) {
+		this.additional = additional;
+	}
+	public WorkOrderDevice getDevice() {
+		return device;
+	}
+	public void setDevice(WorkOrderDevice device) {
+		this.device = device;
+	}
+	public WorkOrderUserInfo getUserInfo() {
+		return userInfo;
+	}
+	public void setUserInfo(WorkOrderUserInfo userInfo) {
+		this.userInfo = userInfo;
+	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getPrefinishTime() {
+		return prefinishTime;
+	}
+	public void setPrefinishTime(Date prefinishTime) {
+		this.prefinishTime = prefinishTime;
+	}
+	
+	public String getStates() {
+		return states;
+	}
+	public void setStates(String states) {
+		this.states = states;
+	}
+	public boolean isGetState() {
+		return getState;
+	}
+	public void setGetState(boolean getState) {
+		this.getState = getState;
+	}
+
+	public String getUrgency() {
+		return urgency;
+	}
+	public void setUrgency(String urgency) {
+		this.urgency = urgency;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	public String getSuggestion() {
+		return suggestion;
+	}
+	public void setSuggestion(String suggestion) {
+		this.suggestion = suggestion;
+	}
+	public String getReply() {
+		return reply;
+	}
+	public void setReply(String reply) {
+		this.reply = reply;
+	}
+	public Evaluations getEvaluation() {
+		return evaluation;
+	}
+	public void setEvaluation(Evaluations evaluation) {
+		this.evaluation = evaluation;
+	}
+	public String getComment() {
+		return comment;
+	}
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+	public Date getGetTime() {
+		return getTime;
+	}
+	public void setGetTime(Date getTime) {
+		this.getTime = getTime;
+	}
+	public Date getFinishTime() {
+		return finishTime;
+	}
+	public void setFinishTime(Date finishTime) {
+		this.finishTime = finishTime;
+	}
+	public String toString(){
+		return "I am from【"+source+"】，创建人："+createWorker;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+}

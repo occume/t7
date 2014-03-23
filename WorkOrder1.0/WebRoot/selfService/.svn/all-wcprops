@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/hyProject/!svn/ver/6054/WorkOrder1.0/WebRoot/selfService
+END
+plugAbuse.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/3870/WorkOrder1.0/WebRoot/selfService/plugAbuse.jsp
+END
+default_error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/3736/WorkOrder1.0/WebRoot/selfService/default_error.jsp
+END
+qqAndPhone.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/2494/WorkOrder1.0/WebRoot/selfService/qqAndPhone.jsp
+END
+advisory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/3873/WorkOrder1.0/WebRoot/selfService/advisory.jsp
+END
+rechargeProblem.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/3505/WorkOrder1.0/WebRoot/selfService/rechargeProblem.jsp
+END
+roleOfAbnormal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/hyProject/!svn/ver/2415/WorkOrder1.0/WebRoot/selfService/roleOfAbnormal.jsp
+END
+gm.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hyProject/!svn/ver/3088/WorkOrder1.0/WebRoot/selfService/gm.jsp
+END
+others.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/2415/WorkOrder1.0/WebRoot/selfService/others.jsp
+END
+wait.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/3736/WorkOrder1.0/WebRoot/selfService/wait.jsp
+END
+accountlock.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/3498/WorkOrder1.0/WebRoot/selfService/accountlock.jsp
+END
+uniqueSelfFaq.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/2871/WorkOrder1.0/WebRoot/selfService/uniqueSelfFaq.jsp
+END
+page.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/732/WorkOrder1.0/WebRoot/selfService/page.jsp
+END
+selfFaqList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/2955/WorkOrder1.0/WebRoot/selfService/selfFaqList.jsp
+END
+faqSelfList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/3176/WorkOrder1.0/WebRoot/selfService/faqSelfList.jsp
+END
+losePwd.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/1516/WorkOrder1.0/WebRoot/selfService/losePwd.jsp
+END
+process.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/3498/WorkOrder1.0/WebRoot/selfService/process.jsp
+END
+userWOList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/3736/WorkOrder1.0/WebRoot/selfService/userWOList.jsp
+END
+addSuccess.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/3736/WorkOrder1.0/WebRoot/selfService/addSuccess.jsp
+END
+accountSecurity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/3498/WorkOrder1.0/WebRoot/selfService/accountSecurity.jsp
+END
+suggestion.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/2415/WorkOrder1.0/WebRoot/selfService/suggestion.jsp
+END
+workOrderDetail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/3979/WorkOrder1.0/WebRoot/selfService/workOrderDetail.jsp
+END
+globeError.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/1722/WorkOrder1.0/WebRoot/selfService/globeError.jsp
+END
+loseItems.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/3869/WorkOrder1.0/WebRoot/selfService/loseItems.jsp
+END
+gameBug.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/2415/WorkOrder1.0/WebRoot/selfService/gameBug.jsp
+END
+success.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/2464/WorkOrder1.0/WebRoot/selfService/success.jsp
+END
+checkcode.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/711/WorkOrder1.0/WebRoot/selfService/checkcode.jsp
+END
+losepasswdMenu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/hyProject/!svn/ver/6054/WorkOrder1.0/WebRoot/selfService/losepasswdMenu.jsp
+END
+gameRunning.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/3985/WorkOrder1.0/WebRoot/selfService/gameRunning.jsp
+END
+JsResult.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/1529/WorkOrder1.0/WebRoot/selfService/JsResult.jsp
+END
+serverFailure.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/2415/WorkOrder1.0/WebRoot/selfService/serverFailure.jsp
+END
+userlockIndex.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/3498/WorkOrder1.0/WebRoot/selfService/userlockIndex.jsp
+END
+roleRecovery.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hyProject/!svn/ver/2415/WorkOrder1.0/WebRoot/selfService/roleRecovery.jsp
+END
+userWOList_ajax.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/3979/WorkOrder1.0/WebRoot/selfService/userWOList_ajax.jsp
+END
+equip.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/3498/WorkOrder1.0/WebRoot/selfService/equip.jsp
+END

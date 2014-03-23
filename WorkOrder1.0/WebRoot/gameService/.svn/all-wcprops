@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/hyProject/!svn/ver/3873/WorkOrder1.0/WebRoot/gameService
+END
+g_wait.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/3873/WorkOrder1.0/WebRoot/gameService/g_wait.jsp
+END
+g_gameBug.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/3873/WorkOrder1.0/WebRoot/gameService/g_gameBug.jsp
+END
+g_success.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/3873/WorkOrder1.0/WebRoot/gameService/g_success.jsp
+END
+g_gameRunning.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/2191/WorkOrder1.0/WebRoot/gameService/g_gameRunning.jsp
+END

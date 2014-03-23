@@ -1,0 +1,6 @@
+#headDiv{
+	font:bold 14px ËÎÌו;
+	background-color:#66CCFF;
+	text-align:center;
+	width:70%;
+}

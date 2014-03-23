@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	本文档定义了CallCenter登录功能的相关接口(请求/响应)等。
+	本文档内容今后可能会有调整。
+
+	*****************************请仔细阅读********************************
+
+	
+	state/stateDesc 状态码对照表
+	00:操作成功
+	03:密码错误
+	04:系统忙（未知错误）
+	05:参数错误
+	26:非法操作
+-->
+	
+<!--
+问题提交
+ 	可能返回state 00,01,04,26
+	提交的数据形如：
+	http://work.2211.com/xml/callcenter_login? username=?&password=?clientId=WO_CALLCENTER&s=xx
+以下未说可以为空的参数均不可以为空
+输入：
+     id:WO_CALLCENTER                    客户端id
+	 username:										用户名
+	 password:										密码
+     s: md5(username+password+clientId+key)
+输出：
+-->
+<hy>
+    <id></id><!--客户端id-->
+    <state></state><!-- 状态码 -->
+    <stateDesc></stateDesc><!-- 状态码描述   -->    
+</hy>
+

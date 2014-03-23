@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="wo.you" extends="workorder-default" namespace="/wo">
+        <!-- 默认action -->
+		
+		<!-- 问题处理 -->
+		<action name="save_*" class="workOrderAction" method="{1}">
+			<result>/selfService/success.jsp</result>
+			<result name="createSuccess">/ctService/success.jsp</result>
+			<result name="input">/selfService/JsResult.jsp</result>
+			<result name="g_success" >/index.jsp</result>
+			<exception-mapping result="default_error" exception=""></exception-mapping>
+			<result name="default_error" >/selfService/default_error.jsp</result>
+		</action>
+		<!-- 问题补充  工单编辑 -->
+		<action name="edit_*" class="workOrderAction" method="{1}">
+			<result name="addMemo">/selfService/workOrderDetail.jsp</result><!--问题补充 -->
+			<result name="addSuccess">/selfService/addSuccess.jsp</result><!--问题补充 -->
+		</action>
+		<!-- 问题查看 -->
+		<action name="get_*" class="workOrderAction" method="{1}">
+			<exception-mapping result="default_error" exception=""></exception-mapping>
+			<result name="default_error" >/selfService/default_error.jsp</result>
+			<result name="userwolist">/selfService/userWOList.jsp</result>
+		</action>
+		<action name="default">
+				<result name="default_error" >/ctService/error/defaultError.jsp</result>
+		</action>
+		
+		<!-- 工单广场 -->
+		<action name="" converter=""></action>
+	</package>
+	<package name="json" extends="workorder-default" namespace="/json">
+		<action name="query_*" class="workOrderPFAction" method="{1}">
+			<result name="operateWO">/ctService/operateWorkOrder.jsp</result>
+			<result name="lookupWO">/ctService/lookupWorkOrder.jsp</result>
+			<result name="accLogon">/ctService/htLogon.jsp</result>
+			<result name="deal">/ctService/processWorkOrder/deal.jsp</result>
+			<result name="success">/ctService/processWorkOrder/success.jsp</result>
+			<result name="assign">/ctService/processWorkOrder/assign.jsp</result>
+			
+			<result name="reLogon">/ctService/processWorkOrder/invaliLogin.jsp</result>
+		</action>
+		<action name="XLSDownload" class="workOrderPFAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="inputName">excelStream</param>
+				<param name="contentDisposition">attachment;filename="statistic.xls"</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 我的咨询问题-->
+	<package name="userwolist" extends="workorder-default" namespace="/selfService">
+		<action name="userWOList" class="workOrderAction" method="userwolist">
+			<exception-mapping result="default_error" exception=""></exception-mapping>
+			<result name="default_error" >/default_error.jsp</result>
+			<result>/selfService/userWOList.jsp</result>
+			<result name="nologin">/selfService/login.jsp</result>
+		</action>
+	</package>
+	<package name="userwolistajax" extends="workorder-default" namespace="/selfService">
+		<action name="userwolist_ajax" class="workOrderAction" method="userwolist_ajax">
+			<exception-mapping result="default_error" exception=""></exception-mapping>
+			<result name="default_error" >/default_error.jsp</result>
+			<result>/selfService/userWOList_ajax.jsp</result>
+			<result name="nologin">/selfService/login.jsp</result>
+		</action>
+	</package>
+	<!-- 接收Password,CallCenter的请求 -->
+	<package name="wo.xml" extends="workorder-default" namespace="/xml">
+		<global-results>
+			<result name="theError" type="redirectAction">
+				<param  name="actionName">dealErrorAction</param>
+			</result>
+		</global-results>
+		
+		<action name="getWorkOrderInfo" class="action4Password" method="getWorkOrderInfoOfUser"></action>
+		<action name="callcenter_*" class="action4CallCenter" method="{1}"></action>
+		<action name="get_*" class="action4CallCenter" method="{1}">
+			<exception-mapping result="theError" exception="java.lang.NullPointerException"></exception-mapping>
+		</action>
+		<action name="getWorkOrdersByTel" class="action4CallCenter" method="getWorkOrdersByTel">
+			<exception-mapping result="theError" exception="java.lang.NullPointerException"></exception-mapping>
+		</action>
+		<action name="saveWorkOrder" class="action4CallCenter" method="saveWorkOrder"></action>
+		<action name="save_*" class="action4CallCenter" method="{1}"></action>
+		<action name="doCallBack" class="action4CallCenter" method="doCallBack"></action>
+		<action name="toProcessPage" class="action4CallCenter" method="toProcessPage">
+			<result name="operateWO">/ctService/operateWorkOrder.jsp</result>
+			<result name="reLogon">/ctService/processWorkOrder/invaliLogin.jsp</result>
+		</action>
+		<action name="dealErrorAction" class="com.hy.wo.action.DownloadFileAction" method="returnXml">
+			<result type="stream">
+				<param name="contentType">text/xml</param>
+				<param name="inputName">xmlStream</param>
+			</result>
+		</action>
+	</package>
+		
+	<package name="wo.acc" extends="workorder-default" namespace="/acc">
+	<!-- 账号管理 -->
+		<action name="acc_*" class="staffAction" method="{1}">
+			<result name="accLogon">/ctService/htLogon.jsp</result>
+			<result name="accIndex">/ctService/htIndex.jsp</result>
+			<result name="accManage">/ctService/accManage.jsp</result>
+			<result name="modifyPsw">/ctService/accManage/modifyPassword.jsp</result>
+			<result name="modifyNick">/ctService/accManage/modifyNickName.jsp</result>
+			<result name="modifySelf">/ctService/accManage/modifySelf.jsp</result>
+			<result name="staffInfoList">/ctService/accManage/staffInfoList.jsp</result>
+			<result name="staffEditList">/ctService/accManage/staffManage.jsp</result>
+			<result name="editStaff">/ctService/accManage/edit.jsp</result>
+			<result name="addStaff">/ctService/accManage/addStaff.jsp</result>
+			<result name="groupList">/ctService/accManage/groupList.jsp</result>
+			<result name="createGroup">/ctService/accManage/createGroup.jsp</result>
+			<result name="editGroup">/ctService/accManage/editGroup.jsp</result>
+			<result name="note">/ctService/accManage/note.jsp</result>
+			<result name="success">/ctService/processWorkOrder/success.jsp</result>
+		</action>
+		<action name="ajaxs_*" class="workOrderAction" method="{1}">
+		
+		</action>
+	</package>
+	<package name="faq" extends="workorder-default" namespace="/faq">
+			<action name="*" class="faqAction" method="{1}">
+					<result name="success">/ctService/faqManage/success.jsp</result>
+					<result name="editFaq">/ctService/faqManage/editFaq.jsp</result>
+					<result name="replyFaq">/ctService/faqManage/replyFaq.jsp</result>
+					<result name="faqList">/ctService/faqManage/faqManage.jsp</result>
+					<result name="selfFaqList">/selfService/selfFaqList.jsp</result>
+					<result name="faqSelfList">/selfService/faqSelfList.jsp</result>
+					<result name="unique">/ctService/faqManage/faqUnique.jsp</result>
+					<result name="uniqueSelf">/selfService/uniqueSelfFaq.jsp</result>
+			</action>
+		</package>	
+	<package name="monitor" extends="workorder-default" namespace="/lock">
+			<action name="*" class="lockMonitorAction" method="{1}"></action>
+	</package>
+	<package name="statistic" extends="workorder-default" namespace="/statistic">
+			<action name="search_*" class="statisticAction" method="{1}">
+				<result name="success" type="stream">
+					<param name="contentType">application/vnd.ms-excel</param>
+					<param name="inputName">excelStream</param>
+					<param name="contentDisposition">attachment;filename="statistic.xls"</param>
+				</result>
+			</action>
+	</package>
+	<package name="im" extends="workorder-default" namespace="/im">
+			<action name="*" class="imsgAction" method="{1}"></action>
+	</package>
+	<package name="error" extends="workorder-default">
+			<default-action-ref name="derror"></default-action-ref>
+			<action name="derror">
+				<result name="default_error" >/ctService/defaultError.jsp</result>
+			</action>
+	</package>
+</struts>

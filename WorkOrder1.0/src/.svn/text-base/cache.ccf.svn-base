@@ -1,0 +1,31 @@
+# PRE-DEFINED CACHE REGIONS
+#用户评价缓存
+jcs.region.rate=
+jcs.region.rate.cacheattributes= org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.rate.cacheattributes.MaxObjects=2000000
+jcs.region.rate.cacheattributes.MemoryCacheName= org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.rate.cacheattributes.UseMemoryShrinker=true
+jcs.region.rate.elementattributes.MaxLifeSeconds=600000
+jcs.region.rate.elementattributes=org.apache.jcs.engine.ElementAttributes 
+jcs.region.rate.elementattributes.IsEternal=false
+
+#工单锁定情况监控
+jcs.region.woMonitor=
+jcs.region.woMonitor.cacheattributes= org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.woMonitor.cacheattributes.MaxObjects=2000000
+jcs.region.woMonitor.cacheattributes.MemoryCacheName= org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.woMonitor.cacheattributes.UseMemoryShrinker=true
+jcs.region.woMonitor.elementattributes.MaxLifeSeconds=600
+jcs.region.woMonitor.elementattributes=org.apache.jcs.engine.ElementAttributes 
+jcs.region.woMonitor.elementattributes.IsEternal=false
+
+jcs.auxiliary.DC=org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCacheFactory
+jcs.auxiliary.DC.attributes=org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCacheAttributes
+jcs.auxiliary.DC.attributes.DiskPath=usr/woLock/
+
+jcs.auxiliary.LTCP=org.apache.jcs.auxiliary.lateral.socket.tcp.LateralTCPCacheFactory
+jcs.auxiliary.LTCP.attributes=org.apache.jcs.auxiliary.lateral.socket.tcp.TCPLateralCacheAttributes
+jcs.auxiliary.LTCP.attributes.TransmissionTypeName=TCP
+jcs.auxiliary.LTCP.attributes.TcpServers=
+jcs.auxiliary.LTCP.attributes.TcpListenerPort=2222
+jcs.auxiliary.LTCP.attributes.PutOnlyMode=true

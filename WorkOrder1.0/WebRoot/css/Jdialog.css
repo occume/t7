@@ -1,0 +1,24 @@
+*{margin:0;padding:0;}
+/**
+	
+**/
+#dialogBox{position:absolute;top:0px;opacity:1;left:600px;border:3px solid #39c;background-color: #fff;min-height:150px;min-width:250px;max-width:300px;max-height:300px;height:auto!important;width:auto!important;}
+
+
+
+#boxHead{display:none;background-color:rgba(105,105,105,0.3)!important;background-color:#666;filter: Alpha(Opacity=30);;cursor:pointer;padding:5px;}
+
+#tran{position:relative;float:right;}
+
+#closeIcon{clear:both;position:relative;width:20px;height:16px;color:#c36;background:url(/images/del.png) no-repeat -30px -13px;}
+
+/**
+	divs that surround the box
+**/
+#roTop{position:absolute;background-color:#699;height:8px;}
+#roBottom{position:absolute;background-color:#699;height:8px;}
+#roLeft{position:absolute;background-color:#699;width:8px;}
+#roRight{position:absolute;background-color:#699;width:8px;}
+#theScreen{display:none;position:absolute;top:0;background-color:#ccc;width:100%;height:100%;}
+
+#userContent{margin:20px 10px 10px 10px;padding:10px 10px 10px 15px;text-align:left;font-family:sans-serif;overflow:hidden;}

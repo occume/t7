@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/hyProject/!svn/ver/6785/WorkOrder1.0/src/com/hy/wo/service
+END
+WorkOrderService.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/hyProject/!svn/ver/6918/WorkOrder1.0/src/com/hy/wo/service/WorkOrderService.java
+END
+CallerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/hyProject/!svn/ver/6310/WorkOrder1.0/src/com/hy/wo/service/CallerService.java
+END
+StaffService.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/5593/WorkOrder1.0/src/com/hy/wo/service/StaffService.java
+END
+WorkOrderPFService.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hyProject/!svn/ver/6918/WorkOrder1.0/src/com/hy/wo/service/WorkOrderPFService.java
+END
+FaqService.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/5946/WorkOrder1.0/src/com/hy/wo/service/FaqService.java
+END
+PrivateCenterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hyProject/!svn/ver/3833/WorkOrder1.0/src/com/hy/wo/service/PrivateCenterService.java
+END
+CallBackService.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hyProject/!svn/ver/5593/WorkOrder1.0/src/com/hy/wo/service/CallBackService.java
+END

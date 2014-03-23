@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hy.wo.po">
+<!-- 工单ORM -->
+	<class name="WorkOrder" table="Work_Order_Self" lazy="true">
+		<id name="id" type="long" column="woId">
+			<!--  <generator class="sequence">
+				<param name="sequence">WOID_SEQ</param>
+            </generator> -->
+           <generator class="identity"></generator>
+		</id>
+		<property name="createTime" column="create_time"/>
+		<property name="prefinishTime" column="prefinish_time"/>
+		<property name="states" column="statee" length="30"/>
+		<property name="getState" column="getStates" length="6"/>
+		<property name="suggestion" length="800"/>
+		<many-to-one name="getWorker" column="getWorker_id"></many-to-one>
+		<many-to-one name="worker" column="worker_id"></many-to-one>
+		<many-to-one name="tobeGroup" column="tobeGroup_id"></many-to-one>
+		<many-to-one name="group" column="group_id"></many-to-one>
+		<!-- 派单记录 -->
+		<component name="assign" class="Assign" >
+			<property name="statu" length="10"></property>
+			<property name="from" column="fromStaff" length="20"></property>
+			<property name="to" column="toStaff"  length="20"></property>
+		</component>
+		
+		<property name="source" length="20"/>
+		<property name="urgency" length="20"/>
+		<property name="createWorker" length="50"/>
+		<!--  many-to-one name="createWorker" column="createWorker_id"></many-to-one -->
+		<property name="reply" length="800"/>
+		<property name="evaluation" length="20" type="com.hy.wo.util.hibernate.EvaluationsType"/>
+		<property name="comment" column="commentt" length="300"/>
+		<property name="getTime" column="get_time"/>
+		<property name="finishTime" column="finish_time"/>
+		<property name="isreaded" length="6"></property>
+		<property name="isdelete" length="6"></property>
+		<property name="ishf" length="6"></property>
+		<property name="isdhgd" length="6"></property>
+		<property name="innerMark" length="5"></property>
+		<property name="callid" length="30"></property>
+			
+		<one-to-one name="userInfo" cascade="all" fetch="select"></one-to-one>
+		<one-to-one name="device" cascade="all" fetch="select"></one-to-one>
+		<one-to-one name="recharge" cascade="all" fetch="select"></one-to-one>
+		<one-to-one name="additional" cascade="all" fetch="select"></one-to-one>
+		
+		<set name="opers" inverse="true" lazy="extra" cascade="all" order-by="operTime">
+			<key column="woId"></key>
+			<one-to-many class="WorkOrderOper"/>
+		</set>
+		
+		<set name="issueAddSet" inverse="true" lazy="extra" cascade="all" order-by="addDate">
+			<key column="woId"></key>
+			<one-to-many class="IssueAdditional"/>
+		</set>
+	</class>
+	<!-- 工单操作类型记录ORM -->	
+	<class name="WorkOrderOper" table="Work_Order_Oper">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<many-to-one name="workOrder" column="woId"></many-to-one>
+		<property name="workerParent" column="worker_parent" length="20"></property>
+		<property name="worker" length="20"></property>
+		<property name="content" column="description" length="1000"></property>
+		<property name="operTime"  column="oper_time"/>
+		<many-to-one name="operType" column="oper_id"></many-to-one>
+	</class>
+	<!-- 工单操作类型ORM -->
+	<class name="OperType" table="Order_Oper_Type" lazy="true">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="type_name"></property>
+	</class>
+	<!-- 部门ORM -->
+	<class name="Department" table="Department" lazy="true">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="department_name"></property>
+	</class>
+	<!-- 问题补充ORM -->
+	<class name="IssueAdditional" table="Issue_Additional">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		
+		<property name="name" length="20"></property>
+		<property name="content" length="500"></property>
+		<property name="addDate" length="15"></property>
+		<property name="fromUser" length="5"></property>
+		<many-to-one name="workOrder" column="woId"></many-to-one>
+	</class>
+	
+	<!-- 工单硬件信息ORM -->	
+	<class name="WorkOrderDevice" table="Work_Order_Device" lazy="true">
+		<id name="id" type="long" column="woId">
+			<generator class="foreign">
+				<param name="property">workOrder</param>
+			</generator>
+		</id>
+		<one-to-one name="workOrder" constrained="true"></one-to-one>
+		<property name="cpu" length="50"/>
+		<property name="memory" length="50"/>
+		<property name="displaycard" length="50"/>
+		<property name="os" length="50"/>
+		<property name="netinfo" length="50"/>
+	</class>
+	<!-- 工单充值信息ORM -->	
+	<class name="WorkOrderRecharge" table="Work_Order_Recharge" lazy="true">
+		<id name="id" type="long" column="woId">
+			<generator class="foreign">
+				<param name="property">workOrder</param>
+			</generator>
+		</id>
+		<one-to-one name="workOrder" constrained="true"></one-to-one>
+		<property name="card" length="30"/>
+		<property name="sum" length="10"/>
+		<property name="phoneCard" length="30"/>
+		<property name="rechargeTime" length="40"/>
+		<property name="rechargeErrorType" length="20"/>
+		<property name="rechargeType" length="20"/>
+	</class>
+	<!-- 工单额外信息ORM -->	
+	<class name="WorkOrderAdditional" table="Work_Order_UserInfo_Additional" lazy="true">
+		<id name="id" type="long" column="woId">
+			<generator class="foreign">
+				<param name="property">workOrder</param>
+			</generator>
+		</id>
+		<one-to-one name="workOrder" constrained="true"></one-to-one>
+		<property name="additionalProblem" column="additionalproblem" length="500"/>
+		<property name="offlineTime" column="offline_time"/>
+		<property name="happenEndDate" column="happen_end_date"/>
+		<property name="ip" length="15"/>
+		<property name="username" length="16"/>
+		<property name="currentVersion" column="current_version" length="16"/>
+		<property name="purpleGold" column="purple_gold" length="10"/>
+		<property name="gameCoin" column="game_coin" length="10"/>
+		<!--  many-to-one name="report" column="report_id"></many-to-one>-->
+		<!--  many-to-one name="advisory" column="advisory_id"></many-to-one>-->
+		<set name="goodsSet" inverse="true" lazy="extra" cascade="all" order-by="name">
+			<key column="woId"></key>
+			<one-to-many class="Goods"/>
+		</set>
+	</class>
+	<!-- 物品丢失ORM -->
+	<class name="Goods" table="goods_list">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name"></property>
+		<property name="attr"></property>
+		<property name="count"></property>
+		<many-to-one name="additional" column="woId"></many-to-one>
+	</class>
+	<!-- 工单来源ORM -->
+	<class name="WorkOrderSource" table="Source">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="sourcename"></property>
+	</class>
+	<!-- 紧急程度ORM -->
+	<class name="Urgency" table="Urgency">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="urgencyname"></property>
+	</class>
+	<!-- 咨询类型ORM -->
+	<class name="Advisory" table="Advisory">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="advisory_name"></property>
+	</class>
+	<!-- 游戏运行问题类型ORM -->
+	<class name="Problem" table="Problem">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="problem_name"></property>
+	</class>
+	<!-- 处理状态ORM -->
+	<class name="States" table="States">
+		<id name="id">
+		<generator class="identity"></generator>
+		</id>
+		<property name="name" column="name"></property>
+	</class>
+	<!-- 充值类型ORM -->
+	<class name="RechargeType" table="Recharge_Type">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="name"></property>
+	</class>
+</hibernate-mapping>

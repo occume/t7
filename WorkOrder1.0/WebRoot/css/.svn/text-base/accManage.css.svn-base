@@ -1,0 +1,101 @@
+body{
+	margin:0px;
+}
+#formBox{
+	position:absolute;
+	display:none;
+	background-color:#fff;
+	top:100px;
+	left:200px;
+	width:500px;
+	height:300px;
+	border:1px solid black;
+}
+#server #content{
+	display:none;
+}
+.id,.name,.edit,.delete{
+	float:left;
+	width:23%;
+	height:20px;
+	cursor: pointer;
+}
+
+#games {
+	clear:both;
+}
+#reportKind{
+	clear:both;
+}
+#issue{
+	clear:both;
+}
+#advisory{
+	clear:both;
+}
+#utilForm{
+	position:absolute;
+	text-align:center;
+	vertical-align:middle;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background:transparent;
+	background-color:#f5f5f5;
+	filter: alpha(opacity=90);
+	opacity:0.9;
+}
+#utilForm #inner{
+	margin:200px auto;
+	width:30%;
+	height:30%;
+	border:3px solid #cccccc;
+	background: #ffffff;
+}
+#utilForm #inner #inner-title{
+	clear:both;
+	background:#cccccc;
+	padding:8px 0 0 8px;
+	text-align: left;
+}
+#utilForm #inner #inner-title span{
+	margin-left:350px;
+	cursor: pointer;
+}
+#utilForm #inner #inner-content{
+	padding: 30px 0px 0px 0px;
+	text-align: center;
+}
+#utilForm #inner #inner-content #name,#utilForm #inner #inner-content #selectBtn{
+	margin-top:10px;
+	width:150px;
+	height:18px;
+}
+#utilForm #inner #inner-content #addBtn{
+	width:80px;
+	margin-top: 10px;
+}
+#utilForm #inner #inner-content #sendBtn{
+	width:80px;
+	margin-top: 10px;
+}
+.zhankai,.add,.flush{
+	cursor: pointer;
+}
+.add,.flush{
+	display:none;
+}
+#utilForm #inner input{}
+.add{
+	
+}
+#util-box{
+	position:absolute;
+	top:200px;
+	left:300px;
+	width:300px;
+	height:160px;
+	border:1px solid blue;
+	background-color:#fff;
+}

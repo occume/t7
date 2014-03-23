@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hy.wo.po">
+
+<!-- 玩家信息ORM -->	
+	<class name="WorkOrderUserInfo" table="Work_Order_UserInfo">
+		<id name="id" type="long" column="woId">
+			<generator class="foreign">
+				<param name="property">workOrder</param>
+			</generator>
+		</id>
+		<one-to-one name="workOrder" constrained="true"></one-to-one>
+		<property name="accountname" length="16"/>
+		<property name="username" length="16"/>
+		<property name="realname" length="16"/>
+		<property name="vipGrade" length="10"/>
+		<many-to-one name="classCategory" column="class_category"></many-to-one>
+		<many-to-one name="game" column="gameid"></many-to-one>
+		
+		<many-to-one name="server" column="serverid" fetch="select"></many-to-one>
+		<property name="tel" length="20"/>
+		<property name="mail" length="50"/>
+		<many-to-one name="lvlOne" column="classification_issues"></many-to-one>
+		<many-to-one name="lvlTwo" column="classification_second"></many-to-one>
+		<property name="qq" length="16"/>
+		<property name="memo" length="300"/>
+		<property name="happendate"/>
+		
+		<!--  <many-to-one name="files" unique="true" cascade="all" lazy="false"/> -->
+		<set name="files" inverse="true" lazy="extra" cascade="all">
+			<key column="user_id"></key>
+			<one-to-many class="FileUpLoad"/>
+		</set>
+	</class>
+	<class name="Member" table="member">
+		<id name="id" column="id" >
+			<generator class="identity"></generator>
+			
+		</id>
+		<one-to-one name="userInfo" cascade="all"></one-to-one>
+		<property name="username" length="16"/>
+		<property name="password" length="100"/>
+	</class>
+	<class name="UserInfo" table="userinfo">
+		<id name="id" column="id">
+			<generator class="foreign">
+				<param name="property">member</param>
+			</generator>
+		</id>
+		<property name="phone" length="16"/>
+		<property name="qq" length="100"/>
+		<one-to-one name="member" constrained="true"></one-to-one>
+	</class>
+	<!-- 问题类型ORM -->
+	<class name="Issue" table="Classification_issues">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="classame"></property>
+		<many-to-one name="parent" column="pid"></many-to-one>
+		
+		<set name="children" inverse="true" lazy="extra" cascade="all">
+			<key column="id"></key>
+			<one-to-many class="Issue"/>
+		</set>
+	</class>
+
+	<!-- 游戏ORM -->
+	<class name="Games" table="Games" lazy="true">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="gamename"></property>
+	</class>
+	<!-- 违规类型ORM -->
+	<class name="ReportKinds" table="Report_Kinds">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="reportname"></property>
+	</class>
+	<!-- 游戏职业ORM -->
+	<class name="ClassCategory" table="Class_Categorys">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="classname"></property>
+		<many-to-one name="game" column="game_id"></many-to-one>
+	</class>
+	<!-- 游戏大区ORM -->
+	<class name="Areas" table="Areas" lazy="true">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="areaname"></property>
+		<many-to-one name="game" column="game_id" lazy="proxy"></many-to-one>
+	</class>
+	<!-- 游戏服务器ORM -->
+	<class name="Servers" table="Servers">
+		<id name="id">
+			
+		</id>
+		<property name="name" column="servername"></property>
+		<property name="useId" column="area_id"></property>
+	</class>
+	<!-- 文件上传 -->
+	<class name="FileUpLoad" table="File_UpLoad">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="path" column="path"></property>
+		<many-to-one name="userinfo" column="user_id"></many-to-one>
+	</class>
+</hibernate-mapping>

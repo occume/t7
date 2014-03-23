@@ -1,0 +1,1291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>  
+<post-base>
+	<province name="北京市">
+		<city>
+			<name>北京市</name>
+			<post>010</post>
+		</city>
+	</province>
+	<province name="上海市">
+		<city>
+			<name>上海市</name>
+			<post>021</post>
+		</city>
+	</province>
+	<province name="天津市">
+		<city>
+			<name>天津市</name>
+			<post>022</post>
+		</city>
+	</province>
+	<province name="重庆市">
+		<city>
+			<name>天津市</name>
+			<post>023</post>
+		</city>
+	</province>
+	<province name="河北省">
+		<city>
+			<name>邯郸市</name>
+			<post>0310</post>
+		</city>
+		<city>
+			<name>石家庄</name>
+			<post>0311</post>
+		</city>
+		<city>
+			<name>保定市</name>
+			<post>0312</post>
+		</city>
+<city>
+			<name>张家口</name>
+			<post>0313</post>
+		</city>
+<city>
+			<name>承德市</name>
+			<post>0314</post>
+		</city>
+<city>
+			<name>唐山市</name>
+			<post>0315</post>
+		</city>
+<city>
+			<name>廊坊市</name>
+			<post>0316</post>
+		</city>
+<city>
+			<name>沧州市</name>
+			<post>0317</post>
+		</city>
+<city>
+			<name>衡水市</name>
+			<post>0318</post>
+		</city>
+<city>
+			<name>邢台市</name>
+			<post>0319</post>
+		</city>
+<city>
+			<name>秦皇岛</name>
+			<post>0335</post>
+		</city>
+	</province>
+	<province name="浙江省">
+		<city>
+			<name>衢州市</name>
+			<post>0570</post>
+		</city>
+<city>
+			<name>杭州市</name>
+			<post>0571</post>
+		</city>
+<city>
+			<name>湖州市</name>
+			<post>0572</post>
+		</city>
+<city>
+			<name>嘉兴市</name>
+			<post>0573</post>
+		</city>
+<city>
+			<name>宁波市</name>
+			<post>0574</post>
+		</city>
+<city>
+			<name>绍兴市</name>
+			<post>0575</post>
+		</city>
+<city>
+			<name>台州市</name>
+			<post>0576</post>
+		</city>
+<city>
+			<name>温州市</name>
+			<post>0577</post>
+		</city>
+<city>
+			<name>丽水市</name>
+			<post>0578</post>
+		</city>
+<city>
+			<name>金华市</name>
+			<post>0579</post>
+		</city>
+<city>
+			<name>舟山市</name>
+			<post>0580</post>
+		</city>
+		</province>
+	<province name="辽宁省">
+		<city>
+			<name>沈阳市</name>
+			<post>024</post>
+		</city>
+		<city>
+			<name>铁岭市</name>
+			<post>0410</post>
+		</city>
+		<city>
+			<name>大连市</name>
+			<post>0411</post>
+		</city>
+<city>
+			<name>鞍山市</name>
+			<post>0412</post>
+		</city>
+<city>
+			<name>抚顺市</name>
+			<post>0413</post>
+		</city>
+<city>
+			<name>本溪市</name>
+			<post>0414</post>
+		</city>
+<city>
+			<name>丹东市</name>
+			<post>0415</post>
+		</city>
+<city>
+			<name>锦州市</name>
+			<post>0416</post>
+		</city>
+<city>
+			<name>营口市</name>
+			<post>0417</post>
+		</city>
+<city>
+			<name>阜新市</name>
+			<post>0418</post>
+		</city>
+<city>
+			<name>辽阳市</name>
+			<post>0419</post>
+		</city>
+<city>
+			<name>朝阳市</name>
+			<post>0421</post>
+		</city>
+<city>
+			<name>盘锦市</name>
+			<post>0427</post>
+		</city>
+<city>
+			<name>葫芦岛</name>
+			<post>0429</post>
+		</city>
+		</province>
+	<province name="湖北省">
+		<city>
+			<name>武汉市</name>
+			<post>027</post>
+		</city>
+		<city>
+			<name>襄城市</name>
+			<post>0710</post>
+		</city>
+		<city>
+			<name>鄂州市</name>
+			<post>0711</post>
+		</city>
+<city>
+			<name>孝感市</name>
+			<post>0712</post>
+		</city>
+<city>
+			<name>黄州市</name>
+			<post>0713</post>
+		</city>
+<city>
+			<name>黄石市</name>
+			<post>0714</post>
+		</city>
+<city>
+			<name>咸宁市</name>
+			<post>0715</post>
+		</city>
+<city>
+			<name>荆沙市</name>
+			<post>0716</post>
+		</city>
+<city>
+			<name>宜昌市</name>
+			<post>0717</post>
+		</city>
+<city>
+			<name>恩施市</name>
+			<post>0718</post>
+		</city>
+<city>
+			<name>十堰市</name>
+			<post>0719</post>
+		</city>
+<city>
+			<name>随枣市</name>
+			<post>0722</post>
+		</city>
+<city>
+			<name>荆门市</name>
+			<post>0724</post>
+		</city>
+<city>
+			<name>江汉市</name>
+			<post>0728</post>
+		</city>
+		</province>
+	<province name="江苏省">
+		<city>
+			<name>南京市</name>
+			<post>025</post>
+		</city>
+		<city>
+			<name>无锡市</name>
+			<post>0510</post>
+		</city>
+		<city>
+			<name>镇江市</name>
+			<post>0511</post>
+		</city>
+<city>
+			<name>苏州市</name>
+			<post>0512</post>
+		</city>
+<city>
+			<name>南通市</name>
+			<post>0513</post>
+		</city>
+<city>
+			<name>扬州市</name>
+			<post>0514</post>
+		</city>
+<city>
+			<name>盐城市</name>
+			<post>0515</post>
+		</city>
+<city>
+			<name>徐州市</name>
+			<post>0516</post>
+		</city>
+<city>
+			<name>淮阴市</name>
+			<post>0517</post>
+		</city>
+<city>
+			<name>淮安市</name>
+			<post>0517</post>
+		</city>
+<city>
+			<name>连云港</name>
+			<post>0518</post>
+		</city>
+<city>
+			<name>常州市</name>
+			<post>0519</post>
+		</city>
+<city>
+			<name>泰州市</name>
+			<post>0523</post>
+		</city>
+		</province>
+	<province name="内蒙古">
+		<city>
+			<name>海拉尔</name>
+			<post>0470</post>
+		</city>
+		<city>
+			<name>呼和浩特</name>
+			<post>0471</post>
+		</city>
+		<city>
+			<name>包头市</name>
+			<post>0472</post>
+		</city>
+<city>
+			<name>乌海市</name>
+			<post>0473</post>
+		</city>
+<city>
+			<name>集宁市</name>
+			<post>0474</post>
+		</city>
+<city>
+			<name>通辽市</name>
+			<post>0475</post>
+		</city>
+<city>
+			<name>赤峰市</name>
+			<post>0476</post>
+		</city>
+<city>
+			<name>东胜市</name>
+			<post>0477</post>
+		</city>
+<city>
+			<name>临河市</name>
+			<post>0478</post>
+		</city>
+<city>
+			<name>锡林浩特</name>
+			<post>0479</post>
+		</city>
+<city>
+			<name>乌兰浩特</name>
+			<post>0482</post>
+		</city>
+<city>
+			<name>阿拉善左旗</name>
+			<post>0483</post>
+		</city>
+		</province>
+	<province name="江西省">
+		<city>
+			<name>新余市</name>
+			<post>0790</post>
+		</city>
+		<city>
+			<name>南昌市</name>
+			<post>0791</post>
+		</city>
+		<city>
+			<name>九江市</name>
+			<post>0792</post>
+		</city>
+<city>
+			<name>上饶市</name>
+			<post>0793</post>
+		</city>
+<city>
+			<name>临川市</name>
+			<post>0794</post>
+		</city>
+<city>
+			<name>宜春市</name>
+			<post>0795</post>
+		</city>
+<city>
+			<name>吉安市</name>
+			<post>0796</post>
+		</city>
+<city>
+			<name>赣州市</name>
+			<post>0797</post>
+		</city>
+<city>
+			<name>景德镇</name>
+			<post>0798</post>
+		</city>
+<city>
+			<name>萍乡市</name>
+			<post>0799</post>
+		</city>
+<city>
+			<name>鹰潭市</name>
+			<post>0701</post>
+		</city>
+		</province>
+	<province name="山西省">
+		<city>
+			<name>忻州市</name>
+			<post>0350</post>
+		</city>
+		<city>
+			<name>太原市</name>
+			<post>0351</post>
+		</city>
+		<city>
+			<name>大同市</name>
+			<post>0352</post>
+		</city>
+<city>
+			<name>阳泉市</name>
+			<post>0353</post>
+		</city>
+<city>
+			<name>榆次市</name>
+			<post>0354</post>
+		</city>
+<city>
+			<name>长治市</name>
+			<post>0355</post>
+		</city>
+<city>
+			<name>晋城市</name>
+			<post>0356</post>
+		</city>
+<city>
+			<name>临汾市</name>
+			<post>0357</post>
+		</city>
+<city>
+			<name>离石市</name>
+			<post>0358</post>
+		</city>
+<city>
+			<name>运城市</name>
+			<post>0359</post>
+		</city>
+		</province>
+	<province name="甘肃省">
+		<city>
+			<name>临夏市</name>
+			<post>0930</post>
+		</city>
+		<city>
+			<name>兰州市</name>
+			<post>0931</post>
+		</city>
+		<city>
+			<name>定西市</name>
+			<post>0932</post>
+		</city>
+<city>
+			<name>平凉市</name>
+			<post>0933</post>
+		</city>
+<city>
+			<name>西峰市</name>
+			<post>0934</post>
+		</city>
+<city>
+			<name>武威市</name>
+			<post>0935</post>
+		</city>
+<city>
+			<name>张掖市</name>
+			<post>0936</post>
+		</city>
+<city>
+			<name>酒泉市</name>
+			<post>0937</post>
+		</city>
+<city>
+			<name>天水市</name>
+			<post>0938</post>
+		</city>
+<city>
+			<name>甘南洲</name>
+			<post>0941</post>
+		</city>
+<city>
+			<name>白银市</name>
+			<post>0943</post>
+		</city>
+		</province>
+	<province name="山东省">
+		<city>
+			<name>菏泽市</name>
+			<post>0530</post>
+		</city>
+		<city>
+			<name>济南市</name>
+			<post>0531</post>
+		</city>
+		<city>
+			<name>青岛市</name>
+			<post>0532</post>
+		</city>
+<city>
+			<name>淄博市</name>
+			<post>0533</post>
+		</city>
+<city>
+			<name>德州市</name>
+			<post>0534</post>
+		</city>
+<city>
+			<name>烟台市</name>
+			<post>0535</post>
+		</city>
+<city>
+			<name>淮坊市</name>
+			<post>0536</post>
+		</city>
+<city>
+			<name>济宁市</name>
+			<post>0537</post>
+		</city>
+<city>
+			<name>泰安市</name>
+			<post>0538</post>
+		</city>
+		</province>
+	<province name="黑龙江">
+		<city>
+			<name>阿城市</name>
+			<post>0450</post>
+		</city>
+		<city>
+			<name>哈尔滨</name>
+			<post>0451</post>
+		</city>
+		<city>
+			<name>齐齐哈特</name>
+			<post>0452</post>
+		</city>
+<city>
+			<name>杜丹江</name>
+			<post>0453</post>
+		</city>
+<city>
+			<name>佳木斯</name>
+			<post>0454</post>
+		</city>
+<city>
+			<name>绥化市</name>
+			<post>0455</post>
+		</city>
+<city>
+			<name>黑河市</name>
+			<post>0456</post>
+		</city>
+<city>
+			<name>加格达奇</name>
+			<post>0457</post>
+		</city>
+<city>
+			<name>伊春市</name>
+			<post>0458</post>
+		</city>
+<city>
+			<name>大庆市</name>
+			<post>0459</post>
+		</city>
+		</province>
+	<province name="福建省">
+		<city>
+			<name>福州市</name>
+			<post>0591</post>
+		</city>
+		<city>
+			<name>厦门市</name>
+			<post>0592</post>
+		</city>
+		<city>
+			<name>宁德市</name>
+			<post>0593</post>
+		</city>
+<city>
+			<name>莆田市</name>
+			<post>0594</post>
+		</city>
+<city>
+			<name>泉州市</name>
+			<post>0595</post>
+		</city>
+<city>
+			<name>晋江市</name>
+			<post>0595</post>
+		</city>
+<city>
+			<name>漳州市</name>
+			<post>0596</post>
+		</city>
+<city>
+			<name>龙岩市</name>
+			<post>0597</post>
+		</city>
+<city>
+			<name>三明市</name>
+			<post>0598</post>
+		</city>
+<city>
+			<name>南平市</name>
+			<post>0599</post>
+		</city>
+		</province>
+	<province name="广东省">
+		<city>
+			<name>广州市</name>
+			<post>020</post>
+		</city>
+		<city>
+			<name>韶关市</name>
+			<post>0751</post>
+		</city>
+		<city>
+			<name>惠州市</name>
+			<post>0752</post>
+		</city>
+<city>
+			<name>梅州市</name>
+			<post>0753</post>
+		</city>
+<city>
+			<name>汕头市</name>
+			<post>0754</post>
+		</city>
+<city>
+			<name>深圳市</name>
+			<post>0755</post>
+		</city>
+<city>
+			<name>珠海市</name>
+			<post>0756</post>
+		</city>
+<city>
+			<name>佛山市</name>
+			<post>0757</post>
+		</city>
+<city>
+			<name>肇庆市</name>
+			<post>0758</post>
+		</city>
+<city>
+			<name>湛江市</name>
+			<post>0759</post>
+		</city>
+<city>
+			<name>中山市</name>
+			<post>0760</post>
+		</city>
+<city>
+			<name>河源市</name>
+			<post>0762</post>
+		</city>
+<city>
+			<name>清远市</name>
+			<post>0763</post>
+		</city>
+<city>
+			<name>顺德市</name>
+			<post>0765</post>
+		</city>
+<city>
+			<name>云浮市</name>
+			<post>0766</post>
+		</city>
+<city>
+			<name>潮州市</name>
+			<post>0768</post>
+		</city>
+<city>
+			<name>东莞市</name>
+			<post>0769</post>
+		</city>
+<city>
+			<name>汕尾市</name>
+			<post>0660</post>
+		</city>
+<city>
+			<name>朝阳市</name>
+			<post>0661</post>
+		</city>
+<city>
+			<name>阳江市</name>
+			<post>0662</post>
+		</city>
+<city>
+			<name>揭西市</name>
+			<post>0661</post>
+		</city>
+		</province>
+	<province name="四川省">
+		<city>
+			<name>成都市</name>
+			<post>028</post>
+		</city>
+		<city>
+			<name>涪陵市</name>
+			<post>0810</post>
+		</city>
+		<city>
+			<name>重庆市</name>
+			<post>0811</post>
+		</city>
+<city>
+			<name>攀枝花</name>
+			<post>0812</post>
+		</city>
+<city>
+			<name>自贡市</name>
+			<post>0813</post>
+		</city>
+<city>
+			<name>永川市</name>
+			<post>0814</post>
+		</city>
+<city>
+			<name>绵阳市</name>
+			<post>0816</post>
+		</city>
+<city>
+			<name>南充市</name>
+			<post>0817</post>
+		</city>
+<city>
+			<name>达县市</name>
+			<post>0818</post>
+		</city>
+<city>
+			<name>万县市</name>
+			<post>0819</post>
+		</city>
+<city>
+			<name>遂宁市</name>
+			<post>0825</post>
+		</city>
+<city>
+			<name>广安市</name>
+			<post>0826</post>
+		</city>
+<city>
+			<name>巴中市</name>
+			<post>0827</post>
+		</city>
+<city>
+			<name>泸州市</name>
+			<post>0830</post>
+		</city>
+<city>
+			<name>宜宾市</name>
+			<post>0831</post>
+		</city>
+<city>
+			<name>内江市</name>
+			<post>0832</post>
+		</city>
+<city>
+			<name>乐山市</name>
+			<post>0833</post>
+		</city>
+<city>
+			<name>西昌市</name>
+			<post>0834</post>
+		</city>
+<city>
+			<name>雅安市</name>
+			<post>0835</post>
+		</city>
+<city>
+			<name>康定市</name>
+			<post>0836</post>
+		</city>
+<city>
+			<name>马尔康</name>
+			<post>0837</post>
+		</city>
+<city>
+			<name>德阳市</name>
+			<post>0838</post>
+		</city>
+<city>
+			<name>广元市</name>
+			<post>0839</post>
+		</city>
+<city>
+			<name>泸州市</name>
+			<post>0840</post>
+		</city>
+		</province>
+	<province name="湖南省">
+		<city>
+			<name>岳阳市</name>
+			<post>0730</post>
+		</city>
+		<city>
+			<name>长沙市</name>
+			<post>0731</post>
+		</city>
+		<city>
+			<name>湘潭市</name>
+			<post>0732</post>
+		</city>
+<city>
+			<name>株洲市</name>
+			<post>0733</post>
+		</city>
+<city>
+			<name>衡阳市</name>
+			<post>0734</post>
+		</city>
+<city>
+			<name>郴州市</name>
+			<post>0735</post>
+		</city>
+<city>
+			<name>常德市</name>
+			<post>0736</post>
+		</city>
+<city>
+			<name>益阳市</name>
+			<post>0737</post>
+		</city>
+<city>
+			<name>娄底市</name>
+			<post>0738</post>
+		</city>
+<city>
+			<name>邵阳市</name>
+			<post>0739</post>
+		</city>
+<city>
+			<name>吉首市</name>
+			<post>0743</post>
+		</city>
+<city>
+			<name>张家界</name>
+			<post>0744</post>
+		</city>
+<city>
+			<name>怀化市</name>
+			<post>0745</post>
+		</city>
+<city>
+			<name>永州冷</name>
+			<post>0746</post>
+		</city>
+		</province>
+	<province name="河南省">
+		<city>
+			<name>商丘市</name>
+			<post>0370</post>
+		</city>
+		<city>
+			<name>郑州市</name>
+			<post>0371</post>
+		</city>
+		<city>
+			<name>安阳市</name>
+			<post>0372</post>
+		</city>
+<city>
+			<name>新乡市</name>
+			<post>0373</post>
+		</city>
+<city>
+			<name>许昌市</name>
+			<post>0374</post>
+		</city>
+<city>
+			<name>平顶山</name>
+			<post>0375</post>
+		</city>
+<city>
+			<name>信阳市</name>
+			<post>0376</post>
+		</city>
+<city>
+			<name>南阳市</name>
+			<post>0377</post>
+		</city>
+<city>
+			<name>开封市</name>
+			<post>0378</post>
+		</city>
+<city>
+			<name>洛阳市</name>
+			<post>0379</post>
+		</city>
+<city>
+			<name>焦作市</name>
+			<post>0391</post>
+		</city>
+<city>
+			<name>鹤壁市</name>
+			<post>0392</post>
+		</city>
+<city>
+			<name>濮阳市</name>
+			<post>0393</post>
+		</city>
+<city>
+			<name>周口市</name>
+			<post>0394</post>
+		</city>
+<city>
+			<name>漯河市</name>
+			<post>0395</post>
+		</city>
+<city>
+			<name>驻马店</name>
+			<post>0396</post>
+		</city>
+<city>
+			<name>三门峡</name>
+			<post>0398</post>
+		</city>
+		</province>
+	<province name="云南省">
+		<city>
+			<name>昭通市</name>
+			<post>0870</post>
+		</city>
+		<city>
+			<name>昆明市</name>
+			<post>0871</post>
+		</city>
+		<city>
+			<name>大理石</name>
+			<post>0872</post>
+		</city>
+<city>
+			<name>个旧市</name>
+			<post>0873</post>
+		</city>
+<city>
+			<name>曲靖市</name>
+			<post>0873</post>
+		</city>
+<city>
+			<name>保山市</name>
+			<post>0875</post>
+		</city>
+<city>
+			<name>文山市</name>
+			<post>0876</post>
+		</city>
+<city>
+			<name>玉溪市</name>
+			<post>0877</post>
+		</city>
+<city>
+			<name>楚雄市</name>
+			<post>0878</post>
+		</city>
+<city>
+			<name>思茅市</name>
+			<post>0879</post>
+		</city>
+<city>
+			<name>景洪市</name>
+			<post>0691</post>
+		</city>
+<city>
+			<name>潞西市</name>
+			<post>0692</post>
+		</city>
+<city>
+			<name>东川市</name>
+			<post>0881</post>
+		</city>
+<city>
+			<name>临沧市</name>
+			<post>0883</post>
+		</city>
+<city>
+			<name>六库市</name>
+			<post>0886</post>
+		</city>
+<city>
+			<name>中甸市</name>
+			<post>0887</post>
+		</city>
+<city>
+			<name>丽江市</name>
+			<post>0888</post>
+		</city>
+		</province>
+	<province name="安徽省">
+		<city>
+			<name>滁州市</name>
+			<post>0550</post>
+		</city>
+		<city>
+			<name>合肥市</name>
+			<post>0551</post>
+		</city>
+		<city>
+			<name>蚌埠市</name>
+			<post>0552</post>
+		</city>
+<city>
+			<name>芜湖市</name>
+			<post>0553</post>
+		</city>
+
+<city>
+			<name>淮南市</name>
+			<post>0554</post>
+		</city>
+
+<city>
+			<name>马鞍山</name>
+			<post>0555</post>
+		</city>
+
+<city>
+			<name>安庆市</name>
+			<post>0556</post>
+		</city>
+<city>
+			<name>宿州市</name>
+			<post>0557</post>
+		</city>
+
+<city>
+			<name>阜阳市</name>
+			<post>0558</post>
+		</city>
+
+<city>
+			<name>黄山市</name>
+			<post>0559</post>
+		</city>
+
+<city>
+			<name>淮北市</name>
+			<post>0561</post>
+		</city>
+<city>
+			<name>铜陵市</name>
+			<post>0562</post>
+		</city>
+<city>
+			<name>宜城市</name>
+			<post>0563</post>
+		</city>
+<city>
+			<name>六安市</name>
+			<post>0564</post>
+		</city>
+<city>
+			<name>巢湖市</name>
+			<post>0565</post>
+		</city>
+<city>
+			<name>贵池市</name>
+			<post>0566</post>
+		</city>
+		</province>
+	<province name="宁夏">
+		<city>
+			<name>银川市</name>
+			<post>0951</post>
+		</city>
+		<city>
+			<name>石嘴山</name>
+			<post>0952</post>
+		</city>
+		<city>
+			<name>吴忠市</name>
+			<post>0953</post>
+		</city>
+<city>
+			<name>固原市</name>
+			<post>0954</post>
+		</city>
+		</province>
+	<province name="吉林省">
+		<city>
+			<name>长春市</name>
+			<post>0431</post>
+		</city>
+		<city>
+			<name>吉林市</name>
+			<post>0432</post>
+		</city>
+		<city>
+			<name>延吉市</name>
+			<post>0433</post>
+		</city>
+<city>
+			<name>四平市</name>
+			<post>0434</post>
+		</city>
+<city>
+			<name>通化市</name>
+			<post>0435</post>
+		</city>
+<city>
+			<name>白城市</name>
+			<post>0436</post>
+		</city>
+<city>
+			<name>辽源市</name>
+			<post>0437</post>
+		</city>
+<city>
+			<name>松原市</name>
+			<post>0438</post>
+		</city>
+<city>
+			<name>浑江市</name>
+			<post>0439</post>
+		</city>
+<city>
+			<name>珲春市</name>
+			<post>0440</post>
+		</city>
+		</province>
+	<province name="广西省">
+		<city>
+			<name>防城港</name>
+			<post>0770</post>
+		</city>
+		<city>
+			<name>南宁市</name>
+			<post>0771</post>
+		</city>
+		<city>
+			<name>柳州市</name>
+			<post>0772</post>
+		</city>
+<city>
+			<name>桂林市</name>
+			<post>0773</post>
+		</city>
+<city>
+			<name>梧州市</name>
+			<post>0774</post>
+		</city>
+<city>
+			<name>玉林市</name>
+			<post>0775</post>
+		</city>
+<city>
+			<name>百色市</name>
+			<post>0776</post>
+		</city>
+<city>
+			<name>钦州市</name>
+			<post>0777</post>
+		</city>
+<city>
+			<name>河池市</name>
+			<post>0778</post>
+		</city>
+<city>
+			<name>北海市</name>
+			<post>0779</post>
+		</city>
+		</province>
+	<province name="贵州省">
+		<city>
+			<name>贵阳市</name>
+			<post>0851</post>
+		</city>
+		<city>
+			<name>遵义市</name>
+			<post>0852</post>
+		</city>
+		<city>
+			<name>安顺市</name>
+			<post>0853</post>
+		</city>
+<city>
+			<name>都均市</name>
+			<post>0854</post>
+		</city>
+<city>
+			<name>凯里市</name>
+			<post>0855</post>
+		</city>
+<city>
+			<name>铜仁市</name>
+			<post>0856</post>
+		</city>
+<city>
+			<name>毕节市</name>
+			<post>0857</post>
+		</city>
+<city>
+			<name>六盘水</name>
+			<post>0858</post>
+		</city>
+<city>
+			<name>兴义市</name>
+			<post>0859</post>
+		</city>
+		</province>
+	<province name="陕西省">
+		<city>
+			<name>西安市</name>
+			<post>029</post>
+		</city>
+		<city>
+			<name>咸阳市</name>
+			<post>0910</post>
+		</city>
+		<city>
+			<name>延吉市</name>
+			<post>0911</post>
+		</city>
+<city>
+			<name>榆林市</name>
+			<post>0912</post>
+		</city>
+<city>
+			<name>渭南市</name>
+			<post>0913</post>
+		</city>
+<city>
+			<name>商洛市</name>
+			<post>0914</post>
+		</city>
+<city>
+			<name>安康市</name>
+			<post>0915</post>
+		</city>
+<city>
+			<name>汉中市</name>
+			<post>0916</post>
+		</city>
+<city>
+			<name>宝鸡市</name>
+			<post>0917</post>
+		</city>
+<city>
+			<name>铜川市</name>
+			<post>0919</post>
+		</city>
+		</province>
+	<province name="青海省">
+		<city>
+			<name>西宁市</name>
+			<post>0971</post>
+		</city>
+		<city>
+			<name>海东市</name>
+			<post>0972</post>
+		</city>
+		<city>
+			<name>同仁市</name>
+			<post>0973</post>
+		</city>
+<city>
+			<name>共和市</name>
+			<post>0974</post>
+		</city>
+
+<city>
+			<name>玛沁市</name>
+			<post>0975</post>
+		</city>
+
+<city>
+			<name>玉树市</name>
+			<post>0976</post>
+		</city>
+<city>
+			<name>德令哈</name>
+			<post>0977</post>
+		</city>
+		</province>
+	<province name="海南省">
+		<city>
+			<name>儋州市</name>
+			<post>0890</post>
+		</city>
+		<city>
+			<name>海口市</name>
+			<post>0898</post>
+		</city>
+		<city>
+			<name>三亚市</name>
+			<post>0899</post>
+		</city>
+		</province>
+       <province name="西藏">
+		<city>
+			<name>拉萨市</name>
+			<post>0891</post>
+		</city>
+		<city>
+			<name>日喀则</name>
+			<post>0892</post>
+		</city>
+		<city>
+			<name>山南市</name>
+			<post>0893</post>
+		</city>
+</province>
+</post-base>

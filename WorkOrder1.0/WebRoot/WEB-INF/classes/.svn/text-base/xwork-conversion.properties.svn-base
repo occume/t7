@@ -1,0 +1,3 @@
+com.hy.wo.util.constants.Evaluations=com.hy.wo.util.EvaluationConversion
+com.hy.wo.util.constants.States=com.hy.wo.util.StatesConversion
+java.util.Date=com.hy.wo.util.DateConversion

@@ -1,0 +1,464 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*账号中心首页*/
+#wrapperleft {FLOAT: left; WIDTH: 465px;height:250px;margin:0 0 10px 10px;background:url(../images/wrapperbggray.gif) no-repeat bottom left;}
+#wrapperlefttop {WIDTH:465px;height:10px;background:url(../images/wrapperbggray.gif) no-repeat top left;}
+
+#wrapperright {FLOAT: right; WIDTH: 275px;margin-right:10px;background:url(../images/quckbg.gif) no-repeat bottom left;}
+#wrapperrighttop {WIDTH: 275px;height:35px;background:url(../images/quckbg.gif) no-repeat top left;}
+
+.userInfoLeft {FLOAT: left; WIDTH: 400px;margin-left:15px;}
+.userInfoLeft DL {CLEAR: both; HEIGHT: 24px;margin:5px 0 5px 0;}
+.userInfoLeft DT {FLOAT: left; WIDTH: 100px;}
+.userInfoLeft DD {FONT-WEIGHT: bold; FLOAT: left;}
+.userInfoLeft DD .grade4 {	DISPLAY: inline-block;BACKGROUND: url(../images/ico.gif) no-repeat 0px -72px;WIDTH: 180px;LINE-HEIGHT: 15px; HEIGHT: 15px;}
+.userInfoLeft DD .grade3 {	DISPLAY: inline-block;BACKGROUND: url(../images/ico.gif) no-repeat 0px -87px;WIDTH: 180px;LINE-HEIGHT: 15px; HEIGHT: 15px}
+.userInfoLeft DD .grade2 {	DISPLAY: inline-block;BACKGROUND: url(../images/ico.gif) no-repeat 0px -102px;WIDTH: 180px;LINE-HEIGHT: 15px; HEIGHT: 15px}
+.userInfoLeft DD .grade1 {	DISPLAY: inline-block;BACKGROUND: url(../images/ico.gif) no-repeat 0px -117px;WIDTH: 180px;LINE-HEIGHT: 15px;HEIGHT: 15px}
+
+.ytxyx {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #6b9f01; HEIGHT: 18px}
+.wyzsfz {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -18px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #6b9f01; HEIGHT: 18px}
+.wyzsfz2 {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -258px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #ff7100; HEIGHT: 18px;}
+.wyzsfz3 {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -276px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #c7000b; HEIGHT: 18px;}
+.wyzsj {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -36px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #6b9f01; HEIGHT: 18px}
+.sppswd {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -54px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #6b9f01; HEIGHT: 18px}
+
+.wyzsjno {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -222px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #888; HEIGHT: 18px}
+.ytxyxno {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -186px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #888; HEIGHT: 18px}
+.wyzsfzno {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -204px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #888; HEIGHT: 18px}
+.sppswdno {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -240px; FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; COLOR: #888; HEIGHT: 18px}
+
+
+.cjmm {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -204px; FLOAT: left; OVERFLOW: hidden; WIDTH: 80px; COLOR: #888; HEIGHT: 18px}
+.bmk {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -204px; FLOAT: left; OVERFLOW: hidden; WIDTH: 80px; COLOR: #888; HEIGHT: 18px}
+.ssbm {PADDING-LEFT: 25px; BACKGROUND: url(../images/ico.gif) no-repeat 0px -204px; FLOAT: left; OVERFLOW: hidden; WIDTH: 80px; COLOR: #888; HEIGHT: 18px}
+
+
+#product {MARGIN:0px 0 10px 10px; WIDTH: 750px; HEIGHT: 170px;}
+#product .menu {BACKGROUND: url(../images/box.gif) no-repeat 0px -83px; WIDTH: 750px; HEIGHT: 30px;}
+
+/*滚动小贴士*/
+#roll{height:24px;margin:2px 0 0 80px;width:600px;}
+#marqueebox0{ overflow:hidden;height:24px;line-height:20px;width:600px;}
+#marqueebox0 ul{ list-style:none}
+#marqueebox0 li{line-height:29px;background:url(../images/icon.gif) 0 0 no-repeat;padding-left:20px;padding-left:0px\9;}
+.amarqueebox0 {color:#444;text-indent:24px;}
+.amarqueebox0:hover { color:#ae0006;}
+
+
+#indexflash { WIDTH:747px; HEIGHT: 120px;margin-top:10px;}
+
+.flash {MARGIN: 0px auto; WIDTH: 100%; HEIGHT: 120px;margin-bottom:30px; border:1px solid #fff\9;}
+.tab {OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 120px; POSITION:relative; }
+.tab DL {MARGIN: 0px; WIDTH: 100%;}
+
+.tab DL DT { WIDTH:120px; HEIGHT: 26px; LINE-HEIGHT: 26px; POSITION: absolute;top:280px;}
+.tab DL DT A {DISPLAY: block; BACKGROUND: url(../images/ico2.png) no-repeat left top; FLOAT: left; HEIGHT: 26px; WIDTH: 26px; CURSOR: pointer;text-align:center;color:#333;}
+.tab DL DT A:hover {DISPLAY: block; BACKGROUND: url(../images/ico1.png) no-repeat; WIDTH: 26px; HEIGHT: 26px;color:#000;}
+.tab DL DT A.tabActive {BACKGROUND: url(../images/ico1.png) no-repeat; WIDTH: 26px; HEIGHT: 26px;font-weight:bold;}
+
+.tab DL DD DIV {Z-INDEX: 1! important; HEIGHT: 546px;}
+.tab DL DD {Z-INDEX: 1! important;}
+.jobbg {BACKGROUND: url(../images/picjob.jpg) no-repeat center top; WIDTH: 100%; HEIGHT: 370px;}
+.jobbg A {DISPLAY: block; OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 370px;;}
+.productsfybg {BACKGROUND: url(../images/picproductsfy.jpg) no-repeat center top; WIDTH: 100%; HEIGHT: 370px;}
+.productsfybg A {DISPLAY: block; OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 370px;}
+.productsqdbg {BACKGROUND: url(../images/picproductsqd.jpg) no-repeat center top; WIDTH: 100%; HEIGHT: 370px;}
+.productsqdbg A {DISPLAY: block; OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 370px;}
+
+
+
+
+/*#product .productList LI {FLOAT: left; MARGIN: 10px 5px 0px 5px; OVERFLOW: hidden; WIDTH: 175px; HEIGHT: 120px; _margin: 10px 5px 0 4px}
+#product .productList LI .productListPic {WIDTH: 175px; HEIGHT: 90px;}
+#product .productList LI .productListA {BACKGROUND: #eaeaea; MARGIN: 3px 0px; WIDTH: 175px; HEIGHT: 25px}
+#product .productList LI .productListA LI {FLOAT: left; MARGIN: 0px; WIDTH: 55px; HEIGHT: 25px}
+#product .productList LI .productListA LI SPAN {DISPLAY:block; PADDING-LEFT: 20px; FLOAT: left; MARGIN: 0px; WIDTH: 30px; COLOR:#999999;LINE-HEIGHT:25px}
+#product .productList LI .productListA LI A {DISPLAY:block;PADDING-LEFT:20px;FLOAT:left; MARGIN:0px; WIDTH: 30px; LINE-HEIGHT: 25px; TEXT-DECORATION: none}
+#product .productList LI .productListA LI A:hover {BACKGROUND: url(../images/ico.gif) no-repeat 0px -136px}
+#product1 .productListPic {BACKGROUND: url(../images/product.jpg) no-repeat}
+#product2 .productListPic {BACKGROUND: url(../images/product.jpg) no-repeat -175px 0px}
+#product3 .productListPic {BACKGROUND: url(../images/product.jpg) no-repeat -350px 0px}
+#product4 .productListPic {BACKGROUND: url(../images/product.jpg) no-repeat -525px 0px}
+*/
+
+
+#quckBox {CLEAR: both; MARGIN-BOTTOM: 10px; HEIGHT: 154px;}
+#quckBox .clear {CLEAR: both; FONT-SIZE: 0px; LINE-HEIGHT: 0}
+#quckBox LI A {DISPLAY: block; OVERFLOW: hidden; WIDTH: 120px; TEXT-INDENT: -9900px; HEIGHT: 40px}
+#quckBox LI {DISPLAY: block; FLOAT: left; MARGIN: 11px 0px 0px 11px; OVERFLOW: hidden; WIDTH: 120px; TEXT-INDENT: -999px; HEIGHT: 40px; _margin: 11px 0 0 7px
+}
+
+
+#quckBox .sfzcz {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px 0px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.sfzcz:hover {BACKGROUND-POSITION: -120px 0px}
+#quckBox .fdhzx {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -160px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.fdhzx:hover {BACKGROUND-POSITION: -120px -160px}
+#quckBox .sjaqb {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -40px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.sjaqb:hover {BACKGROUND-POSITION: -120px -40px}
+#quckBox .sjaqs {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -200px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.sjaqs:hover {BACKGROUND-POSITION: -120px -200px}
+#quckBox .xgyx {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -80px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.xgyx:hover {BACKGROUND-POSITION: -120px -80px}
+#quckBox .xgmm {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -240px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.xgmm:hover {BACKGROUND-POSITION: -120px -240px}
+#quckBox .sfzyz {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -120px; WIDTH: 120px; HEIGHT: 40px;}
+#quckBox A.sfzyz:hover {BACKGROUND-POSITION: -120px -120px}
+#quckBox .zzfw {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -280px; WIDTH: 120px; HEIGHT: 40px}
+#quckBox A.zzfw:hover {BACKGROUND-POSITION: -120px -280px}
+#servicePhone {CLEAR: both; DISPLAY: block; BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -320px; MARGIN-LEFT: 12px; OVERFLOW: hidden; WIDTH: 250px; HEIGHT: 35px;margin-bottom:15px;}
+#servicePhone A {DISPLAY: block; OVERFLOW: hidden; WIDTH: 250px; TEXT-INDENT: -9900px; HEIGHT: 35px}
+
+/*手机验证*/
+
+.losepasswdcon4{margin:20px 0 20px 0px;width:710px;height:60px;background:url(../images/icon_pwd.gif) no-repeat 0 -180px;border-bottom:1px dashed #ccc;}
+.losepasswdcon4 ul{ list-style:none;margin-left:70px;_margin-left:50px;}
+.losepasswdcon4 li{float:left;margin-left:20px;width:190px;height:50px;background:#ebebeb;border:1px solid #ccc;text-align:center;line-height:50px;}
+.losepasswdcon4 li span{color:#F90;font-weight:bold;}
+
+
+
+
+/*提问列表*/
+
+#questionbox{width:710px;height:auto;background:url(../images/textlightbg710.gif) no-repeat bottom left;margin-bottom:10px;}
+#questionboxtop{background:url(../images/textlightbg710.gif) no-repeat top left;height:10px;;margin:auto;}
+#questionboxd{width:710px;height:auto;background:url(../images/textdarkbg710.gif) no-repeat bottom left;margin-bottom:10px;}
+#questionboxdtop{background:url(../images/textdarkbg710.gif) no-repeat top left;height:10px;;margin:auto;}
+
+
+#questiontitle{ WIDTH: 690px; HEIGHT: 30px;margin:0 10px 1px 10px; text-align:center;}
+.questiontitle1{float:left; WIDTH: 60px; HEIGHT: 30px;margin-left:2px;line-height:30px;text-indent:12px;color:#444;font-weight:bold;background:#ccc}
+.questiontitle2{float:left; WIDTH: 400px; HEIGHT: 30px;margin-left:2px;line-height:30px;text-indent:12px;color:#444;font-weight:bold;background:#ccc}
+.questiontitle3{float:left; WIDTH: 140px; HEIGHT: 30px;margin-left:2px;line-height:30px;text-indent:12px;color:#444;font-weight:bold;background:#ccc}
+.questiontitle4{float:left; WIDTH: 80px; HEIGHT: 30px;margin-left:2px;line-height:30px;text-indent:12px;color:#444;font-weight:bold;background:#ccc}
+
+#questioncon{ WIDTH: 690px;margin:0 10px 1px 10px;margin-bottom:5px;}
+.questioncon1{float:left; WIDTH: 60px; margin-left:2px;line-height:25px;text-align:center;}
+.questioncon2{float:left; WIDTH: 400px; margin-left:2px;line-height:25px;border-left:1px dashed #ccc;border-right:1px dashed #ccc;}
+.questioncon2 p{line-height:25px;margin:10px;text-indent:24px;}
+.questioncon2 h3{line-height:25px;margin:10px;font-weight:normal;}
+.questioncon3{float:left; WIDTH: 140px; margin-left:2px;line-height:25px;text-align:center;}
+.questioncon4{float:left; WIDTH: 70px; margin-left:2px;line-height:25px;text-align:center;}
+
+
+#questioncon2{ WIDTH: 690px;margin:0 10px 1px 10px;margin-bottom:5px;}
+#questioncon2 .box1{float:left;width:100px;text-align:right;height:20px;line-height:20px;margin-right:5px;}
+#questioncon2 .box2{float:left;width:200px;height:20px;line-height:20px;}
+#questioncon2 .box3{float:right;width:100px;text-align:right;height:20px;line-height:20px;margin-right:5px;}
+#questioncon2 .box4{float:right;width:200px;height:20px;line-height:20px;}
+#questioncon2 .box5{float:left;width:550px;height:auto;}
+
+.myqstcont{ WIDTH: 710px;margin:10px 0px 10px 0px;border-top:1px dashed #ccc}
+.myqstcont .box1{float:left;width:120px;text-align:right;height:20px;line-height:20px;margin-top:5px;}
+.myqstcont .box2{float:left;width:580px;height:20px;line-height:20px;margin-top:5px;}
+.myqstcont .box3{float:left;width:580px;height:auto;margin-top:5px;}
+.pinkbgcolor{width:690px;background:#F5F5F5}
+
+.totle {float:left;width:100px;height:80px;line-height:50px;padding-top:20px;border-right:1px dashed #ccc;margin:10px 0 10px 25px;text-align:center;}
+.totle1{float:left;width:100px;height:80px;line-height:50px;padding-top:20px;border-right:1px dashed #ccc;margin:10px 0 10px 10px;text-align:center;}
+.totle2{float:left;width:100px;height:80px;line-height:50px;padding-top:20px;border-right:1px dashed #ccc;margin:10px 0 10px 10px;text-align:center;}
+.totle3{float:left;width:100px;height:80px;line-height:50px;padding-top:20px;border-right:1px dashed #ccc;margin:10px 0 10px 10px;text-align:center;}
+.totle4{float:left;width:100px;height:80px;line-height:50px;padding-top:20px;border-right:1px dashed #ccc;margin:10px 0 10px 10px;text-align:center;}
+.totle5{float:left;width:100px;height:80px;line-height:50px;padding-top:20px;margin:10px 0 10px 10px;text-align:center;}
+
+
+.wtlistbox{width:710px;height:auto;margin-bottom:10px;}
+.btn_inner{border-bottom:solid 2px #ccc;height:32px;25px;width:98%;margin:auto;}
+.btn_inner li.selected{border-top:solid 2px #ccc;border-left:1px solid #ccc;border-right:1px solid #ccc;background:#fff;height:32px;line-height:32px;color:#C00;}
+.btn_inner li{float:left; border-top:1px solid #E4E4E4; border-left:1px solid #E4E4E4; border-right:1px solid #E4E4E4;text-align:center;font-weight:bold;height:30px;line-height:30px;margin-left:2px;display:block; width:100px;}
+
+.btn_inner_content{clear:both;width:98%;margin:auto;}
+
+.btn_inner_content li{display:block;boder:1px solid #f00;}
+.wtlisttitle{width:100%;height:30px;line-height:30px;border-bottom:1px dashed #ccc;margin:5px 0 5px 0;}
+.wtlisttitle1{float:left;width:450px;text-align:center;font-weight:bold;}
+.wtlisttitle2{float:left;width:150px;text-align:center;font-weight:bold;}
+.wtlisttitle3{float:left;width:85px;text-align:center;font-weight:bold;}
+
+.wtlistcont{width:100%;height:30px;line-height:30px;border-bottom:1px dashed #ccc;margin:5px 0 5px 0;}
+.wtlistcont1{float:left;width:450px;height:30px;line-height:30px;}
+.wtlistcont2{float:left;width:150px;text-align:center;height:30px;line-height:30px;}
+.wtlistcont3{float:left;width:85px;text-align:center;height:30px;line-height:30px;}
+
+.wtlistcontwcl{float:left; WIDTH: 85px; HEIGHT: 30px;line-height:30px;color:#c7000b;background:url(../images/iconwt.gif) no-repeat 0 0;}
+.wtlistcontyhf{float:left; WIDTH: 55px; HEIGHT: 30px;line-height:30px;color:#6b9f01;text-align:center;margin-left:33px;background:url(../images/icon_end1.gif) no-repeat 0 0;}/***iconwt***/
+.wtlistcontyhfReaded{float:left; WIDTH: 55px; HEIGHT: 30px;line-height:30px;color:#6b9f01;text-align:center;margin-left:27px;background:url(../images/icon_end.gif) no-repeat 0 0; }
+.wtlistcontclz{float:left; WIDTH: 85px; HEIGHT: 30px;line-height:30px;color:#ff7100;text-align:center;background:url(../images/iconwt.gif) no-repeat 0 -60px;}
+.wtlistcontwb{float:left; WIDTH: 85px; HEIGHT: 30px;line-height:30px;color:#444;text-align:center;background:url(../images/iconwt.gif) no-repeat 0 -90px;}
+.wtlistcontbczl{float:left; WIDTH: 85px; HEIGHT: 30px;line-height:30px;color:#039;text-align:center;background:url(../images/iconwt.gif) no-repeat 0 -120px;}
+.wtlistcontbczl-readed{float:left; WIDTH: 85px; HEIGHT: 30px;line-height:30px;color:#039;text-align:center;background:url(../images/iconwt.gif) no-repeat 0 -120px;}
+
+
+
+/*翻页button*/
+#turnpage{width:690px; height:30px;margin:1px 10px 10px 10px;line-height:30px;}
+#turnpage .buttonfirst a{float:right;width:25px; height:15px;line-height:30px;background:url(../images/buttonpg.gif) no-repeat 0 0;margin:7px 2px 0 0;}
+#turnpage .buttonfirst a:hover{background:url(../images/buttonpg.gif) no-repeat -25px 0;}
+#turnpage .buttonfront a{float:right;width:25px;height:15px;line-height:30px;background:url(../images/buttonpg.gif) no-repeat 0 -15px;margin:7px 2px 0 0;}
+#turnpage .buttonfront a:hover{background:url(../images/buttonpg.gif) no-repeat -25px -15px;}
+#turnpage .buttonnext a{float:right;width:25px; height:15px;line-height:30px;background:url(../images/buttonpg.gif) no-repeat 0 -30px;margin:7px 2px 0 0;}
+#turnpage .buttonnext a:hover{background:url(../images/buttonpg.gif) no-repeat -25px -30px;}
+#turnpage .buttonend a{float:right;width:25px; height:15px;line-height:30px;background:url(../images/buttonpg.gif) no-repeat 0 -45px;margin:7px 10px 0 0;}
+#turnpage .buttonend a:hover{background:url(../images/buttonpg.gif) no-repeat -25px -45px;}
+#turnpage .buttonselect{float:right;margin-right:10px;}
+
+/*评价*/
+.myratewarp{width:710px;margin-bottom:30px;background:#FEE;border-top:5px solid #FF9B9B;}
+.myrate{width:100%;text-align:center;padding:10px 0 10px 0;}
+.myrate6{margin-top: 30px;}
+.myrate1{float:left;width:150px;text-align:center;}
+.myrate2{float:left;width:150px;margin-left:30px;text-align:center;}
+.myrate3{float:left;width:150px;margin-left:30px;text-align:center;}
+.myrate4{float:left;width:150px;margin-left:30px;text-align:center;}
+.myrate #comment{width:200px;height:60px;}
+
+/*faq*/
+.zhbf{width:710px;margin:20px auto;}
+.zhbf span{color:#f00;}
+.zhbf1{float:left; width:300px;height:230px;margin-left: 20px;_margin-left:10px;background:url(../images/prolist_2.jpg) no-repeat 0 0;}
+.zhbf2{float:right;width:300px;height:230px;margin-right:20px;_margin-right:10px;background:url(../images/prolist_2.jpg) no-repeat 0 0;}
+.zhbf3{width:670px;height:auto;margin:auto;margin-bottom:20px;background:url(../images/prolist_2.jpg) no-repeat bottom;}
+.zhbf3 .title670{margin:auto;height:35px;line-height:35px;text-align:center;color:#fff;font-weight:bold;background:url(../images/prolist_2.jpg) no-repeat 0 -230px;}
+.boxtitle{width:280px;margin:auto;height:33px;line-height:35px;text-align:center;color:#fff;font-weight:bold;}
+
+.boxcont {width:280px;margin:5px auto;height:140px;}
+.boxcont_l{float:left;width:95px;margin-top:25px;}
+.boxcont_r{float:left;width:185px;text-indent:24px;}
+.boxcont_c{width:630px;text-indent:24px;margin:auto;}
+.faqcont{width:710px;margin:20px auto 30px;}
+.faqcont li{ list-style:none;height:25px;line-height:25px;border-top:1px dashed #ccc;margin:5px 0 5px 0;background:url(../images/icon.gif) no-repeat 0 -3px;text-indent:24px;}
+
+.faqcontlist{width:750px;margin:20px auto 30px;}
+.faqcontlist li{ list-style:none;}
+
+
+/*service index*/
+.serviceflash{WIDTH: 750px; HEIGHT: 135px;margin:-10px 10px 10px 10px;}
+
+.quckservice {width:750px;height:auto;background:url(../images/prolist_1.jpg) no-repeat bottom;margin:auto;}
+.quckservice .quckhead{height:35px;background:url(../images/prolist_1.jpg) no-repeat top;}
+
+.quckgame {height:120px;width:750px;margin:auto;}
+.quckgame ul {list-style:none;}
+.quckgame ul li { float:left; height:120px;width:180px; MARGIN: 11px 0px 0px 6px; _margin: 11px 0 0 4px;position: relative;}
+.quckgame ul li a{ display:block;height:120px;width:180px;}
+.quckgame ul li a:hover{height:120px;width:180px;}
+/**修改前*/
+.submenue1 {position:absolute;top:117px;height:50px; display: none;width:170px;margin-left:5px;background: url(../images/tips1.jpg) no-repeat 0 0;}
+.submenue1 ul li { float:left;height:25px;width:50px;line-height:25px;margin-left:5px;}
+.submenue1 ul li a {height:25px;width:50px;color:#444;}
+.submenue1 ul li a:hover {height:25px;width:50px;color:#f00;}
+
+#dropmenu li:hover ul, #dropmenu li.over ul { display: block; /* The magic */ }
+/***下拉菜单居中***/
+.submenue {position:absolute;top:117px;height:50px; display: none;width:170px;margin-left:5px;background: url(../images/tips1.jpg) no-repeat 0 0;padding-left:20px;_padding-left:10px;}
+.submenue ul li { float:left;height:25px;width:50px;line-height:25px;margin-left:10px;}
+.submenue ul li a {height:25px;width:50px;color:#444;}
+.submenue ul li a:hover {height:25px;width:50px;color:#f00;}
+
+
+
+
+
+
+
+
+.quckgame .icongame1 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1500px; WIDTH: 180px; HEIGHT: 120px;}
+.quckgame .icongame1:hover {BACKGROUND-POSITION: -180px -1500px}
+
+.quckgame .icongame2 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1620px; WIDTH: 180px; HEIGHT: 120px;}
+.quckgame .icongame2:hover {BACKGROUND-POSITION: -180px -1620px}
+
+.quckgame .icongame3 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1740px; WIDTH: 180px; HEIGHT: 120px;}
+.quckgame .icongame3:hover {BACKGROUND-POSITION: -180px -1740px}
+
+.quckgame .icongame4 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1860px; WIDTH: 180px; HEIGHT: 120px;}
+.quckgame .icongame4:hover {BACKGROUND-POSITION: -180px -1860px}
+
+
+
+
+
+
+
+.quckmore{height:auto;margin-top:10px\9;}
+
+.quckgamemore li {DISPLAY: block; FLOAT: left; OVERFLOW: hidden; WIDTH: 120px; TEXT-INDENT: -999px; HEIGHT: 80px; MARGIN: 11px 0px 0px 4px; _margin: 11px 0 0 3px;}
+.quckgamemore li a {DISPLAY: block; OVERFLOW: hidden; WIDTH: 120px; TEXT-INDENT: -9900px; HEIGHT: 80px}
+.quckgamemore .icongamemore1 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -835px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgamemore .icongamemore1:hover {BACKGROUND-POSITION: -120px -835px}
+
+.quckgamemore .icongamemore2 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -915px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgamemore .icongamemore2:hover {BACKGROUND-POSITION: -120px -915px}
+
+.quckgamemore .icongamemore3 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -355px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgamemore .icongamemore3:hover {BACKGROUND-POSITION: -120px -355px}
+
+.quckgamemore .icongamemore4 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -515px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgamemore .icongamemore4:hover {BACKGROUND-POSITION: -120px -515px}
+
+.quckgamemore .icongamemore5 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1395px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgamemore .icongamemore5:hover {BACKGROUND-POSITION: -120px -1395px}
+
+.quckgamemore .icongamemore6 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -995px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgamemore .icongamemore6:hover {BACKGROUND-POSITION: -120px -995px}
+
+
+
+/*
+.quckservice .qucksercont_l{float:left;width:425px;background:url(../images/my-knows_bg.jpg) no-repeat right center;}
+.quckservice .qucksercont_r{float:left;width:300px;margin-left:15px;}
+
+
+.quckgame li {DISPLAY: block; FLOAT: left; MARGIN: 11px 0px 0px 11px; OVERFLOW: hidden; WIDTH: 120px; TEXT-INDENT: -999px; HEIGHT: 80px; _margin: 11px 0 0 7px;}
+.quckgame li a {DISPLAY: block; OVERFLOW: hidden; WIDTH: 120px; TEXT-INDENT: -9900px; HEIGHT: 80px}
+.quckgame .icongame1 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -355px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame1:hover {BACKGROUND-POSITION: -120px -355px}
+
+.quckgame .icongame2 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -435px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame2:hover {BACKGROUND-POSITION: -120px -435px}
+
+.quckgame .icongame3 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -515px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame3:hover {BACKGROUND-POSITION: -120px -515px}
+
+.quckgame .icongame4 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -595px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame4:hover {BACKGROUND-POSITION: -120px -595px}
+
+.quckgame .icongame5 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -675px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame5:hover {BACKGROUND-POSITION: -120px -675px}
+
+.quckgame .icongame6 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -755px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame6:hover {BACKGROUND-POSITION: -120px -755px}
+
+.quckgame .icongame7 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -835px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame7:hover {BACKGROUND-POSITION: -120px -835px}
+
+.quckgame .icongame8 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -915px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame8:hover {BACKGROUND-POSITION: -120px -915px}
+
+.quckgame .icongame9 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -995px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame9:hover {BACKGROUND-POSITION: -120px -995px}
+
+.quckgame .icongame10 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1075px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame10:hover {BACKGROUND-POSITION: -120px -1075px}
+
+.quckgame .icongame11 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1155px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame11:hover {BACKGROUND-POSITION: -120px -1155px}
+
+.quckgame .icongame12 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1235px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame12:hover {BACKGROUND-POSITION: -120px -1235px}
+
+.quckgame .icongame13 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1315px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame13:hover {BACKGROUND-POSITION: -120px -1315px}
+
+.quckgame .icongame14 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1395px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame14:hover {BACKGROUND-POSITION: -120px -1395px}
+
+.quckgame .icongame15 {BACKGROUND: url(../images/quckbutton.gif) no-repeat 0px -1475px; WIDTH: 120px; HEIGHT: 80px;}
+.quckgame .icongame15:hover {BACKGROUND-POSITION: -120px -1475px}
+
+*/
+
+.memberlogin{BACKGROUND: url(../images/butlogin.png) no-repeat 0px 0px; WIDTH: 180px; HEIGHT: 33px;margin:auto;;cursor:hand; overflow:hidden; margin-bottom:3px;}
+.memberlogin:hover{BACKGROUND: url(../images/butlogin.png) no-repeat 0px -33px; }
+
+
+
+/*10.28  新增index快速入口
+.quckboxfg{width:670px;height:20px;margin:auto;background:url(../images/quckboxfg.jpg) no-repeat;}
+
+.quckservicebox{height:570px;width:100%;}
+
+.quckservicebox li {DISPLAY: block; FLOAT: left; MARGIN: 11px 0px 0px 22px; OVERFLOW: hidden; WIDTH: 340px;HEIGHT: 100px; _margin: 11px 0 0 18px;}
+.quckservicebox li a {DISPLAY: block; OVERFLOW: hidden; WIDTH: 340px;HEIGHT: 100px}
+.quckservicebox .iconservice1 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px 0px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice1:hover {BACKGROUND-POSITION: -340px 0px;color:#ff4c00;}
+
+.quckservicebox .iconservice2 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -100px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice2:hover {BACKGROUND-POSITION: -340px -100px;color:#ff4c00;}
+
+.quckservicebox .iconservice3 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -200px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice3:hover {BACKGROUND-POSITION: -340px -200px;color:#ff4c00;}
+
+.quckservicebox .iconservice4 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -300px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice4:hover {BACKGROUND-POSITION: -340px -300px;color:#ff4c00;}
+
+.quckservicebox .iconservice5 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -400px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice5:hover {BACKGROUND-POSITION: -340px -400px;color:#ff4c00;}
+
+.quckservicebox .iconservice6 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -500px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice6:hover {BACKGROUND-POSITION: -340px -500px;color:#ff4c00;}
+
+.quckservicebox .iconservice7 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -600px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice7:hover {BACKGROUND-POSITION: -340px -600px;color:#ff4c00;}
+
+.quckservicebox .iconservice8 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -700px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice8:hover {BACKGROUND-POSITION: -340px -700px;color:#ff4c00;}
+
+.quckservicebox .iconservice9 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -800px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice9:hover {BACKGROUND-POSITION: -340px -800px;color:#ff4c00;}
+
+.quckservicebox .iconservice15 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1400px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox .iconservice15:hover {BACKGROUND-POSITION: -340px -1400px;color:#ff4c00;}
+
+.quckservicebox2{height:350px;}
+.quckservicebox2 li {DISPLAY: block; FLOAT: left; MARGIN: 11px 0px 0px 22px; OVERFLOW: hidden; WIDTH: 340px;HEIGHT: 100px; _margin: 11px 0 0 18px;}
+.quckservicebox2 li a {DISPLAY: block; OVERFLOW: hidden; WIDTH: 340px;HEIGHT: 100px}
+
+.quckservicebox2 .iconservice10 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -900px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox2 .iconservice10:hover {BACKGROUND-POSITION: -340px -900px;color:#ff4c00;}
+
+.quckservicebox2 .iconservice11 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1000px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox2 .iconservice11:hover {BACKGROUND-POSITION: -340px -1000px;color:#ff4c00;}
+
+.quckservicebox2 .iconservice12 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1100px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox2 .iconservice12:hover {BACKGROUND-POSITION: -340px -1100px;color:#ff4c00;}
+
+.quckservicebox2 .iconservice13 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1200px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox2 .iconservice13:hover {BACKGROUND-POSITION: -340px -1200px;color:#ff4c00;}
+
+.quckservicebox2 .iconservice14 {BACKGROUND: url(../images/quckbutton2.gif) no-repeat 0px -1300px; WIDTH: 230px; HEIGHT: 100px;padding-left:110px;padding-top:10px;text-indent:20px;}
+.quckservicebox2 .iconservice14:hover {BACKGROUND-POSITION: -340px -1300px;color:#ff4c00;}
+
+*/
+/*11.2  新增流程图*/
+.process{ position:relative;width:570px;height:850px;margin:auto;background:url(../images/process.gif) no-repeat 0 0;}
+.processcont1{position:absolute;top:20px;left:231px;width:180px;height:40px;line-height:20px;text-align:center;}
+.processcont2{position:absolute;top:95px;left:231px;width:180px;height:40px;line-height:20px;}
+.processcont3{position:absolute;top:170px;left:231px;width:180px;height:40px;line-height:15px;}
+.processcont4{position:absolute;top:245px;left:231px;width:180px;height:40px;line-height:40px;text-align:center;}
+.processcont5{position:absolute;top:245px;left:45px;width:110px;height:40px;line-height:20px;text-align:center;}
+.processcont6{position:absolute;top:320px;left:231px;width:180px;height:40px;line-height:15px;}
+.processcont7{position:absolute;top:395px;left:231px;width:180px;height:40px;line-height:20px;}
+.processcont8{position:absolute;top:470px;left:231px;width:180px;height:40px;line-height:15px;}
+.processcont9{position:absolute;top:470px;left:45px;width:110px;height:80px;line-height:20px;}
+.processcont10{position:absolute;top:545px;left:292px;width:60px;height:35px;line-height:35px;text-align:center;}
+.processcont11{position:absolute;top:628px;left:103px;width:180px;height:80px;line-height:20px;}
+.processcont12{position:absolute;top:628px;left:362px;width:180px;height:80px;line-height:16px;}
+.processcont13{position:absolute;top:772px;left:292px;width:60px;height:35px;line-height:40px;text-align:center;}
+/***selfServiceMain TipBox***/
+#tipBox{
+	position: absolute;
+	display:none;
+	width:240px;
+	height:135px;
+	padding:5px 0 0 57px;
+	vertical-align:middle;
+	/**filter: alpha(opacity=100);*/
+	/**opacity:1;*/
+	
+	background:url(../images/tipBg.png) no-repeat top;
+}
+#tipBox  #innerTipbox{
+	width:200px;
+	font-size:16px;
+	margin-left:8px;
+	font-family: "微软雅黑";
+}
+/***workOrderDetail  textArea***/
+.myrate #leftCount{
+	font-family: Georgia;
+	font-size:28px;
+}

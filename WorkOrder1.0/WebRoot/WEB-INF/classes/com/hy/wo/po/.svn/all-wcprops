@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/hyProject/!svn/ver/6053/WorkOrder1.0/src/com/hy/wo/po
+END
+Advisory.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/981/WorkOrder1.0/src/com/hy/wo/po/Advisory.java
+END
+Caller.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/5592/WorkOrder1.0/src/com/hy/wo/po/Caller.java
+END
+WorkOrder.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/5313/WorkOrder1.0/src/com/hy/wo/po/WorkOrder.hbm.xml
+END
+Staff.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/6918/WorkOrder1.0/src/com/hy/wo/po/Staff.java
+END
+Department.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/828/WorkOrder1.0/src/com/hy/wo/po/Department.java
+END
+ReportKinds.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/647/WorkOrder1.0/src/com/hy/wo/po/ReportKinds.java
+END
+WorkOrderOper.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/3732/WorkOrder1.0/src/com/hy/wo/po/WorkOrderOper.java
+END
+OperType.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/981/WorkOrder1.0/src/com/hy/wo/po/OperType.java
+END
+Member.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/675/WorkOrder1.0/src/com/hy/wo/po/Member.java
+END
+Faq.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hyProject/!svn/ver/5946/WorkOrder1.0/src/com/hy/wo/po/Faq.java
+END
+Urgency.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/799/WorkOrder1.0/src/com/hy/wo/po/Urgency.java
+END
+WorkOrderUserInfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hyProject/!svn/ver/6918/WorkOrder1.0/src/com/hy/wo/po/WorkOrderUserInfo.hbm.xml
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hyProject/!svn/ver/2492/WorkOrder1.0/src/com/hy/wo/po/User.java
+END
+WorkOrderRecharge.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/5215/WorkOrder1.0/src/com/hy/wo/po/WorkOrderRecharge.java
+END
+ServerInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hyProject/!svn/ver/5592/WorkOrder1.0/src/com/hy/wo/po/ServerInfo.java
+END
+RechargeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hyProject/!svn/ver/1116/WorkOrder1.0/src/com/hy/wo/po/RechargeType.java
+END
+Caller.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/5069/WorkOrder1.0/src/com/hy/wo/po/Caller.hbm.xml
+END
+FaqAnswer.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/5946/WorkOrder1.0/src/com/hy/wo/po/FaqAnswer.java
+END
+Servers.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/5386/WorkOrder1.0/src/com/hy/wo/po/Servers.java
+END
+WorkOrderUserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hyProject/!svn/ver/6918/WorkOrder1.0/src/com/hy/wo/po/WorkOrderUserInfo.java
+END
+Areas.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hyProject/!svn/ver/649/WorkOrder1.0/src/com/hy/wo/po/Areas.java
+END
+Group.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/5386/WorkOrder1.0/src/com/hy/wo/po/Group.java
+END
+CallBack.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/5354/WorkOrder1.0/src/com/hy/wo/po/CallBack.java
+END
+Games.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/6053/WorkOrder1.0/src/com/hy/wo/po/Games.java
+END
+WorkOrderDevice.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hyProject/!svn/ver/952/WorkOrder1.0/src/com/hy/wo/po/WorkOrderDevice.java
+END
+WorkOrderSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/1085/WorkOrder1.0/src/com/hy/wo/po/WorkOrderSource.java
+END
+Problem.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/1442/WorkOrder1.0/src/com/hy/wo/po/Problem.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hyProject/!svn/ver/838/WorkOrder1.0/src/com/hy/wo/po/Role.java
+END
+States.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/1085/WorkOrder1.0/src/com/hy/wo/po/States.java
+END
+ClassCategory.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hyProject/!svn/ver/5390/WorkOrder1.0/src/com/hy/wo/po/ClassCategory.java
+END
+GameGoods.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/4528/WorkOrder1.0/src/com/hy/wo/po/GameGoods.java
+END
+SubCallBack.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hyProject/!svn/ver/5354/WorkOrder1.0/src/com/hy/wo/po/SubCallBack.java
+END
+WorkOrderAdditional.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/hyProject/!svn/ver/2048/WorkOrder1.0/src/com/hy/wo/po/WorkOrderAdditional.java
+END
+Goods.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/2048/WorkOrder1.0/src/com/hy/wo/po/Goods.java
+END
+BatchData.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/962/WorkOrder1.0/src/com/hy/wo/po/BatchData.java
+END
+FaqRep.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/5946/WorkOrder1.0/src/com/hy/wo/po/FaqRep.java
+END
+WorkOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/6959/WorkOrder1.0/src/com/hy/wo/po/WorkOrder.java
+END
+IssueAdditional.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/hyProject/!svn/ver/1725/WorkOrder1.0/src/com/hy/wo/po/IssueAdditional.java
+END
+Assign.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/1725/WorkOrder1.0/src/com/hy/wo/po/Assign.java
+END
+FileUpLoad.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/656/WorkOrder1.0/src/com/hy/wo/po/FileUpLoad.java
+END
+Staff.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hyProject/!svn/ver/6918/WorkOrder1.0/src/com/hy/wo/po/Staff.hbm.xml
+END
+Permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hyProject/!svn/ver/903/WorkOrder1.0/src/com/hy/wo/po/Permission.java
+END
+Issue.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hyProject/!svn/ver/5386/WorkOrder1.0/src/com/hy/wo/po/Issue.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hyProject/!svn/ver/676/WorkOrder1.0/src/com/hy/wo/po/UserInfo.java
+END
+Faq.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hyProject/!svn/ver/5946/WorkOrder1.0/src/com/hy/wo/po/Faq.hbm.xml
+END

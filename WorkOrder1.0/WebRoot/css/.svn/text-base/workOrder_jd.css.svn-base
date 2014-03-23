@@ -1,0 +1,149 @@
+#woDetail-box{
+	width:100%;
+	min-height:500px;
+	height:auto !important;
+	position:relative;
+	margin-right:8px;
+	margin-top:30px;
+	background: #ffffff;
+	border:solid 1px  #f1f1f1;
+	text-align: center;
+	padding-bottom: 8px;
+}
+#woDetail-box .jKey{
+	font-size:14px;
+	color:#666666;
+}
+#woDetail-box .jValue{
+	font-size:15px;
+	color:#000000;
+}
+#woDetail-box h2{
+	width:99%;
+	font-size:16px;
+	border-bottom:1px solid #bc8f8f;
+	margin-bottom: 0px;
+	padding:3px 0px 3px 5px; 
+	line-height: 26px;
+	text-align: left;
+}
+#woDetail-box ul{
+	width:100%;
+	padding:5px 0px 5px 5px;
+	overflow: hidden;
+}
+#woDetail-box ul li{
+	float:left;
+	width:33%;
+	
+	list-style: none;
+	
+	text-align: left;
+}
+/*** 问题描述 ****/
+#woDetail-box #userInfoMemo h2{
+	
+	border:1px dashed #d3d7d4;
+	border-bottom:none;
+	background: #d3d7d4;
+}
+#woDetail-box #userInfoMemo ul{
+	width:99%;
+	border:1px dashed #d3d7d4;
+	border-top:none;
+	color:#104E8B;
+	margin-bottom: 8px;
+}
+#woDetail-box #userInfoMemo ul li{
+	width:90%;
+	font-size:18px;
+	border: none;
+}
+/***问题补充***/
+#woDetail-box #additional h2{
+	border:1px dashed #d3d7d4;
+	border-bottom:none;
+	background: #d3d7d4;
+}
+#woDetail-box #additional ul{
+	width:99%;
+	padding-left:0px;
+	padding-right:5px;
+	border:1px dashed #d3d7d4;
+	border-top:none;
+	color:#104E8B;
+	margin-bottom: 8px;
+	
+}
+#woDetail-box #additional ul li{
+	width:98%;
+	clear:both;
+}
+#woDetail-box #additional .topic,#woDetail-box #additional .topic span{
+	padding:6px 0px 6px 10px;
+	font-size:16px;
+	font-family: sans-serif;
+}
+
+#woDetail-box #additional .content{
+	font-size:14px;
+	padding:6px 0px 6px 60px;
+	border-bottom: 1px solid #d3d7d4;
+	font-family: sans-serif;
+}
+.jd-ahover{
+	font-size:15px;
+	font-weight: bold;
+	color:#4bb5ff;
+}
+.cllc h2{
+	color:#f05b72;
+	font-size:24px;
+}
+.cllc .topic{
+	border:1px dashed #fff;
+	border-bottom:none;
+	text-align: left;
+}
+.cllc .content{
+	text-align: left;
+	padding-left:30px;
+}
+.cllc span{
+	margin-left:5px;
+}
+/***图片***/
+.picture-box{
+	float:left;
+	width:100%;
+	padding-bottom:10px;
+	border:1px solid #f1f1f1;
+	background: #ffffff;
+}
+.picture-item{
+	width:48%;
+	float:left;
+	margin: 10px 0 0 10px;
+}
+.picture-title{
+	
+}
+.picture{
+	
+}
+#faq-search-box{background: #4bb5ff;margin-left:10px;padding:2px;margin-bottom: 10px;overflow: hidden;width:85%;}
+#faq-search-box #emp{background: #ffffff;border: 2px solid #CDC9C9;border-right:none;height:30px;width:100px;float:left;font:bold 16px red;line-height: 33px;text-align: center;}
+#faq-search-box #name{background: #ffffff;border:2px solid #CDC9C9;border-right:none;height:28px;width:220px;float:left;font-size:16px;line-height: 28px;vertical-align: middle;}
+#faq-search-box #send{background: #ffffff;border: 2px solid #CDC9C9;height:34px;width:82px;float:left;}
+/***Faq 快捷键***/
+#quickKey{margin-left: 5px;}
+#quickKey span{cursor: pointer;margin-left: 15px;}
+#woInfo{position:relative;width:90%;float:left;}
+#innerLD{float:left;height:30px;line-height:30px;margin-top:5px;font-size:20px;cursor: pointer;}
+.batchReplyTextArea{width:300px;height:150px;margin:10px;}
+.deReasonTextArea{width:300px;height:150px;margin:10px;}
+/***工单回复编辑***/
+#pbtnEdit{width:200px;display:none;border-top: 1px #CDC9C9 solid;margin-top:5px;padding:3px 0 0 5px}
+#pbtnEdit #btnEdit,#pbtnEdit #btnDelete{cursor: pointer;color:#bc8f8f;font-size:13px;}
+#queding,#quxiao{cursor:pointer;color:#bc8f8f;font-size:14px;margin-left: 5px;}
+.pthf-box .content{border: 1px solid black;}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	本文档定义了客服系统的相关接口(请求/响应)等。
+	本文档内容今后可能会有调整。
+
+	*****************************请仔细阅读********************************
+
+	
+	state/stateDesc 状态码对照表
+	00:操作成功
+	01:数据库访问异常
+	12:数据为空
+	04:系统忙（未知错误）
+	26:非法操作
+-->
+	
+<!--
+问题提交
+ 	可能返回state 00,01,04,12，26
+	提交的数据形如：
+	http://cs.2211.com/xml/getDealInfo? accountname=xx&clientId=PC_PASSWORD&s=xx
+以下未说可以为空的参数均不可以为空
+输入：
+     clientId:		PC_PASSWORD   客户端id(由本系统分配)
+	 accountname:	用户名
+     s: 			md5(clientId+paramKey)
+     paramKey:		58WADFE2F89SDEG
+输出：
+-->
+<hy>
+    <id></id><!--客户端id-->
+    <state></state><!-- 状态码 -->
+    <stateDesc></stateDesc><!-- 状态码描述   -->    
+  	<count><!-- 不同状态数量   -->
+    	<allCount></allCount>				<!-- 所有问题数量   -->
+    	<dealingCount></dealingCount>		<!-- 处理中问题数量   -->
+    	<responsedCount></responsedCount>	<!-- 处理完毕问题数量   -->
+    	<undealCount></undealCount>			<!-- 已接受问题数量   -->
+    	<lackInfoCount></lackInfoCount>		<!-- 需补充资料问题数量   -->
+    </count>
+</hy>
+

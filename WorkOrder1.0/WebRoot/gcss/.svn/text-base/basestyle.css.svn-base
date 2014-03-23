@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+
+* {FONT-SIZE: 12px; COLOR: #fff; LINE-HEIGHT: 22px; FONT-FAMILY: Tahoma}
+BODY {BACKGROUND:#2a2926 url(../images/bg2.jpg) no-repeat fixed 0 0; PADDING: 0px;MARGIN: 0px;font-size:12px;color:#fff;}
+.main {width:600px;height:435px;margin:auto;}
+A {COLOR: #f00; TEXT-DECORATION: none}
+A:hover {COLOR: #fff; TEXT-DECORATION: none}
+
+h3{color:#C00; text-indent:10px;height:30px;line-height:30px;margin:10px 0 10px 0;font-weight:bold;}
+
+.clear{clear:both;height:0;font-size: 1px;line-height: 0px;} 
+
+.header{width:100px;margin:5px auto;}
+/*表单格式*/
+#formedit{margin:10px auto;width:90%;height:auto;padding-bottom:5px;}
+.formcont{margin:1px 0 1px 0;width:100%;}
+.formcont span{color:#F00;margin:0 3px 0 3px;}
+.formcont .formlefttitle{float:left;width:120px;text-align:right;font-weight:bold;}
+.formcont .lefttitlear{float:left;width:120px;text-align:right;}
+.formcont .formlefttitle2{float:left;width:120px;text-align:right;font-weight:bold;}
+.formcont .formlefttitle3{float:right;width:120px;text-align:right;font-weight:bold;}
+.formcont .formrigcont{float:left;width:200px;}
+.formcont .formrigcont3{float:right;width:200px;}
+.formcont .errornotes{float:left;color:#f00;}
+.formcont .formpasswdqd{float:left;width:180px;height:20px;background:url(../images/button.gif) no-repeat 0 -70px;text-align:center;}
+.formcont .changeimg{float:left;width:75px;height:25px;display:inline-block;}
+.formcont .changeimgtext{float:left;}
+.formcont .formnotestext{float:left;color:#c4c4c4; }
+.formcont .formnotestext2{color:#999;padding-left:120px;}
+.formcont .formcheckbox{padding-left:115px;}
+.formcont .formtextareacont{float:left;width:450px;height:120px;}
+.formcont .forminputfile{float:left;width:450px;}
+.formcont .textnotes{margin-left:120px;height:20px;color:#999;}
+.formcont .baocuo{margin-left:120px;height:20px;color:#f00;}
+
+
+.formcontbox2{border:1px dashed #ccc; background:#353431;width:90%;margin:auto;}
+.formcontbox2 .top{height:10px;}
+.formcontbox2 .toptext{text-align:center;color:#f00}
+.formcontbox2 span{color:#F00;margin:0 3px 0 3px;}
+.formcontbox2 .bottom{height:10px}
+.formcontbox2 .formcont2{margin:0px;}
+.formcontbox2 .formcont2 .formlefttitle2{float:left;width:120px;text-align:right;}
+.formcontbox2 .formcont2 .formlefttitle3{float:right;width:120px;text-align:right;}
+.formcontbox2 .formcont2 .formrigcont{float:left;width:200px;}
+.formcontbox2 .formcont2 .formrigcont3{float:right;width:200px;}
+.formcontbox2 .formcont2 .formrigcontbz{float:left;color:#8F8F8F;}
+.formcontbox2 .formcont2 .baocuo5{margin-left:120px;height:20px;width:200px;color:#f00;}
+
+
+.formcontbox2 .baocuo2 {width:100%;height:20px;}
+.formcontbox2 .baocuo2 .baocuo3{float:left;margin-left:120px;height:20px;width:200px;color:#f00;}
+.formcontbox2 .baocuo2 .baocuo4{float:right;height:20px;width:200px;color:#f00;}
+
+.ui-icon-triangle-1-s{background:url(../images/button.gif) no-repeat 0 -50px;display:block;width:16px;margin-top:2px;height:16px; margin-left:300px; float:left;}
+.ui-icon-triangle-1-d{background:url(../images/button.gif) no-repeat 0 -66px;display:block;width:16px;margin-top:2px;height:16px; margin-left:300px; float:left;}
+.ui-icon-triangle-1-s-text{ text-align:left; height:16px; display:block; margin-left:5px; float:left; width:100px;}
+
+
+
+
+.input180 {BORDER:#ccc 1px solid;FONT-SIZE:12px; WIDTH:180px; LINE-HEIGHT: 16px;HEIGHT: 16px;background:#353431;}
+.input450 {BORDER:#ccc 1px solid;FONT-SIZE:12px; WIDTH:450px; LINE-HEIGHT: 16px;HEIGHT: 16px;background:#353431;}
+.select180 {BORDER:#ccc 1px solid;FONT-SIZE:12px; WIDTH:180px; LINE-HEIGHT: 20px;HEIGHT: 20px;background:#353431;}
+.textarea{BORDER:#ccc 1px solid;FONT-SIZE:12px; WIDTH:100%;height:120px; LINE-HEIGHT: 25px;background:#353431;}
+/*button*/
+.buttonBox{margin:20px auto;width:150px;}
+
+.buttonYes{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat 0 -25px;text-align:center;color:#fff;line-height:25px;border:none;}
+.buttonYes_mouseout{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat 0 -25px;text-align:center;color:#fff;line-height:25px;border:none;}
+.buttonYes_mouseover{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat -70px -25px;text-align:center;line-height:25px;border:none;}
+
+.buttonNo{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat 0 0px;text-align:center;color:#ccc;margin-left:10px;line-height:25px;border:none;}
+.buttonNo_mouseout{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat 0 0px;text-align:center;color:#ccc;margin-left:10px;line-height:25px;border:none;}
+.buttonNo_mouseover{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat -70px 0px;text-align:center;margin-left:10px;line-height:25px;border:none;}
+
+.gmnoteshead{width:500px;height:10px;margin:auto;background:url(../images/notesbg.png) no-repeat top;margin-top:10px;}
+.gmtks{width:500px;height:100px;margin:auto;background:url(../images/notesbg.png) no-repeat bottom;}
+.gmtks .face{float:left;width:50px;margin-left:50px;padding-top:25px;}
+.gmtks .tkstext{float:left;color:#fff;margin:auto;padding-top:20px;font-size:14px;text-align:center;margin-left:60px;}
+.gmnotes{width:500px;height:150px;margin:auto;background:url(../images/notesbg.png) no-repeat bottom;}
+.gmnotes .gmnotestext{margin:auto;width:400px;padding-top:20px;}
+
+
+.buttonNo2 a{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat 0 0px;text-align:center;color:#fff;margin-left:10px;line-height:25px;border:none;}
+.buttonNo2 a:hover{float:left;display:inline-block;width:70px;height:25px;background:url(../images/button.gif) no-repeat -70px 0px;text-align:center;color:#fff;margin-left:10px;line-height:25px;border:none;}
+

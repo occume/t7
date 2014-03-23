@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<globe>
+	<!-- 配置文件自动更新时间间隔（初始配置）[毫秒] -->
+	<update-time>120000</update-time>
+	<default-waitTime>5</default-waitTime><!-- 数据库操作超时等待时间，单位为秒 -->
+	<!-- 编码方式 -->
+	<charset>UTF-8</charset>
+	<content-type>text/html; charset=UTF-8</content-type>
+	
+	<database>
+		<mysql>
+			<pool-name>jdbc/mysqlOneword</pool-name> <!-- 连接池JNDI名称 -->
+		</mysql>
+		<query-timeout>5</query-timeout><!-- JDBC操作中的查询超时间，单位：秒；该参数仅在当前节点位置有效 -->
+        <oracle><!-- 读 oracle 数据库连接池配置 -->
+            <switch>0</switch><!-- 指定使用的数据源的索外值[0代表全部连接都可以任意用，其它数字代表第几个连接可以用]  -->
+            <num>1</num><!-- 数据源的数量 -->
+            <pool-name>jdbc/serverInfo</pool-name><!-- serverInfo 连接池JNDI名称 -->
+        </oracle> 
+	</database>
+	<!-- 
+		switch:		(switch=false  总->子->客) (switch=true  客->-子->总)
+	 -->
+	<service>
+		<switch>true</switch><!-- 客户端总开关-->		
+		<general>
+			<file><!-- 文件操作 -->
+				<upload><!-- 上传文件路径 -->
+					/upload
+				</upload>
+				<xlsDownload><!-- 下载文件路径 -->
+					/xlsDownload
+				</xlsDownload>
+			</file>
+			<passport><!-- 帐户中心相关信息 -->
+				<getPwdMenu>http://passport.2211.com/ucenter/losepasswdMenu.htm</getPwdMenu><!-- 找回密码默认首页的的URL -->
+				<getPwdBySecureCodeUrl>http://passport.2211.com/ucenter/losepwdBySec.jsp</getPwdBySecureCodeUrl><!-- 通过超级密码找回密码的URL -->
+				<getPwdByUserEmailUrl>http://passport.2211.com/ucenter/losepwdByUserMail.jsp</getPwdByUserEmailUrl><!-- 通过密保邮箱找回密码的URL -->
+			</passport>
+			<WoCenter><!--分配给WOCS的相关参数-->
+				<switch>true</switch>
+				<clientId>WO_CS</clientId><!-- 请求SSO的客户端ID -->
+			  	<paramKey>PZW64BF8Nsl6lgb3Y</paramKey><!-- 访问SSO的密钥 -->
+			</WoCenter>	
+			<WoCallCenter><!--分配给WOCS的相关参数-->
+				<switch>true</switch>
+				<clientId>WO_CALLCENTER</clientId><!-- 请求SSO的客户端ID -->
+			  	<paramKey>PZW64BF8Nsl6lgb3Y</paramKey><!-- 访问SSO的密钥 -->
+			</WoCallCenter>	
+		</general>
+		<!-- 客户端 -->
+        <client>
+        	<WO_PASSWORD><!-- 账户中心 -->
+				<paramKey>58WADFE2F89SDEG</paramKey>
+			</WO_PASSWORD>
+		</client>
+		<checkTicketUrl>http://workorder.2211.com/security/getTicket.jsp</checkTicketUrl><!-- 验证TICKET页 -->
+		<defaultLoginUrl>http://workorder.2211.com/selfService/login.jsp</defaultLoginUrl>
+	</service>
+	<!-- 缓存操作相关配置 -->
+	<cache>
+		<batchType><!-- 批量操作类型缓存区域 -->
+			<key>batchType</key><!-- 批量操作类型缓存区域KEY -->
+		</batchType>
+	</cache>
+	<!-- 相关参数验证规则配置 -->
+	<validate>
+		<sso>true</sso><!-- 登录页面是否使用SSO[true:使用SSO|false:使用LoginCenter] -->
+	<switch>false</switch><!-- 登录页面是否需要验证码功能 -->
+		<nickname-min-length>1</nickname-min-length>
+		<nickname-max-length>16</nickname-max-length>
+		<address-min-length>5</address-min-length><!-- 联系地址最小长度 -->
+		<address-max-length>255</address-max-length><!-- 联系地址最大长度 -->
+		<normal>
+			<isvalidate-address>false</isvalidate-address><!-- 是否对该用户地址信息做验证 -->
+		</normal>
+		<reg-express>
+			<accountname>^[a-zA-Z0-9]{2,15}$</accountname>
+			<password>[^\s]{6,20}</password>
+			<realname>^[\u4E00-\u9FA5]{2,10}$</realname>
+			<sex>^[M,F]{1}$</sex>
+			<email>
+				^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$
+			</email>
+			<secureCode>^[0-9]{6,20}$</secureCode><!-- 错误的安全码正则 -->
+			<phoneNumber>^\d{3,4}-\d{7,8}(-\d{3,4})?$</phoneNumber><!-- 联系电话 -->
+			<telNumber>^[0-9]{8,20}$</telNumber>
+			<qq>^[1-9][0-9]{4,}$</qq><!-- QQ -->
+			<happdate>^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-)) (20|21|22|23|[0-1]?\d):[0-5]?\d:[0-5]?\d$</happdate><!-- 日期验证正则表达式 -->
+		</reg-express>
+	</validate>
+	<checkCode><!--生成验证码的相关参数 -->
+		<checkcode-name>VerifyCode</checkcode-name><!-- session中验证码属性的名称 -->
+		<type>
+			<value>3</value><!-- 验证类型值:一共有四个值[0,1,2,3] ,假如值为0，则要获取randomType的节点值-->
+			<randomType>1,2,3,</randomType><!-- 所有的验证码类型 -->
+		</type><!-- 验证码类型值 -->
+		<patter>^[a-zA-Z0-9]{4,6}$</patter><!-- 验证码的正则表达式-->
+		<count>4,</count><!-- 产生验证码字符的个：现是规定为4到6个，生成时随机取一种 -->
+		<width>80</width><!-- 验证码图片宽度值 -->
+		<height>30</height><!-- 验证码高度值 -->
+		<character>
+			23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz
+		</character><!-- 拼接验证码的字符，去除了"o","O","l","I","i"，0，1 -->
+		<fonts>Courier,Arial Black,Eras Demi ITC,</fonts><!-- 注意：字体顺序不能改变，不然的话会导致 -->
+		<interference><!-- 图片背景干扰线 -->
+			<linesNumber>155</linesNumber><!-- 干扰线数量 -->
+			<color>160,200,</color><!-- 用以随机产生颜色的数值 -->
+			<X1>12</X1>
+			<Y1>12</Y1>
+		</interference>
+		<distortion><!-- 字体变形验证码的相关参数 -->
+			<X>27</X><!-- X轴值 -->
+			<Y>21</Y><!-- Y轴值 -->
+			<fontColor>0,0,255</fontColor><!-- 字体颜色 -->
+			<fontSize>18</fontSize><!-- 字体大小 -->
+			<bgColor>255,255,255</bgColor><!-- 背景颜色 -->
+		</distortion>
+		<overlap><!-- 字体重叠验证码的相关参数 -->
+			<X>11</X><!-- X轴值 -->
+			<Y>21</Y><!-- Y轴值 -->
+			<randomX>8</randomX><!-- X轴的随机数 -->
+			<randomY>10</randomY><!-- Y轴的随机数 -->
+			<fontColorOdd>255,0,0</fontColorOdd><!-- 奇数字体颜色 -->
+			<fontColorEven>0,0,0</fontColorEven><!-- 偶数字体颜色 255,255,255-->
+			<fontSizeOdd>20</fontSizeOdd><!-- 验证码图片奇数字体的大小 -->
+			<fontSizeEven>22</fontSizeEven><!-- 验证码图片偶数字体的大小 -->
+		</overlap>
+		<floatPoint><!-- 前景为点的验证码 -->
+			<fontColor>255,0,0</fontColor><!-- 字体颜色 -->
+			<fontSize>20</fontSize><!-- 验证码图片字体的大小 -->
+			<foregroundColor>255,255,255</foregroundColor><!-- 前景图片颜色255,255,255 -->
+			<X>10</X><!-- X轴值 -->
+			<Y>14</Y><!-- Y轴值 -->
+			<randomX>4</randomX><!-- X轴产生随机数的值 -->
+			<randomY>5</randomY><!-- Y轴产生随机数的值 -->
+			<additionX>4</additionX><!-- 画X轴的附加值 -->
+		</floatPoint>
+	</checkCode>
+	<!-- 状态码 -->
+	<state>
+		<_00>操作成功</_00>
+		<_01>数据库访问异常</_01>
+		<_03>密码错误</_03><!-- 密码错误 -->
+		<_02>火游帐号不存在</_02>
+		<_04>系统忙</_04>
+		<_05>参数错误</_05>
+		<_11>值错误</_11>
+		<_12>数据为空</_12>
+		<_20>访问超时,请重新访问</_20>
+		<_26>非法的操作</_26>
+		<_41>缓存错误</_41>
+		<_99>暂不提供本服务</_99>
+	</state>
+	<ftp>
+		<isremote>false</isremote>	
+		<server>58.221.50.21</server>
+		<port>21</port>
+		<userName>maintain</userName>
+		<userPassword>Bzl5fL$ikEEYG</userPassword>
+		<ftpDirectory>
+			/upload
+		</ftpDirectory>
+		<ftpdomain>http://pic.2211.com</ftpdomain>
+	</ftp>
+	
+	<ssoInfo><!-- 访问SSO的一切相关信息 -->
+  	<clientId>SSO_WO</clientId><!-- 请求SSO的客户端ID -->
+  	<paramKey>EIOHF589AFD1AF25</paramKey><!-- 访问SSO的密钥 -->
+  	<postPath><!-- 各个接口路径 -->
+	  	<login>https://login.passport.2211.com/login</login><!-- 访问SSO的验证用户密码接口 -->
+	  	<checkCookie>https://login.passport.2211.com/checkCookie</checkCookie><!-- 访问SSO的验证COOKIE的接口 -->
+	  	<logout>https://login.passport.2211.com/logout</logout><!-- 访问SSO的登出接口 -->
+	  	<checkTicket>https://login.passport.2211.com/checkTicket</checkTicket><!-- 访问SSO验证ticket的接口 -->
+  	</postPath>
+  </ssoInfo>
+  <privateCenter>
+  	<passwordinfoURL>
+  		<write>http://privatecenter.2211.com:8080/passwordinfo</write><!-- 访问PC写接口 -->
+  		<read>http://privatecenter.2211.com:8080/passwordinfo</read>
+  	</passwordinfoURL>
+  	<userinfoURL>
+  		<write>http://privatecenter.2211.com:8080/user</write>
+  		<read>http://privatecenter.2211.com:8080/user</read>
+  	</userinfoURL>
+  	<passwordURL>
+  		<write>http://privatecenter.2211.com:8080/password</write>
+  		<read>http://privatecenter.2211.com:8080/password</read>
+  	</passwordURL>
+  	<tokenURL>
+  		<write>http://privatecenter.2211.com:8080/token</write>
+  		<read>http://privatecenter.2211.com:8080/token</read>
+  	</tokenURL>
+  	<activeGameURL>
+  		<write>http://privatecenter.2211.com:8080/activegame</write>
+  		<read>http://privatecenter.2211.com:8080/activegame</read>
+  	</activeGameURL>
+  	<fcmURL>
+  		<write>http://privatecenter.2211.com:8080/fcm</write>
+  		<read>http://privatecenter.2211.com:8080/fcm</read>
+  	</fcmURL>
+  </privateCenter>
+   <!-- 默认游戏服务器数据库用户及密码 -->
+	 <gameserver>
+		<user>selectuser</user><!-- ago -->
+	    <pass>N8$vcT2aO!</pass><!-- N8$vcT2aO! g7A&hN-->
+    </gameserver>
+    
+  <limitSubmit><!-- 提交问题防刷限制 -->
+  		<listenIssueSubmit>false</listenIssueSubmit><!-- true:限制 -->
+  		<timeGap>2</timeGap><!-- 单位：分钟 -->
+  </limitSubmit>
+  <monitorLock>
+  		<switch>true</switch>
+  		<delay>20</delay><!-- 单位：秒钟 -->
+  </monitorLock>
+  <!-- 用户延时评价 -->
+  <writeRate>
+  		<switch>true</switch>
+  		<delay>300</delay><!-- 单位：秒钟 -->
+  </writeRate>
+  <!-- workOrderView -->
+  <workOrderView>
+  		<switch>true</switch>
+  		<path>globeConf/QQwry.dat</path>
+  </workOrderView>
+  <workOrderQeury>
+  		<respond>
+  			<ceilTime>60</ceilTime>
+  		</respond>
+  </workOrderQeury>
+</globe>

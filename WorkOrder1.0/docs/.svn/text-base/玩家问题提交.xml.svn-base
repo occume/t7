@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	本文档定义了客服系统的相关接口(请求/响应)等。
+	本文档内容今后可能会有调整。
+
+	*****************************请仔细阅读********************************
+
+	
+	state/stateDesc 状态码对照表
+	00:操作成功
+	01:数据库访问异常
+	04:系统忙（未知错误）
+	05:参数错误
+	26:非法操作
+-->
+	
+<!--
+问题提交
+ 	可能返回state 00,01,02,04,05,26
+	提交的数据形如：
+	http://wocenter.2211.com:8080/wo/save_***?clientId=WO_CS&s=xx
+以下未说可以为空的参数均不可以为空
+输入：
+     clientId:WO_CS                     			客户端id(由本系统分配)
+     userInfo.qq:xxx									玩家QQ			
+	 userInfo.tel:xxx									玩家联系电话
+	 userInfo.memo:xxx							问题描述
+	 userInfo.server.id:xxx						服务器id
+	 userInfo.accountname:xxx			玩家账号
+	 userInfo.username:xxx					玩家游戏角色名称
+	 userInfo.happendate:xxx				问题发生时间
+	 additional.currentVersion:xxx		游戏当前版本
+	 device.cpu:xxx									电脑处理器
+	 device.displaycard:xxx					显卡
+	 device.memory:xxx							内存
+	 device.os:xxx										操作系统
+	 device.netinfo:xxx							网络供应商
+	 userInfo.lvlTwo.id:xxx						问题二级类型
+     s: xxx														md5(clientId+特殊字符串）
+输出：
+-->
+<hy>
+    <id></id><!--客户端id-->
+    <state></state><!-- 状态码 -->
+    <stateDesc></stateDesc><!-- 状态码描述   -->    
+</hy>
+

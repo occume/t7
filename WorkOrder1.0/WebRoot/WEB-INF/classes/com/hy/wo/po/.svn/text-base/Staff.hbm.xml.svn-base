@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hy.wo.po">
+<!-- 员工信息ORM -->
+	<class name="Staff" table="Staffs" lazy="true">
+		<id name="id" column="id" length="30">
+			<generator class="identity"></generator>
+		</id>
+		<property name="accName" column="username" length="16"/>
+		<property name="password" column="pwd" length="30"/>
+		<property name="nickName" column="nickname" length="16"/>
+		<property name="zuoXi" column="zuoxi" length="16"/>
+		<many-to-one name="role" column="role_id" lazy="false"></many-to-one>
+		<many-to-one name="group" column="group_id" lazy="false"></many-to-one>
+		<many-to-one name="department" column="department_id"></many-to-one>
+		<property name="isdelete" length="6"></property>
+	</class>
+	<!-- 员工分组信息ORM -->
+	<class name="Group" table="Groups" lazy="true">
+		<id name="id" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="group_name" length="16"/>
+		<property name="createDate" column="create_date"/>
+		<property name="departId" column="depart_id"/>
+	</class>
+	<!-- 员工角色信息ORM -->
+	<class name="Role" table="Role">
+		<id name="id" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="role_name" length="16"/>
+		<property name="level" column="group_name" length="6"/>
+		<set name="permissions" table="tb_mapping" lazy="extra" cascade="all" order-by="permission_id">
+			<key column="role_id"></key>
+			<many-to-many class="Permission" column="permission_id"></many-to-many>
+		</set>
+	</class>
+	<!--员工权限信息ORM  -->
+	<class name="Permission" table="Permission" lazy="true">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" not-null="true" length="50"/>
+		<property name="operation" length="10"></property>
+		<many-to-one name="parent" column="pid"></many-to-one>
+		
+		<set name="children" lazy="extra" cascade="all">
+			<key column="pid"></key>
+			<one-to-many class="Permission"/>
+		</set>
+		
+		<set name="roles" table="tb_mapping" lazy="extra" cascade="all">
+			<key column="permission_Id"></key>
+			<many-to-many class="Role" column="role_id"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>
